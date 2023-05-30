@@ -119,7 +119,7 @@ a {
   color: #0056B4;
 }
 a:hover {
-  color: #FFE82C;
+  color: #FEDA00;
 }
 
 /*--- Common Classes---------------------*/
@@ -722,15 +722,15 @@ button.submit, button[type=submit] {
   color: #ffffff;
   border: none;
   background-color: #0056B4;
-  border: 1px solid #FFE82C;
+  border: 1px solid #FEDA00;
   border-radius: 5px;
 }
 button.submit:hover, button[type=submit]:hover {
-  background-color: #FFE82C !important;
+  background-color: #FEDA00 !important;
 }
 
 .btn-brand:hover {
-  background-color: #FFE82C !important;
+  background-color: #FEDA00 !important;
 }
 
 .btn-login {
@@ -762,14 +762,14 @@ button.submit:hover, button[type=submit]:hover {
   padding: 12px 30px;
   border-radius: 4px;
   color: #fff;
-  border: 1px solid #FFE82C;
+  border: 1px solid #FEDA00;
   background-color: #0056B4;
   cursor: pointer;
   transition: all 300ms linear 0s;
   letter-spacing: 0.5px;
 }
 .btn:hover, .button:hover {
-  background-color: #FFE82C;
+  background-color: #FEDA00;
 }
 .btn.btn-sm, .button.btn-sm {
   padding: 8px 18px;
@@ -1015,6 +1015,11 @@ textarea:focus {
   color: unset;
 }
 
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #0056B4;
+  color: white;
+}
+
 .select2-container {
   max-width: 135px;
 }
@@ -1027,11 +1032,11 @@ textarea:focus {
   color: #ffffff;
   border: none;
   background-color: #0056B4;
-  border: 1px solid #FFE82C;
+  border: 1px solid #FEDA00;
   border-radius: 5px;
 }
 .contact-from-area .contact-form-style button:hover {
-  background-color: #FFE82C !important;
+  background-color: #FEDA00 !important;
 }
 
 .form-group {
@@ -1274,7 +1279,7 @@ label {
   color: #ffffff;
   border: none;
   background-color: #0056B4;
-  border: 1px solid #FFE82C;
+  border: 1px solid #FEDA00;
   border-radius: 4px;
 }
 .comment-form button:hover {
@@ -2543,7 +2548,7 @@ table .product-thumbnail img {
   border: 0;
 }
 .banner-big .btn:hover {
-  background: #FFE82C !important;
+  background: #FEDA00 !important;
 }
 
 /*Deal banners*/
@@ -4370,7 +4375,7 @@ h6.post-title {
   margin-right: 5px;
 }
 .header-info > ul > li:hover > a {
-  color: #333;
+  color: #FEDA00;
 }
 .header-info > ul > li:hover > ul.language-dropdown {
   visibility: visible;
@@ -4745,7 +4750,7 @@ h6.post-title {
   color: #ffffff;
 }
 .cart-dropdown-wrap .shopping-cart-footer .shopping-cart-button a:hover {
-  background-color: #FFE82C;
+  background-color: #FEDA00;
 }
 
 .sticky-bar.stick {
@@ -4757,7 +4762,7 @@ h6.post-title {
   z-index: 999;
   left: 0;
   transition: all 0.3s ease 0s;
-  border-bottom: 2px solid #FFE82C;
+  border-bottom: 2px solid #FEDA00;
   background: #fff;
 }
 .sticky-bar.stick.sticky-white-bg {
@@ -5229,7 +5234,7 @@ h6.post-title {
   transition-duration: 0.5s;
 }
 .mobile-social-icon a img {
-  max-width: 20px;
+  max-width: 25px;
   opacity: 0.7;
 }
 .mobile-social-icon a img:hover {
@@ -6225,7 +6230,7 @@ span.fi-rs-apps {
 }
 
 .newsletter {
-  background-color: #FFE82C;
+  background-color: #FEDA00;
 }
 .newsletter .icon-email {
   max-width: 40px;
@@ -7913,7 +7918,7 @@ span.fi-rs-apps {
     border-bottom: 1px solid #e2e9e1;
   }
   .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-top .mobile-header-logo a img {
-    width: 80px;
+    width: 130px;
   }
   .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area {
     padding: 30px 20px;
