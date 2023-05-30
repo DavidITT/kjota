@@ -12,6 +12,24 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+    .vue();
+
+mix.styles([
+    'resources/templates/client/css/plugins/animate.css',
+    'resources/templates/client/css/plugins/jquery-ui.css',
+    'resources/templates/client/css/plugins/magnific-popup.css',
+    'resources/templates/client/css/plugins/perfect-scrollbar.css',
+    'resources/templates/client/css/plugins/select2.min.css',
+    'resources/templates/client/css/plugins/slick.css',
+], 'public/css/client/client-plugins.css');
+
+mix.styles([
+    'resources/templates/client/css/vendors/bootstrap.min.css',
+    'resources/templates/client/css/vendors/fontawesome-all.min.css',
+    'resources/templates/client/css/vendors/normalize.css',
+], 'public/css/client/client-vendors.css');
+
+mix.sass('resources/templates/client/sass/main.scss', 'public/css/client/main.css').options({
+    processCssUrls: false
+});
+
