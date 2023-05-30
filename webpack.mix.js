@@ -33,3 +33,7 @@ mix.sass('resources/templates/client/sass/main.scss', 'public/css/client/main.cs
     processCssUrls: false
 });
 
+if (mix.inProduction()) {
+    mix.version();
+}
+
