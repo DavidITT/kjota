@@ -1,7 +1,7 @@
 /*COMPONENTS -> SLIDER*/
 .single-animation-wrap {
 	&.slick-active {
-		.slider-animated-1 {			
+		.slider-animated-1 {
 			h1 {
 				-webkit-animation-delay: 1.4s;
 				animation-delay: 1.4s;
@@ -68,7 +68,7 @@
 	-webkit-animation-name: fadeInUp;
 	animation-name: fadeInUp;
 }
-.hero-slider-1 {	  
+.hero-slider-1 {
 	height: 500px;
 	img {
 		max-height: 500px;
@@ -165,7 +165,7 @@
 		&.dot-style-1.dot-style-1-position-1 ul {
 			bottom: 10px;
 		}
-		
+
 	}
 	&.style-4 {
 		&.dot-style-1.dot-style-1-position-1 ul {
@@ -173,7 +173,7 @@
 		}
 	}
 }
-.hero-slider-content-2 {	
+.hero-slider-content-2 {
 	h1 {
 		font-size:58px;
 		line-height: 64px;
@@ -205,7 +205,7 @@
 		font-size: 15px;
 		line-height: 1;
 	}
-	
+
 }
 .single-slider-img {
 
@@ -275,21 +275,21 @@
 	  width: 100%;
 	  .slider-btn {
 		cursor: pointer;
-		background: #e8f6ea;
+		background: $color-brand;
 		width: 45px;
 		height: 45px;
 		position: absolute;
 		display: block;
 		z-index: 100;
 		border-radius: 50%;
-		border: 1px solid #cce7d0;
+		border: 1px solid $color-brand;
 		-webkit-transition: all .2s ease-out;
 		-moz-transition: all .2s ease-out;
 		transition: all .2s ease-out;
 		text-align: center;
 		line-height: 45px;
 		font-size: 14px;
-		color: $color-brand;
+		color: white;
 		&.slider-prev {
 			left: 20px;
 			i {
@@ -303,12 +303,12 @@
 			}
 		}
 		&:hover {
-			background-color: $color-brand;
+			background-color: $color-primary;
 			color: #fff;
-			border-color: $color-brand;
+			border-color: $color-primary;
 		}
-		
-		
+
+
 	  }
 	  	&.slider-arrow-2 {
 			.slider-btn {
@@ -316,7 +316,7 @@
 				height: 30px;
 				line-height: 30px;
 				font-size: 10px;
-			}		
+			}
 		}
 		&.slider-arrow-3 {
 			.slider-btn {
@@ -337,7 +337,7 @@
 				margin-top: -20px;
 			}
 		}
-	  
+
   }
 .home-slide-cover {
 	position: relative;
@@ -350,7 +350,7 @@
 	}
 }
 /*Carausel*/
-.carausel-6-columns-cover {	
+.carausel-6-columns-cover {
 	.carausel-6-columns {
 		overflow: hidden;
 		margin: 0 -12px;
@@ -386,12 +386,12 @@
 			&.slider-arrow-3 {
 				margin-top: 0;
 			}
-		}	
+		}
 	}
-	
+
 }
 .carausel-4-columns-cover {
-	
+
 	.carausel-4-columns {
 		overflow: hidden;
 		margin: 0 -12px;

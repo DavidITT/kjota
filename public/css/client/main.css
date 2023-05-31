@@ -1568,19 +1568,19 @@ label {
 }
 .slider-arrow .slider-btn {
   cursor: pointer;
-  background: #e8f6ea;
+  background: #0056B4;
   width: 45px;
   height: 45px;
   position: absolute;
   display: block;
   z-index: 100;
   border-radius: 50%;
-  border: 1px solid #cce7d0;
+  border: 1px solid #0056B4;
   transition: all 0.2s ease-out;
   text-align: center;
   line-height: 45px;
   font-size: 14px;
-  color: #0056B4;
+  color: white;
 }
 .slider-arrow .slider-btn.slider-prev {
   left: 20px;
@@ -1595,9 +1595,9 @@ label {
   margin-left: 2px;
 }
 .slider-arrow .slider-btn:hover {
-  background-color: #0056B4;
+  background-color: #6A94D4;
   color: #fff;
-  border-color: #0056B4;
+  border-color: #6A94D4;
 }
 .slider-arrow.slider-arrow-2 .slider-btn {
   width: 30px;
@@ -6238,7 +6238,7 @@ span.fi-rs-apps {
 }
 
 .newsletter {
-  background-color: #0056B4;
+  background-color: #6A94D4;
 }
 .newsletter .icon-email {
   max-width: 40px;

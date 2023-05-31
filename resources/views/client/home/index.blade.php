@@ -4,61 +4,38 @@
     <main class="main">
         <section class="home-slider position-relative pt-25 pb-20">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-9">
-                        <div class="position-relative">
-                            <div class="hero-slider-1 style-3 dot-style-1 dot-style-1-position-1">
-                                <div class="single-hero-slider single-animation-wrap">
-                                    <div class="container">
-                                        <div class="slider-1-height-3 slider-animated-1">
-                                            <div class="hero-slider-content-2">
-                                                <h4 class="animated">Trade-In Offer</h4>
-                                                <h2 class="animated fw-900">Supper Value Deals</h2>
-                                                <h1 class="animated fw-900 text-brand">On All Products</h1>
-                                                <p class="animated">Save more with coupons & up to 70% off</p>
-                                                <a class="animated btn btn-brush btn-brush-3" href="shop-product-right.html"> Shop Now </a>
-                                            </div>
-                                            <div class="slider-img">
-                                                <img src="{{asset('assets/client/imgs/slider/banner1.jpg')}}" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single-hero-slider single-animation-wrap">
-                                    <div class="container">
-                                        <div class="slider-1-height-3 slider-animated-1">
-                                            <div class="hero-slider-content-2">
-                                                <h4 class="animated">Tech Promotions</h4>
-                                                <h2 class="animated fw-900">Tech Trending</h2>
-                                                <h1 class="animated fw-900 text-brand">Great Collection</h1>
-                                                <p class="animated">Save more with coupons & up to 20% off</p>
-                                                <a class="animated btn btn-brush btn-brush-3" href="shop-product-right.html"> Shop Now </a>
-                                            </div>
-                                            <div class="slider-img">
-                                                <img src="{{asset('assets/client/imgs/banner/slider.png')}}" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slider-arrow hero-slider-1-arrow style-3"></div>
-                        </div>
+                <div class="row mb-sm-3 mb-md-0">
+                    <div class="col-lg-9 mb-4 mb-md-0">
+                        @include('client.home.components.main-slider')
                     </div>
                     <div class="col-lg-3 d-md-none d-lg-block">
-                        <div class="banner-img banner-1 wow fadeIn  animated home-3">
-                            <img class="border-radius-10" src="{{asset('assets/client/imgs/banner/banner-5.jpg')}}" alt="">
-                            <div class="banner-text">
-                                <span>Accessories</span>
-                                <h4>Save 17% on <br>Autumn Hat</h4>
-                                <a href="shop-grid-right.html">Shop Now <i class="fi-rs-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="banner-img banner-2 wow fadeIn  animated mb-0">
-                            <img class="border-radius-10" src="{{ asset('assets/client/imgs/banner/banner-7.jpg') }}" alt="">
-                            <div class="banner-text">
-                                <span>Smart Offer</span>
-                                <h4>Save 20% on <br>Eardrop</h4>
-                                <a href="shop-grid-right.html">Shop Now <i class="fi-rs-arrow-right"></i></a>
+                        @include('client.home.components.promotionals')
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="popular-categories section-padding mt-15 mb-25">
+            <div class="container wow fadeIn animated">
+                <h3 class="section-title mb-20"><span>Categorias</span> Populares</h3>
+                @include('client.home.components.popular-categories-carousel')
+            </div>
+        </section>
+
+        <section class="section-padding mb-50">
+            <div class="container wow fadeIn animated">
+                <h3 class="section-title mb-20"><span>Nuevos</span> Productos</h3>
+                @include('client.home.components.new-products-carousel')
+            </div>
+        </section>
+
+        <section class="mb-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="banner-bg wow fadeIn animated" style="background-color: whitesmoke">
+                            <div class="banner-content">
+                                <h5 class="text-grey-4 mb-15">No te quedes sin tus cajas</h5>
+                                <h2 class="fw-600">Aprovecha el <span class="text-brand">Hot Sale</span></h2>
                             </div>
                         </div>
                     </div>
@@ -66,4 +43,8 @@
             </div>
         </section>
     </main>
+
+    @include('client.home.components.modals.quickview-product-modal')
 @endsection
+
+
