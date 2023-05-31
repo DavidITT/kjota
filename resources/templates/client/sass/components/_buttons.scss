@@ -50,6 +50,7 @@
 	background-color: $color-brand;
 	border-color: $color-brand;
 }
+
 button.submit, button[type='submit'] {
     font-size: 15px;
     font-weight: 500;
@@ -64,7 +65,7 @@ button.submit, button[type='submit'] {
     }
 }
 .btn-brand:hover {
-    background-color: $color-brand-dark !important;
+    background-color: $color-secondary !important;
 }
 
 .btn-login {
@@ -87,7 +88,6 @@ button.submit, button[type='submit'] {
 		}
 	}
 }
-
 
 .btn, .button {
 	display: inline-block;
@@ -163,3 +163,12 @@ button.submit, button[type='submit'] {
 		float: left;
 	}
 }
+
+.btn-suscribe {
+    background-color: black;
+    color: white;
+    &:hover{
+        background-color: $color-secondary !important;
+    }
+}
+

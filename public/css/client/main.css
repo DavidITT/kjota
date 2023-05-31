@@ -244,11 +244,11 @@ input[type=number]:focus,
 }
 
 .text-primary {
-  color: #3f81eb !important;
+  color: #6A94D4 !important;
 }
 
 .text-warning {
-  color: #ffb300 !important;
+  color: #FFD800 !important;
 }
 
 .text-danger {
@@ -288,11 +288,11 @@ input[type=number]:focus,
 }
 
 .bg-primary {
-  background-color: #3f81eb !important;
+  background-color: #6A94D4 !important;
 }
 
 .bg-warning {
-  background-color: #ffb300 !important;
+  background-color: #FFD800 !important;
 }
 
 .bg-danger {
@@ -730,7 +730,7 @@ button.submit:hover, button[type=submit]:hover {
 }
 
 .btn-brand:hover {
-  background-color: #FEDA00 !important;
+  background-color: #41506b !important;
 }
 
 .btn-login {
@@ -826,6 +826,14 @@ button.submit:hover, button[type=submit]:hover {
 .tags .btn, .tags .button {
   border-radius: 4px;
   float: left;
+}
+
+.btn-suscribe {
+  background-color: black;
+  color: white;
+}
+.btn-suscribe:hover {
+  background-color: #41506b !important;
 }
 
 /*COMPONENTS -> FORM*/
@@ -1283,7 +1291,7 @@ label {
   border-radius: 4px;
 }
 .comment-form button:hover {
-  background-color: #3f81eb !important;
+  background-color: #6A94D4 !important;
   border: none !important;
 }
 
@@ -1466,7 +1474,7 @@ label {
 }
 .hero-slider-1.style-3 .hero-slider-content-2 .btn-default {
   color: #fff;
-  background-color: #ffb300;
+  background-color: #FFD800;
   border-radius: 50px;
   padding: 10px 19px;
   font-size: 13px;
@@ -3058,7 +3066,7 @@ table .product-thumbnail img {
   font-size: 11px;
   letter-spacing: 2px;
   content: "\f225" "\f225" "\f225" "\f225" "\f225";
-  color: #ffb300;
+  color: #FFD800;
 }
 .product-cart-wrap .product-content-wrap .add-to-cart {
   width: 44px;
@@ -4571,7 +4579,7 @@ h6.post-title {
   color: #0056B4;
 }
 .search-style-1 form button:hover {
-  color: #3f81eb;
+  color: #6A94D4;
 }
 
 .header-action {
@@ -4762,7 +4770,7 @@ h6.post-title {
   z-index: 999;
   left: 0;
   transition: all 0.3s ease 0s;
-  border-bottom: 2px solid #FEDA00;
+  border-bottom: 2px solid #0056B4;
   background: #fff;
 }
 .sticky-bar.stick.sticky-white-bg {
@@ -6230,11 +6238,12 @@ span.fi-rs-apps {
 }
 
 .newsletter {
-  background-color: #FEDA00;
+  background-color: #0056B4;
 }
 .newsletter .icon-email {
   max-width: 40px;
   margin-right: 15px;
+  color: white;
 }
 .newsletter .form-subcriber input {
   border-radius: 4px 0 0 4px;
@@ -7853,7 +7862,7 @@ span.fi-rs-apps {
     margin-right: 0;
   }
   .logo.logo-width-1 a img {
-    width: 120px;
+    width: 130px;
   }
   .header-action .header-action-icon {
     margin-right: 15px;
