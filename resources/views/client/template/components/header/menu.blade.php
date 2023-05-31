@@ -2,14 +2,14 @@
     <div class="container">
         <div class="header-wrap header-space-between position-relative  main-nav">
             <div class="logo logo-width-1 d-block d-lg-none">
-                <a href="index.html"><img src="assets/client/imgs/theme/logo.png" alt="logo"></a>
+                <a href="{{route('home')}}"><img src="{{ asset('assets/client/imgs/theme/logo.png') }}" alt="logo"></a>
             </div>
             <div class="header-nav d-none d-lg-flex">
                 <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block">
                     <nav>
                         <ul>
                             <li>
-                                <a class="active" href="index.html">Home</a>
+                                <a class="active" href="{{route('home')}}">Home</a>
                             </li>
                             <li>
                                 <a href="page-about.html">Nosotros</a>
@@ -57,10 +57,6 @@
                     </nav>
                 </div>
             </div>
-<!--            <div class="hotline d-none d-lg-block">
-                <p><i class="fi-rs-headset"></i><span>Hotline</span> 1900 - 888 </p>
-            </div>-->
-<!--            <p class="mobile-promotion">Happy <span class="text-brand">Mother's Day</span>. Big Sale Up to 40%</p>-->
             <div class="header-action-right d-block d-lg-none">
                 <div class="header-action-2">
                     @include('client.shopping-cart.shopping-cart')

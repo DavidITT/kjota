@@ -2,7 +2,7 @@
     <div class="mobile-header-wrapper-inner">
         <div class="mobile-header-top">
             <div class="mobile-header-logo">
-                <a href="index.html"><img src="assets/client/imgs/theme/logo.png" alt="logo"></a>
+                <a href="{{route('home')}}"><img src="{{asset('assets/client/imgs/theme/logo.png')}}" alt="logo"></a>
             </div>
             <div class="mobile-menu-close close-style-wrap close-style-position-inherit">
                 <button class="close-style search-close">
@@ -23,7 +23,7 @@
                 <nav>
                     <ul class="mobile-menu">
                         <li>
-                            <a href="index.html">Home</a>
+                            <a href="{{route('home')}}">Home</a>
                         </li>
                         <li>
                             <a href="index.html">Nosotros</a>
@@ -72,11 +72,8 @@
             </div>
             <div class="mobile-social-icon">
                 <h5 class="mb-15 text-grey-4">Siguenos</h5>
-                <a href="https://www.facebook.com/bullet.envios/" target="_blank"><img src="assets/client/imgs/theme/icons/icon-facebook.svg" alt=""></a>
-<!--                <a href="#"><img src="assets/client/imgs/theme/icons/icon-twitter.svg" alt=""></a>-->
-                <a href="https://www.instagram.com/kjota.mx/" target="_blank"><img src="assets/client/imgs/theme/icons/icon-instagram.svg" alt=""></a>
-<!--                <a href="#"><img src="assets/client/imgs/theme/icons/icon-pinterest.svg" alt=""></a>
-                <a href="#"><img src="assets/client/imgs/theme/icons/icon-youtube.svg" alt=""></a>-->
+                <a href="https://www.facebook.com/bullet.envios/" target="_blank"><img src="{{asset('assets/client/imgs/theme/icons/icon-facebook.svg')}}" alt="facebook-icon"></a>
+                <a href="https://www.instagram.com/kjota.mx/" target="_blank"><img src="{{asset('assets/client/imgs/theme/icons/icon-instagram.svg')}}" alt="instagram-icon"></a>
             </div>
         </div>
     </div>
