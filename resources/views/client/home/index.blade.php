@@ -8,7 +8,7 @@
                     <div class="col-lg-9 mb-4 mb-md-0">
                         @include('client.home.components.main-slider')
                     </div>
-                    <div class="col-lg-3 d-md-none d-lg-block">
+                    <div class="col-lg-3 d-none d-lg-block">
                         @include('client.home.components.promotionals')
                     </div>
                 </div>

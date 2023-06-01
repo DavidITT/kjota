@@ -1,4 +1,4 @@
-<div class="header-bottom header-bottom-bg-color sticky-bar">
+<div class="header-bottom sticky-bar">
     <div class="container">
         <div class="header-wrap header-space-between position-relative  main-nav">
             <div class="logo logo-width-1 d-block d-lg-none">
