@@ -9,11 +9,10 @@
                         <img class="hover-img" src="{{ asset('assets/client/imgs/shop/products/arcon-1.jpg') }}" alt="">
                     </a>
                 </div>
-                <div class="product-action-1">
-                    <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                <div class="product-action-1 d-none d-md-block">
+                    <a aria-label="Vista previa" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                         <i class="fi-rs-eye"></i></a>
-                    <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html" tabindex="0"><i class="fi-rs-heart"></i></a>
-                    <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html" tabindex="0"><i class="fi-rs-shuffle"></i></a>
+                    <a aria-label="Agregar a lista de deseos" class="action-btn small hover-up" href="shop-wishlist.html" tabindex="0"><i class="fi-rs-heart"></i></a>
                 </div>
                 <div class="product-badges product-badges-position product-badges-mrg">
                     <span class="hot">Hot</span>
@@ -35,11 +34,10 @@
                         <img class="hover-img" src="{{ asset('assets/client/imgs/shop/products/caja-pastel.jpg') }}" alt="">
                     </a>
                 </div>
-                <div class="product-action-1">
-                    <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                <div class="product-action-1 d-none d-md-block">
+                    <a aria-label="Vista previa" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                         <i class="fi-rs-eye"></i></a>
-                    <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html" tabindex="0"><i class="fi-rs-heart"></i></a>
-                    <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html" tabindex="0"><i class="fi-rs-shuffle"></i></a>
+                    <a aria-label="Agregar a lista de deseos" class="action-btn small hover-up" href="shop-wishlist.html" tabindex="0"><i class="fi-rs-heart"></i></a>
                 </div>
                 <div class="product-badges product-badges-position product-badges-mrg">
                     <span class="hot">Hot</span>
@@ -61,11 +59,10 @@
                         <img class="hover-img" src="{{ asset('assets/client/imgs/shop/products/kj-lonchera.jpg') }}" alt="">
                     </a>
                 </div>
-                <div class="product-action-1">
-                    <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                <div class="product-action-1 d-none d-md-block">
+                    <a aria-label="Vista previa" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                         <i class="fi-rs-eye"></i></a>
-                    <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html" tabindex="0"><i class="fi-rs-heart"></i></a>
-                    <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html" tabindex="0"><i class="fi-rs-shuffle"></i></a>
+                    <a aria-label="Agregar a lista de deseos" class="action-btn small hover-up" href="shop-wishlist.html" tabindex="0"><i class="fi-rs-heart"></i></a>
                 </div>
                 <div class="product-badges product-badges-position product-badges-mrg">
                     <span class="hot">Hot</span>
@@ -87,11 +84,10 @@
                         <img class="hover-img" src="{{ asset('assets/client/imgs/shop/products/kj-cerveza.jpg') }}" alt="">
                     </a>
                 </div>
-                <div class="product-action-1">
-                    <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                <div class="product-action-1 d-none d-md-block">
+                    <a aria-label="Vista previa" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                         <i class="fi-rs-eye"></i></a>
-                    <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html" tabindex="0"><i class="fi-rs-heart"></i></a>
-                    <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html" tabindex="0"><i class="fi-rs-shuffle"></i></a>
+                    <a aria-label="Agregar a lista de deseos" class="action-btn small hover-up" href="shop-wishlist.html" tabindex="0"><i class="fi-rs-heart"></i></a>
                 </div>
                 <div class="product-badges product-badges-position product-badges-mrg">
                     <span class="hot">Hot</span>
@@ -113,11 +109,10 @@
                         <img class="hover-img" src="{{ asset('assets/client/imgs/shop/products/kr.2.jpg') }}" alt="">
                     </a>
                 </div>
-                <div class="product-action-1">
-                    <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                <div class="product-action-1 d-none d-md-block">
+                    <a aria-label="Vista previa" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                         <i class="fi-rs-eye"></i></a>
-                    <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html" tabindex="0"><i class="fi-rs-heart"></i></a>
-                    <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html" tabindex="0"><i class="fi-rs-shuffle"></i></a>
+                    <a aria-label="Agregar a lista de deseos" class="action-btn small hover-up" href="shop-wishlist.html" tabindex="0"><i class="fi-rs-heart"></i></a>
                 </div>
                 <div class="product-badges product-badges-position product-badges-mrg">
                     <span class="hot">Hot</span>
@@ -139,11 +134,10 @@
                         <img class="hover-img" src="{{ asset('assets/client/imgs/shop/products/ks-inj-14.jpg') }}" alt="">
                     </a>
                 </div>
-                <div class="product-action-1">
-                    <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                <div class="product-action-1 d-none d-md-block">
+                    <a aria-label="Vista previa" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                         <i class="fi-rs-eye"></i></a>
-                    <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html" tabindex="0"><i class="fi-rs-heart"></i></a>
-                    <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html" tabindex="0"><i class="fi-rs-shuffle"></i></a>
+                    <a aria-label="Agregar a lista de deseos" class="action-btn small hover-up" href="shop-wishlist.html" tabindex="0"><i class="fi-rs-heart"></i></a>
                 </div>
                 <div class="product-badges product-badges-position product-badges-mrg">
                     <span class="hot">Hot</span>
@@ -165,11 +159,10 @@
                         <img class="hover-img" src="{{ asset('assets/client/imgs/shop/products/lonchera-micro.jpg') }}" alt="">
                     </a>
                 </div>
-                <div class="product-action-1">
-                    <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                <div class="product-action-1 d-none d-md-block">
+                    <a aria-label="Vista previa" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                         <i class="fi-rs-eye"></i></a>
-                    <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html" tabindex="0"><i class="fi-rs-heart"></i></a>
-                    <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html" tabindex="0"><i class="fi-rs-shuffle"></i></a>
+                    <a aria-label="Agregar a lista de deseos" class="action-btn small hover-up" href="shop-wishlist.html" tabindex="0"><i class="fi-rs-heart"></i></a>
                 </div>
                 <div class="product-badges product-badges-position product-badges-mrg">
                     <span class="hot">Hot</span>
