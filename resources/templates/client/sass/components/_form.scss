@@ -26,7 +26,7 @@ input {
 	width: 100%;
 	&:focus {
 		background: transparent;
-		border: 1px solid #88c1be;
+		border: 1px solid $color-brand-dark;
 	}
 	&.square {
 		border-radius: 0;
@@ -59,7 +59,7 @@ textarea {
 	min-height: 200px;
 	&:focus {
 		background: transparent;
-		border: 1px solid #88c1be;
+        border: 1px solid $color-brand-dark;
 	}
 }
 .select2-container--default {
@@ -194,10 +194,9 @@ textarea {
 			color: #ffffff;
 			border: none;
 			background-color: $color-brand;
-			border: 1px solid $color-brand-dark;
 			border-radius: 5px;
 			&:hover {
-				background-color: $color-brand-dark !important;
+				background-color: black !important;
 			}
 		}
 	}

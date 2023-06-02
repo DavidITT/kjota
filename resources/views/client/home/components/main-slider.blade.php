@@ -4,12 +4,12 @@
             <div class="container">
                 <div class="slider-1-height-3 slider-animated-1">
                     <div class="hero-slider-content-2">
-                        <h4 class="animated">Mas de 100 modelos en</h4>
-                        <h2 class="animated fw-900 text-brand">Cajas de Cartón</h2>
+                        <h4 class="animated text-white">Mas de 100 modelos en</h4>
+                        <h2 class="animated fw-900 text-secondary-brand">Cajas de Cartón</h2>
 
                     </div>
                     <div class="slider-img">
-                        <img src="{{asset('assets/client/imgs/slider/banner-1.jpg')}}" alt="">
+                        <img src="{{asset('assets/client/imgs/slider/banner-1.png')}}" alt="">
                     </div>
                 </div>
             </div>

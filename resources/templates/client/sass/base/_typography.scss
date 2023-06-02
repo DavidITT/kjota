@@ -111,9 +111,9 @@ h5.widget-title {
 
 .text-style-1 {
   position: relative;
-  &::after {    
+  &::after {
     content: "";
-    background-color: #ffdabf;
+    background-color: $color-brand;
     height: 20%;
     width: 110%;
     display: block;

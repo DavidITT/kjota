@@ -60,7 +60,7 @@
                         <li><a href="#">Delivery Information</a></li>
                         <li><a href="#">Politicas de privacidad</a></li>
                         <li><a href="#">Terminos &amp; Condiciones</a></li>
-                        <li><a href="#">Contacto</a></li>
+                        <li><a href="{{route('contact')}}">Contacto</a></li>
                         <li><a href="#">Soporte</a></li>
                     </ul>
                 </div>

@@ -47,7 +47,8 @@
     @include('client.template.footer')
 </div>
 
-<script src="{{ mix('js/app.js') }}"></script>
+<script src="{{ asset('js/app.js') }}"></script>
+
 <!-- Vendor JS-->
 <script src="{{ asset('assets/client/js/vendor/modernizr-3.6.0.min.js') }}"></script>
 <script src="{{ asset('assets/client/js/vendor/jquery-3.6.0.min.js') }}"></script>
@@ -72,7 +73,6 @@
 <!-- Template  JS -->
 <script src="{{ asset('assets/client/js/main.js?v=3.4') }}"></script>
 <script src="{{ asset('assets/client/js/shop.js?v=3.4') }}"></script>
-
 
 </body>
 

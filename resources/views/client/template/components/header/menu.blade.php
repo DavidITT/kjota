@@ -45,7 +45,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="page-contact.html">Contacto</a>
+                                <a href="{{route('contact')}}">Contacto</a>
                             </li>
                             <li>
                                 <a href="page-contact.html">Mi Cuenta</a>

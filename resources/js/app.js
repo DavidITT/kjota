@@ -5,6 +5,5 @@ import store from './client/store'
 const app = createApp({}).use(store)
 
 //Client Components
-app.component('hello-world', require('./client/HelloWorld.vue').default);
-
+app.component('branch-map', require('./client/modules/contact/MapSection.vue').default);
 app.mount('#app')

@@ -52,7 +52,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="index.html">Contacto</a>
+                            <a href="{{route('contact')}}">Contacto</a>
                         </li>
                         <li>
                             <a href="index.html">Mi Cuenta</a>
