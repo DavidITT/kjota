@@ -2,9 +2,9 @@
     <section class="pt-50 pb-50">
         <div class="container">
 
-            <Map :branch="branch" :srcMap="srcMap"/>
+            <Map :branch="branch" :srcMap="srcMap" id="branch-map"/>
 
-            <div class="d-flex flex-wrap flex-md-row flex-lg-row">
+            <div class="d-flex flex-wrap flex-column flex-md-row">
                 <div class="col-md-4 mb-4">
                     <h4 class="mb-15 text-brand">Sucursal Tollocan</h4>
                     P.º Tollocan 319-A, Alvaro Obregon <br>
@@ -98,6 +98,7 @@ export default {
             branch,
             srcMap,
             onViewMap: (val) => branch.value = val
+
         }
     }
 }
