@@ -12,7 +12,7 @@
                                 <a class="active" href="{{route('home')}}">Home</a>
                             </li>
                             <li>
-                                <a href="page-about.html">Nosotros</a>
+                                <a href="{{route('about')}}">Nosotros</a>
                             </li>
                             <li><a href="shop-grid-right.html">Categorias <i class="fi-rs-angle-down"></i></a>
                                 <ul class="sub-menu">

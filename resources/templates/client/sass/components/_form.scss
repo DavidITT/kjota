@@ -199,10 +199,16 @@ textarea {
 				background-color: black !important;
 			}
 		}
+        .input-style{
+            background-color: white;
+        }
+        .textarea-style{
+            background-color: white;
+        }
 	}
 }
 .form-group {
-	margin-bottom: 1rem;
+	margin-bottom: white;
 	input {
 		background: #fff;
 		border: 1px solid #e2e9e1;
@@ -214,7 +220,7 @@ textarea {
 		color: #1a1a1a;
 		width: 100%;
 		&:focus {
-			background: transparent;
+			background: white;
 			border-color: #e2e9e1;
 		}
 	}
@@ -430,7 +436,7 @@ label {
 		min-height: 200px;
 		border-radius: 4px;
 		&:focus {
-			background: transparent;
+			background-color: white;
 			outline: none !important;
 			-webkit-box-shadow: none;
 			box-shadow: none;

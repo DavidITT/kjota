@@ -7,8 +7,8 @@
             <div class="d-flex flex-wrap flex-column flex-md-row">
                 <div class="col-md-4 mb-4">
                     <h4 class="mb-15 text-brand">Sucursal Tollocan</h4>
-                    P.º Tollocan 319-A, Alvaro Obregon <br>
-                    52100 San Mateo Atenco, Méx. <br>
+                    Av. Paseo Tollocan 321, Alvaro Obregon <br>
+                    52105, San Mateo Atenco, Méx. <br>
                     <abbr title="Phone">Telefono:</abbr> 01 728 690 1794<br>
                     <abbr title="Phone">Telefono:</abbr> 01 728 690 9499<br>
                     <button @click="onViewMap('Tollocan')" type="button"
@@ -80,17 +80,18 @@ export default {
                     srcMap.value = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2236.886328304762!2d-99.21830818280395!3d19.45645540744735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d202413ac1e673%3A0x666397235f1e69b2!2sKjota!5e0!3m2!1ses-419!2smx!4v1685650319965!5m2!1ses-419!2smx'
                     break;
                 case 'Tollocan':
-                    srcMap.value = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d941.4809750159382!2d-99.55852456551999!3d19.28567530452051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8ac5bca70285%3A0x320293f493621bf3!2sKjota!5e0!3m2!1ses-419!2smx!4v1685659689870!5m2!1ses-419!2smx'
+                    srcMap.value = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d941.4810681157093!2d-99.55941750944595!3d19.285659112610013!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8ac5bb0cf197%3A0xd6b7eaaaa35691e7!2sKJ%20Suc%20Tollocan!5e0!3m2!1ses-419!2smx!4v1685996824301!5m2!1ses-419!2smx'
                     break;
                 case 'La Viga':
                     srcMap.value = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.9404548505975!2d-99.1235828058053!3d19.379463194765535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fe675dbd3ee5%3A0xd88398ac865bbe9d!2sCalz.%20de%20la%20Viga%201183%2C%20Militar%20Marte%2C%20Iztacalco%2C%2008840%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1685659930258!5m2!1ses-419!2smx'
                     break;
                 case 'El Olivo':
-                    srcMap.value = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.519126024821!2d-99.27963652397281!3d19.389963642039568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2012d686f5671%3A0x3cebec99e0633b24!2sLomas%20de%20San%20Fernando%20206%2C%20El%20Olivo%2C%2052789%20Naucalpan%20de%20Ju%C3%A1rez%2C%20M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1685659994641!5m2!1ses-419!2smx'
+                    srcMap.value = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1582.3664904748505!2d-99.27788615965858!3d19.38979702272373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2011a91fee347%3A0x1ed1381f6fa463a!2sKJ%20Cajas%20de%20cart%C3%B3n!5e0!3m2!1ses-419!2smx!4v1685996918915!5m2!1ses-419!2smx'
                     break;
                 case 'Villa':
                     srcMap.value = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d943.3916464347712!2d-99.646324!3d18.950569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd97d67e9e8e63%3A0x1a12670b1ad72ae9!2sEmpaques%20De%20Cart%C3%B3n%20K%20J!5e0!3m2!1ses-419!2smx!4v1685727781138!5m2!1ses-419!2smx'
                     break;
+
             }
         })
 

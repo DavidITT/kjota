@@ -20,3 +20,8 @@ Route::get('/', function () {
 Route::get('/contacto', function () {
     return view('client.contact.index');
 })->name('contact');
+
+Route::get('/nosotros', function () {
+    return view('client.about.index');
+})->name('about');
+

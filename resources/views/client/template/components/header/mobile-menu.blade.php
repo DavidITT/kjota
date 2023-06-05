@@ -26,7 +26,7 @@
                             <a href="{{route('home')}}">Home</a>
                         </li>
                         <li>
-                            <a href="index.html">Nosotros</a>
+                            <a href="{{route('about')}}">Nosotros</a>
                         </li>
                         <li class="menu-item-has-children"><span class="menu-expand"></span><a href="index.html">Categorias</a>
                             <ul class="dropdown">
