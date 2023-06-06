@@ -24,8 +24,8 @@
             <div class="col-xl-3 col-lg-4">
                 <div class="header-info header-info-right">
                     <ul>
-                        <li><i class="fi-rs-user"></i><a href="page-login-register.html">Iniciar Sesión</a></li>
-                        <li><a href="page-login-register.html">Registrarse</a></li>
+                        <li><i class="fi-rs-user"></i><a href="{{route('login')}}">Iniciar Sesión</a></li>
+                        <li><a href="{{route('register')}}">Registrarse</a></li>
                     </ul>
                 </div>
             </div>

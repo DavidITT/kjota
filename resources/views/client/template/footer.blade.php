@@ -67,7 +67,8 @@
                 <div class="col-lg-2  col-md-3">
                     <h5 class="widget-title wow fadeIn animated">Mi Cuenta</h5>
                     <ul class="footer-list wow fadeIn animated">
-                        <li><a href="#">Iniciar Sesión</a></li>
+                        <li><a href="{{route('login')}}">Iniciar Sesión</a></li>
+                        <li><a href="{{route('register')}}">Registrarse</a></li>
                         <li><a href="#">Cerrar Sesión</a></li>
                         <li><a href="#">Ver Carrito</a></li>
                         <li><a href="#">Lista de deseos</a></li>

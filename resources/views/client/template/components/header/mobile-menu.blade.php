@@ -63,8 +63,9 @@
             </div>
             <div class="mobile-header-info-wrap mobile-header-border">
                 <div class="single-mobile-header-info d-flex">
-                    <a class="mr-5" href="page-login-register.html">Iniciar Sesión </a> /
-                    <a class="ml-5" href="page-login-register.html"> Registrarse </a>
+                    <a class="mr-5" href="{{route('login')}}">Iniciar Sesión </a> /
+                    <a class="ml-5" href="{{route('register')}}"> Registrarse </a>
+                    <a class="ml-5" href="#logout"> Cerrar Sesión </a>
                 </div>
                 <div class="single-mobile-header-info">
                     <a target="_blank" href="https://api.whatsapp.com/send?phone=5215574312004&amp;text=Hola,%20me%20gustar&iacute;a%20obtener%20m&aacute;s%20informaci&oacute;n">(+52) 1 55 7431 2004</a>
