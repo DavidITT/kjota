@@ -74,6 +74,16 @@ Route::get('/carrito', function () {
 Route::get('/perfil', [AccountController::class, 'index'])->name('account');
 
 
+/*
+|--------------------------------------------------------------------------
+| 404 Page Error
+|--------------------------------------------------------------------------
+*/
+Route::fallback(function () {
+    return view('client.errors.404');
+});
+
+
 
 
 
