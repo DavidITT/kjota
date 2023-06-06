@@ -241,6 +241,13 @@
 	.mobile-promotion {
 		display: inline-block;
 	}
+    .upload-image{
+        figcaption{
+            position: absolute;
+            bottom: 0;
+            right: 34%;
+        }
+    }
 }
 /*Mobile landscape*/
 @media only screen and (min-width:576px) and (max-width:767px){
@@ -351,6 +358,13 @@
 	.loop-grid.pr-30 {
 		padding-right: 0 !important;
 	}
+    .upload-image{
+        figcaption{
+            position: absolute;
+            bottom: 0;
+            right: 33%;
+        }
+    }
 }
 /*Desktop*/
 @media only screen and (min-width:992px) and (max-width:1199px){
@@ -494,6 +508,14 @@
 			height: 500px;
 		}
 	}
+
+    .upload-image{
+        figcaption{
+            position: absolute;
+            bottom: 0;
+            right: 10%;
+        }
+    }
 
 }
 /*Wide screen*/
@@ -782,6 +804,14 @@
 	}
 	.related-products .product-cart-wrap {margin-bottom: 30px;}
 	.mb-sm-15 {margin-bottom: 15px;}
+
+    .upload-image{
+        figcaption{
+            position: absolute;
+            bottom: 2%;
+            right: 30%;
+        }
+    }
 }
 
 /*phone landscape*/

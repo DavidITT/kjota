@@ -65,3 +65,13 @@ Route::get('/carrito', function () {
     return view('client.shopping-cart.index');
 })->name('shopping-cart');
 
+/*
+|--------------------------------------------------------------------------
+| Account
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/perfil', function () {
+    return view('client.account.index');
+})->name('account');
+

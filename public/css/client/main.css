@@ -1837,8 +1837,7 @@ label {
 }
 
 .dashboard-menu {
-  border: 1px solid #e2e9e1;
-  border-radius: 5px;
+  border-bottom: 1px solid #e2e9e1;
   overflow: hidden;
 }
 .dashboard-menu ul {
@@ -2468,6 +2467,22 @@ table .product-thumbnail img {
   right: 30px;
   top: 30px;
   z-index: 2;
+}
+
+.upload-image figure {
+  position: relative;
+}
+.upload-image figure i {
+  color: white;
+  font-size: 25px;
+}
+.upload-image figcaption {
+  position: absolute;
+  bottom: 5%;
+  right: 17%;
+}
+.upload-image figcaption input {
+  display: none;
 }
 
 /*COMPONENTS -> BANNERS*/
@@ -8070,6 +8085,11 @@ span.fi-rs-apps {
   .mobile-promotion {
     display: inline-block;
   }
+  .upload-image figcaption {
+    position: absolute;
+    bottom: 0;
+    right: 34%;
+  }
 }
 /*Mobile landscape*/
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -8160,6 +8180,11 @@ span.fi-rs-apps {
   .loop-grid.pr-30 {
     padding-right: 0 !important;
   }
+  .upload-image figcaption {
+    position: absolute;
+    bottom: 0;
+    right: 33%;
+  }
 }
 /*Desktop*/
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -8239,6 +8264,11 @@ span.fi-rs-apps {
   }
   .hero-slider-1 .single-slider-img-1 {
     height: 500px;
+  }
+  .upload-image figcaption {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
   }
 }
 /*Wide screen*/
@@ -8542,6 +8572,11 @@ span.fi-rs-apps {
   }
   .mb-sm-15 {
     margin-bottom: 15px;
+  }
+  .upload-image figcaption {
+    position: absolute;
+    bottom: 2%;
+    right: 30%;
   }
 }
 /*phone landscape*/
