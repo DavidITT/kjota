@@ -69,12 +69,11 @@
                     <ul class="footer-list wow fadeIn animated">
                         <li><a href="{{route('login')}}">Iniciar Sesión</a></li>
                         <li><a href="{{route('register')}}">Registrarse</a></li>
-                        <li><a href="#">Cerrar Sesión</a></li>
+                        <li><a href="{{route('account')}}">Mi cuenta</a></li>
                         <li><a href="{{route('shopping-cart')}}">Ver Carrito</a></li>
+                        <li><a href="{{ route('account', ['tab' => 'orders']) }}" class="mb-0 mb-5 mb-md-0">Mis Ordenes</a></li>
+                        <li><a href="{{ route('account', ['tab' => 'tracking']) }}">Seguimiento</a></li>
                         <li><a href="#">Lista de deseos</a></li>
-                        <li><a href="#">Seguir mi orden</a></li>
-                        <li><a href="#">Ayuda</a></li>
-                        <li><a href="#" class="mb-0 mb-5 mb-md-0">Mis Compras</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4">

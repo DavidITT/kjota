@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <h5 class="mb-0">Seguimiento de pedidos</h5>
+        <h5 class="mb-0">Rastrear pedido</h5>
     </div>
     <div class="card-body contact-from-area">
         <p>Para rastrear su pedido, ingrese su ID de pedido en el cuadro a continuación y presione el botón "Rastrear".</p>

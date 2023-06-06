@@ -54,8 +54,11 @@
                         <li>
                             <a href="{{route('contact')}}">Contacto</a>
                         </li>
-                        <li>
-                            <a href="index.html">Mi Cuenta</a>
+                        <li class="menu-item-has-children"><span class="menu-expand"></span><a href="{{ route('account') }}">Mi Cuenta</a>
+                            <ul class="dropdown">
+                                <li><a href="{{ route('account', ['tab' => 'orders']) }}">Mis Ordenes</a></li>
+                                <li><a href="{{ route('account', ['tab' => 'tracking']) }}">Rastreo</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>

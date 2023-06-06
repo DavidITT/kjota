@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Client\AccountController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -70,8 +71,9 @@ Route::get('/carrito', function () {
 | Account
 |--------------------------------------------------------------------------
 */
+Route::get('/perfil', [AccountController::class, 'index'])->name('account');
 
-Route::get('/perfil', function () {
-    return view('client.account.index');
-})->name('account');
+
+
+
 

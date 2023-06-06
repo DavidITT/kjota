@@ -48,10 +48,10 @@
                                 <a href="{{route('contact')}}">Contacto</a>
                             </li>
                             <li>
-                                <a href="page-contact.html">Mi Cuenta</a>
+                                <a href="{{route('account')}}">Mi Cuenta</a>
                             </li>
                             <li>
-                                <a href="page-contact.html">Seguimiento</a>
+                                <a href="{{ route('account', ['tab' => 'tracking']) }}">Seguimiento</a>
                             </li>
                         </ul>
                     </nav>
