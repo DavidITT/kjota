@@ -5,7 +5,7 @@
         <section class="pt-75 pb-80">
             <div class="card">
                 <div class="row mx-0">
-                    <div class="col-md-3 px-0 border-end">
+                    <div class="col-12 col-sm-4 col-lg-3 px-0 border-end">
                         <div class="dashboard-menu">
                             <ul class="nav flex-column" role="tablist">
                                 <li class="nav-item">
@@ -23,7 +23,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-9 mtb-40">
+                    <div class="col-12 col-sm-8 col-lg-9 mtb-40">
                         <hr class="d-block d-md-none mb-40">
                         <div class="tab-content dashboard-content">
                             <div class="tab-pane fade active show" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
