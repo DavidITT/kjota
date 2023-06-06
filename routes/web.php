@@ -55,3 +55,13 @@ Route::get('/nosotros', function () {
     return view('client.about.index');
 })->name('about');
 
+/*
+|--------------------------------------------------------------------------
+| Shopping Cart
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/carrito', function () {
+    return view('client.shopping-cart.index');
+})->name('shopping-cart');
+

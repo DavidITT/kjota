@@ -59,7 +59,7 @@
             </div>
             <div class="header-action-right d-block d-lg-none">
                 <div class="header-action-2">
-                    @include('client.shopping-cart.shopping-cart')
+                    @include('client.shopping-cart.shopping-cart-modal')
                     <div class="header-action-icon-2 d-block d-lg-none">
                         <div class="burger-icon burger-icon-white">
                             <span class="burger-icon-top"></span>

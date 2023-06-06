@@ -783,7 +783,8 @@
 					}
 				}
 				&:hover {
-					background-color: $color-brand-dark;
+                    border: 2px solid $color-body;
+					background-color: $color-body;
 				}
 			}
 

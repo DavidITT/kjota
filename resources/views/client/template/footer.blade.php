@@ -70,7 +70,7 @@
                         <li><a href="{{route('login')}}">Iniciar Sesión</a></li>
                         <li><a href="{{route('register')}}">Registrarse</a></li>
                         <li><a href="#">Cerrar Sesión</a></li>
-                        <li><a href="#">Ver Carrito</a></li>
+                        <li><a href="{{route('shopping-cart')}}">Ver Carrito</a></li>
                         <li><a href="#">Lista de deseos</a></li>
                         <li><a href="#">Seguir mi orden</a></li>
                         <li><a href="#">Ayuda</a></li>

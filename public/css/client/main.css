@@ -4766,7 +4766,8 @@ h6.post-title {
   color: #ffffff;
 }
 .cart-dropdown-wrap .shopping-cart-footer .shopping-cart-button a:hover {
-  background-color: #FFE82C;
+  border: 2px solid #161c27;
+  background-color: #161c27;
 }
 
 .sticky-bar.stick {
