@@ -2931,12 +2931,12 @@ table .product-thumbnail img {
   height: 40px;
   line-height: 44px;
   border-radius: 50px;
-  background-color: #e8f6ea;
+  background-color: #FFE82C;
   text-align: center;
   margin-right: 3px;
   position: relative;
   display: inline-block;
-  border: 1px solid #cce7d0;
+  border: 1px solid #FFE82C;
 }
 .product-cart-wrap .product-action-1 button.small, .product-cart-wrap .product-action-1 a.action-btn.small {
   width: 32px;

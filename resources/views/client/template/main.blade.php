@@ -32,6 +32,8 @@
     @include('client.template.navbar')
     @yield('content')
     @include('client.template.footer')
+
+    @include('client.home.components.modals.quickview-product-modal')
 </div>
 
 <script src="{{ asset('js/app.js') }}"></script>

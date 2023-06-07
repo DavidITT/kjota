@@ -18,7 +18,7 @@
                                 <ul class="sub-menu">
                                     <li><a href="#">Cajas<i class="fi-rs-angle-right"></i></a>
                                         <ul class="level-menu">
-                                            <li><a href="shop-product-right.html">Cajas de linea</a></li>
+                                            <li><a href="{{  route('category.show', ['category' => 'cajas-de-linea']) }}">Cajas de linea</a></li>
                                             <li><a href="shop-product-left.html">Cajas delivery</a></li>
                                             <li><a href="shop-product-full.html">Cajas de plastico</a></li>
                                         </ul>

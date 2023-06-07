@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Client\AccountController;
+use App\Http\Controllers\Client\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -73,15 +74,22 @@ Route::get('/carrito', function () {
 */
 Route::get('/perfil', [AccountController::class, 'index'])->name('account');
 
+/*
+|--------------------------------------------------------------------------
+| Categories
+|--------------------------------------------------------------------------
+*/
+Route::get('/categoria/{category}', [CategoryController::class, 'show'])->name('category.show');
+
 
 /*
 |--------------------------------------------------------------------------
 | 404 Page Error
 |--------------------------------------------------------------------------
 */
-Route::fallback(function () {
+/*Route::fallback(function () {
     return view('client.errors.404');
-});
+});*/
 
 
 

@@ -28,7 +28,7 @@
                         <li>
                             <a href="{{route('about')}}">Nosotros</a>
                         </li>
-                        <li class="menu-item-has-children"><span class="menu-expand"></span><a href="index.html">Categorias</a>
+                        <li class="menu-item-has-children"><span class="menu-expand"></span><a href="{{  route('category.show', ['category' => 'cajas-de-linea']) }}">Categorias</a>
                             <ul class="dropdown">
                                 <li><a href="">Cartón corrugado</a></li>
                                 <li><a href="">Esquineros</a></li>

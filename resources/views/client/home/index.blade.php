@@ -43,8 +43,6 @@
             </div>
         </section>
     </main>
-
-    @include('client.home.components.modals.quickview-product-modal')
 @endsection
 
 
