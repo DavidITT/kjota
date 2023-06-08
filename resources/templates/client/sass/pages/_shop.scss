@@ -77,12 +77,13 @@
 			height: 40px;
 			line-height: 44px;
 			border-radius: 50px;
-			background-color: $color-brand-dark;
+			background-color: $color-primary;
 			text-align: center;
 			margin-right: 3px;
 			position: relative;
 			display: inline-block;
-			border: 1px solid $color-brand-dark;
+			border: 1px solid $color-primary;
+            color:white;
 
 			&.small {
 				width: 32px;
