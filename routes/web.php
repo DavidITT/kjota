@@ -50,6 +50,24 @@ Route::get('/contacto', function () {
 
 /*
 |--------------------------------------------------------------------------
+| Information Pages
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/terminos-y-condiciones', function () {
+    return view('client.information.terms-and-conditions');
+})->name('terms-and-conditions');
+
+Route::get('/politicas-de-privacidad', function () {
+    return view('client.information.privacy-policies');
+})->name('privacy-policies');
+
+Route::get('/ayuda', function () {
+    return view('client.information.help');
+})->name('help');
+
+/*
+|--------------------------------------------------------------------------
 | About Us
 |--------------------------------------------------------------------------
 */

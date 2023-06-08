@@ -57,11 +57,10 @@
                     <h5 class="widget-title wow fadeIn animated">Nosotros</h5>
                     <ul class="footer-list wow fadeIn animated mb-sm-5 mb-md-0">
                         <li><a href="{{route('about')}}">Acerca de nosotros</a></li>
-                        <li><a href="#">Delivery Information</a></li>
-                        <li><a href="#">Politicas de privacidad</a></li>
-                        <li><a href="#">Terminos &amp; Condiciones</a></li>
+                        <li><a href="{{route('privacy-policies')}}">Politicas de privacidad</a></li>
+                        <li><a href="{{route('terms-and-conditions')}}">Terminos &amp; Condiciones</a></li>
                         <li><a href="{{route('contact')}}">Contacto</a></li>
-                        <li><a href="#">Soporte</a></li>
+                        <li><a href="{{route('help')}}">Ayuda</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2  col-md-3">
