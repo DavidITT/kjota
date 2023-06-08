@@ -14,7 +14,7 @@
                             <li>
                                 <a href="{{route('about')}}">Nosotros</a>
                             </li>
-                            <li><a href="shop-grid-right.html">Categorias <i class="fi-rs-angle-down"></i></a>
+                            <li><a href="{{  route('category.show', ['category' => 'Cajas de Linea']) }}">Categorias <i class="fi-rs-angle-down"></i></a>
                                 <ul class="sub-menu">
                                     <li><a href="#">Cajas<i class="fi-rs-angle-right"></i></a>
                                         <ul class="level-menu">

@@ -5,7 +5,7 @@
         <section class="mt-50 mb-50">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-9">
+                    <div class="col-lg-9 mb-30">
                         <div class="product-detail accordion-detail">
                             <div class="row mb-50">
                                 <div class="col-md-6 col-sm-12 col-xs-12">
@@ -114,16 +114,8 @@
                     </div>
                     <div class="col-lg-3 primary-sidebar sticky-sidebar">
                         <div class="widget-category mb-30">
-                            <h5 class="section-title style-1 mb-30 wow fadeIn animated">Category</h5>
-                            <ul class="categories">
-                                <li><a href="shop-grid-right.html">Shoes & Bags</a></li>
-                                <li><a href="shop-grid-right.html">Blouses & Shirts</a></li>
-                                <li><a href="shop-grid-right.html">Dresses</a></li>
-                                <li><a href="shop-grid-right.html">Swimwear</a></li>
-                                <li><a href="shop-grid-right.html">Beauty</a></li>
-                                <li><a href="shop-grid-right.html">Jewelry & Watch</a></li>
-                                <li><a href="shop-grid-right.html">Accessories</a></li>
-                            </ul>
+                            <h5 class="section-title style-1 mb-30 wow fadeIn animated">Categorias</h5>
+                            @include('client.general_components.categories-list')
                         </div>
                     </div>
                 </div>
