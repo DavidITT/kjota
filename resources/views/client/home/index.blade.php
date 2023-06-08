@@ -23,8 +23,8 @@
 
         <section class="section-padding mb-50">
             <div class="container wow fadeIn animated">
-                <h3 class="section-title mb-20"><span>Nuevos</span> Productos</h3>
-                @include('client.home.components.new-products-carousel')
+                <h3 class="section-title mb-20"><span>Productos</span> Populares</h3>
+                @include('client.home.components.popular-products-carousel')
             </div>
         </section>
 
