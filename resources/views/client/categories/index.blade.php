@@ -58,7 +58,7 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
+                                            <a href="{{  route('product.show', ['product' => 'Arcon 1']) }}">
                                                 <img class="default-img"
                                                      src="{{asset('assets/client/imgs/shop/products/arcon-1.jpg')}}"
                                                      alt="">
@@ -82,7 +82,7 @@
                                         <div class="product-category">
                                             <a href="shop-grid-right.html">Cajas de linea</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">Arcon 1</a></h2>
+                                        <h2><a href="{{  route('product.show', ['product' => 'Arcon 1']) }}">Arcon 1</a></h2>
                                         <div class="product-price">
                                             <span>$238.85 </span>
                                             <span class="old-price">$245.8</span>
@@ -98,7 +98,7 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
+                                            <a href="{{  route('product.show', ['product' => 'Caja Pastel']) }}">
                                                 <img class="default-img"
                                                      src="{{asset('assets/client/imgs/shop/products/caja-pastel.jpg')}}"
                                                      alt="">
@@ -138,7 +138,7 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
+                                            <a href="{{  route('product.show', ['product' => 'Caja Cerveza']) }}">
                                                 <img class="default-img"
                                                      src="{{asset('assets/client/imgs/shop/products/kj-cerveza.jpg')}}"
                                                      alt="">
@@ -162,7 +162,7 @@
                                         <div class="product-category">
                                             <a href="shop-grid-right.html">Cajas de linea</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">KJ Cerveza</a></h2>
+                                        <h2><a href="{{  route('product.show', ['product' => 'Caja Cerveza']) }}">KJ Cerveza</a></h2>
                                         <div class="product-price">
                                             <span>$238.85 </span>
                                             <span class="old-price">$245.8</span>
@@ -178,7 +178,7 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
+                                            <a href="{{  route('product.show', ['product' => 'KJ Lonchera']) }}">
                                                 <img class="default-img"
                                                      src="{{asset('assets/client/imgs/shop/products/kj-lonchera.jpg')}}"
                                                      alt="">
@@ -202,7 +202,7 @@
                                         <div class="product-category">
                                             <a href="shop-grid-right.html">Cajas de linea</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">KJ Lonchera</a></h2>
+                                        <h2><a href="{{  route('product.show', ['product' => 'KJ Lonchera']) }}">KJ Lonchera</a></h2>
                                         <div class="product-price">
                                             <span>$238.85 </span>
                                             <span class="old-price">$245.8</span>
@@ -218,7 +218,7 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
+                                            <a href="{{  route('product.show', ['product' => 'KR.2']) }}">
                                                 <img class="default-img"
                                                      src="{{asset('assets/client/imgs/shop/products/kr.2.jpg')}}"
                                                      alt="">
@@ -242,7 +242,7 @@
                                         <div class="product-category">
                                             <a href="shop-grid-right.html">Cajas de linea</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">KR.2</a></h2>
+                                        <h2><a href="{{  route('product.show', ['product' => 'KR.2']) }}">KR.2</a></h2>
                                         <div class="product-price">
                                             <span>$238.85 </span>
                                             <span class="old-price">$245.8</span>
@@ -258,7 +258,7 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
+                                            <a href="{{  route('product.show', ['product' => 'KS4']) }}">
                                                 <img class="default-img"
                                                      src="{{asset('assets/client/imgs/shop/products/KS-4-1.jpg')}}"
                                                      alt="">
@@ -282,7 +282,7 @@
                                         <div class="product-category">
                                             <a href="shop-grid-right.html">Cajas de linea</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">KS-4</a></h2>
+                                        <h2><a href="{{  route('product.show', ['product' => 'KS4']) }}">KS-4</a></h2>
                                         <div class="product-price">
                                             <span>$238.85 </span>
                                             <span class="old-price">$245.8</span>
@@ -298,7 +298,7 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
+                                            <a href="{{  route('product.show', ['product' => 'KS4-INJ']) }}">
                                                 <img class="default-img"
                                                      src="{{asset('assets/client/imgs/shop/products/ks-inj-14.jpg')}}"
                                                      alt="">
@@ -322,7 +322,7 @@
                                         <div class="product-category">
                                             <a href="shop-grid-right.html">Cajas de linea</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">KS-4 Injerto</a></h2>
+                                        <h2><a href="{{  route('product.show', ['product' => 'KS4-INJ']) }}">KS-4 Injerto</a></h2>
                                         <div class="product-price">
                                             <span>$238.85 </span>
                                             <span class="old-price">$245.8</span>
@@ -338,7 +338,7 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
+                                            <a href="{{  route('product.show', ['product' => 'Pizza Jumbo']) }}">
                                                 <img class="default-img"
                                                      src="{{asset('assets/client/imgs/shop/products/pizza-jum.jpg')}}"
                                                      alt="">
@@ -362,7 +362,7 @@
                                         <div class="product-category">
                                             <a href="shop-grid-right.html">Cajas de linea</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">Pizza Jumbo</a></h2>
+                                        <h2><a href="{{  route('product.show', ['product' => 'Pizza Jumbo']) }}">Pizza Jumbo</a></h2>
                                         <div class="product-price">
                                             <span>$238.85 </span>
                                             <span class="old-price">$245.8</span>
@@ -378,7 +378,7 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
+                                            <a href="{{  route('product.show', ['product' => 'Sobre 1']) }}">
                                                 <img class="default-img"
                                                      src="{{asset('assets/client/imgs/shop/products/sobre-1.jpg')}}"
                                                      alt="">
@@ -402,7 +402,7 @@
                                         <div class="product-category">
                                             <a href="shop-grid-right.html">Cajas de linea</a>
                                         </div>
-                                        <h2><a href="shop-product-right.html">Sobre 1</a></h2>
+                                        <h2><a href="{{  route('product.show', ['product' => 'Sobre 1']) }}">Sobre 1</a></h2>
                                         <div class="product-price">
                                             <span>$238.85 </span>
                                             <span class="old-price">$245.8</span>
@@ -435,28 +435,28 @@
                         <div class="widget-category mb-30">
                             <h5 class="section-title style-1 mb-30 wow fadeIn animated">Categorias</h5>
                             <ul class="categories">
-                                <li><a href="{{  route('category.show', ['category' => 'cajas-de-linea']) }}">Cajas de linea</a></li>
-                                <li><a href="shop-product-left.html">Cajas delivery</a></li>
-                                <li><a href="shop-product-full.html">Cajas de plastico</a></li>
-                                <li><a href="">Cartón corrugado</a></li>
-                                <li><a href="">Esquineros</a></li>
-                                <li><a href="">Peliculas estirables</a></li>
-                                <li><a href="">Cintas adhesivas</a></li>
-                                <li><a href="">Papel Kraft</a></li>
-                                <li><a href="">Cacahuate</a></li>
-                                <li><a href="">Aire Sellado</a></li>
-                                <li><a href="">Archiveros</a></li>
-                                <li><a href="">Hogar</a></li>
-                                <li><a href="">Oficina</a></li>
-                                <li><a href="">Despachador de cinta</a></li>
-                                <li><a href="">Sobre acojinado</a></li>
-                                <li><a href="">Pepel Engomado</a></li>
-                                <li><a href="">Espuma de polietileno</a></li>
-                                <li><a href="">Etiquetas adheribles</a></li>
-                                <li><a href="">Fleje</a></li>
-                                <li><a href="">Hojas de cartón</a></li>
-                                <li><a href="">Papeleria</a></li>
-                                <li><a href="">Rafla</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Cajas de Linea']) }}">Cajas de linea</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Cajas Delivery']) }}">Cajas delivery</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Cajas de Plastico']) }}">Cajas de plastico</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Carton Corrugado']) }}">Cartón corrugado</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Esquineros']) }}">Esquineros</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Peliculas Estirables']) }}">Peliculas estirables</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Cintas Adhesivas']) }}">Cintas adhesivas</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Papel Kraft']) }}">Papel Kraft</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Cacahuate']) }}">Cacahuate</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Aire Sellado']) }}">Aire Sellado</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Archiveros']) }}">Archiveros</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Hogar']) }}">Hogar</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Oficina']) }}">Oficina</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Despachador de Cinta']) }}">Despachador de cinta</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Sobre Acojinado']) }}">Sobre acojinado</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Papel Engomado']) }}">Pepel Engomado</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Espuma de Polietileno']) }}">Espuma de polietileno</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Etiquetas Adheribles']) }}">Etiquetas adheribles</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Fleje']) }}">Fleje</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Hojas de cartón']) }}">Hojas de cartón</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Papeleria']) }}">Papeleria</a></li>
+                                <li><a href="{{  route('category.show', ['category' => 'Rafla']) }}">Rafla</a></li>
                             </ul>
                         </div>
                     </div>
