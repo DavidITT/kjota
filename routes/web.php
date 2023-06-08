@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Client\AccountController;
 use App\Http\Controllers\Client\CategoryController;
+use App\Http\Controllers\Client\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -80,6 +81,14 @@ Route::get('/perfil', [AccountController::class, 'index'])->name('account');
 |--------------------------------------------------------------------------
 */
 Route::get('/categoria/{category}', [CategoryController::class, 'show'])->name('category.show');
+
+/*
+|--------------------------------------------------------------------------
+| Products
+|--------------------------------------------------------------------------
+*/
+Route::get('/producto/{product}', [ProductController::class, 'show'])->name('product.show');
+
 
 
 /*
