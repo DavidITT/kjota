@@ -19,6 +19,7 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{asset('css/admin/admin-vendors.css')}}">
+    <link rel="stylesheet" href="{{asset('css/admin/material-icon-round.css')}}">
     <!-- Compile CSS -->
     <link rel="stylesheet" href="{{asset('css/admin/main.css')}}">
 </head>

@@ -50,7 +50,6 @@ mix.js('resources/js/admin.js', 'public/js/admin.js')
 
 mix.styles([
     'resources/templates/admin/css/vendors/bootstrap.css',
-    'resources/templates/admin/css/vendors/material-icon-round.css',
     'resources/templates/admin/css/vendors/normalize.css',
     'resources/templates/admin/css/vendors/perfect-scrollbar.css',
     'resources/templates/admin/css/vendors/select2.min.css',
