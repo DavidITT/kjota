@@ -20,8 +20,10 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{asset('css/admin/admin-vendors.css')}}">
     <link rel="stylesheet" href="{{asset('css/admin/material-icon-round.css')}}">
+
     <!-- Compile CSS -->
     <link rel="stylesheet" href="{{asset('css/admin/main.css')}}">
+
 </head>
 
 <body>
@@ -29,31 +31,29 @@
 <div id="admin-app">
     <div class="screen-overlay"></div>
     @include('admin.template.components.side-menu')
-    <div class="main-wrap">
+    <main class="main-wrap">
         @include('admin.template.components.navbar')
         <section class="content-main">
             @yield('content')
         </section>
         @include('admin.template.components.footer')
-    </div>
+    </main>
 </div>
-
 <script src="{{ asset('js/admin.js') }}"></script>
 
 <!-- Vendor JS-->
 
+<script src="{{ asset('assets/admin/js/vendors/chart.js') }}"></script>
 <script src="{{ asset('assets/admin/js/vendors/jquery-3.6.0.min.js') }}"></script>
 <script src="{{ asset('assets/admin/js/vendors/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('assets/client/js/vendor/jquery-migrate-3.3.0.min.js') }}"></script>
 <script src="{{ asset('assets/admin/js/vendors/select2.min.js') }}"></script>
 <script src="{{ asset('assets/admin/js/vendors/perfect-scrollbar.js') }}"></script>
 <script src="{{ asset('assets/admin/js/vendors/jquery.fullscreen.min.js') }}"></script>
-<script src="{{ asset('assets/admin/js/vendors/chart.js') }}"></script>
-
-<!-- Main Script -->
 
 <script src="{{ asset('assets/admin/js/main.js') }}" type="text/javascript"></script>
 <script src="{{ asset('assets/admin/js/custom-chart.js') }}" type="text/javascript"></script>
+
+
 
 </body>
 

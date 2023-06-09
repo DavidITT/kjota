@@ -70,7 +70,7 @@
             <div class="card mb-4">
                 <article class="card-body">
                     <h5 class="card-title">Sale statistics</h5>
-                    <canvas id="myChart" height="120px"></canvas>
+                    <canvas id="myChart" height="120"></canvas>
                 </article>
             </div>
             <div class="row">
@@ -81,7 +81,7 @@
                             <div class="new-member-list">
                                 <div class="d-flex align-items-center justify-content-between mb-4">
                                     <div class="d-flex align-items-center">
-                                        <img src="assets/imgs/people/avatar4.jpg" alt="" class="avatar">
+                                        <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200" alt="" class="avatar">
                                         <div>
                                             <h6>Patric Adams</h6>
                                             <p class="text-muted font-xs">
@@ -93,7 +93,7 @@
                                 </div>
                                 <div class="d-flex align-items-center justify-content-between mb-4">
                                     <div class="d-flex align-items-center">
-                                        <img src="assets/imgs/people/avatar2.jpg" alt="" class="avatar">
+                                        <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200" alt="" class="avatar">
                                         <div>
                                             <h6>Dilan Specter</h6>
                                             <p class="text-muted font-xs">
@@ -105,7 +105,7 @@
                                 </div>
                                 <div class="d-flex align-items-center justify-content-between mb-4">
                                     <div class="d-flex align-items-center">
-                                        <img src="assets/imgs/people/avatar3.jpg" alt="" class="avatar">
+                                        <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200" alt="" class="avatar">
                                         <div>
                                             <h6>Tomas Baker</h6>
                                             <p class="text-muted font-xs">
@@ -261,7 +261,7 @@
                     </div>
                 </div>
                 <div class="col-md-2 col-6">
-                    <input type="date" value="02.05.2022" class="form-control">
+                    <input type="date" value="" class="form-control">
                 </div>
                 <div class="col-md-2 col-6">
                     <div class="custom_select">
@@ -467,3 +467,4 @@
         </nav>
     </div>
 @endsection
+

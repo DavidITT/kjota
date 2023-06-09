@@ -29,16 +29,7 @@
                 <a href="#" class="requestfullscreen nav-link btn-icon"><i class="material-icons md-cast"></i></a>
             </li>
             <li class="dropdown nav-item">
-                <a class="dropdown-toggle" data-bs-toggle="dropdown" href="#" id="dropdownLanguage" aria-expanded="false"><i class="material-icons md-public"></i></a>
-                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownLanguage">
-                    <a class="dropdown-item text-brand" href="#"><img src="assets/imgs/theme/flag-us.png" alt="English">English</a>
-                    <a class="dropdown-item" href="#"><img src="assets/imgs/theme/flag-fr.png" alt="Français">Français</a>
-                    <a class="dropdown-item" href="#"><img src="assets/imgs/theme/flag-jp.png" alt="Français">日本語</a>
-                    <a class="dropdown-item" href="#"><img src="assets/imgs/theme/flag-cn.png" alt="Français">中国人</a>
-                </div>
-            </li>
-            <li class="dropdown nav-item">
-                <a class="dropdown-toggle" data-bs-toggle="dropdown" href="#" id="dropdownAccount" aria-expanded="false"> <img class="img-xs rounded-circle" src="assets/imgs/people/avatar2.jpg" alt="User"></a>
+                <a class="dropdown-toggle" data-bs-toggle="dropdown" href="#" id="dropdownAccount" aria-expanded="false"> <img class="img-xs rounded-circle" src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200" alt="User"></a>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownAccount">
                     <a class="dropdown-item" href="#"><i class="material-icons md-perm_identity"></i>Edit Profile</a>
                     <a class="dropdown-item" href="#"><i class="material-icons md-settings"></i>Account Settings</a>
