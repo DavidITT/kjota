@@ -37,7 +37,7 @@
                 </div>
                 <div class="header-action-right">
                     <div class="header-action-2">
-                        @include('client.shopping-cart.shopping-cart-modal')
+                        @include('client.general_components.shopping-cart-modal')
                     </div>
                 </div>
             </div>

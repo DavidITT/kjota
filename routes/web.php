@@ -78,13 +78,22 @@ Route::get('/nosotros', function () {
 
 /*
 |--------------------------------------------------------------------------
-| Shopping Cart
+| Shopping Cart and Checkout
 |--------------------------------------------------------------------------
 */
 
 Route::get('/carrito', function () {
-    return view('client.shopping-cart.index');
+    return view('client.checkout.cart');
 })->name('shopping-cart');
+
+Route::get('/checkout/shipping', function () {
+    return view('client.checkout.shipping');
+})->name('checkout.shipping');
+
+Route::get('/checkout/payment', function () {
+    return view('client.checkout.payment');
+})->name('checkout.payment');
+
 
 /*
 |--------------------------------------------------------------------------
