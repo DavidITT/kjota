@@ -11,6 +11,12 @@ const mix = require('laravel-mix');
  |
  */
 
+/*
+ |--------------------------------------------------------------------------
+ | Client
+ |--------------------------------------------------------------------------
+ */
+
 mix.js('resources/js/app.js', 'public/js')
     .vue();
 
@@ -32,6 +38,34 @@ mix.styles([
 mix.sass('resources/templates/client/sass/main.scss', 'public/css/client/main.css').options({
     processCssUrls: false
 });
+
+/*
+ |--------------------------------------------------------------------------
+ | Admin
+ |--------------------------------------------------------------------------
+ */
+
+mix.js('resources/js/admin.js', 'public/js/admin.js')
+    .vue();
+
+mix.styles([
+    'resources/templates/admin/css/vendors/bootstrap.css',
+    'resources/templates/admin/css/vendors/material-icon-round.css',
+    'resources/templates/admin/css/vendors/normalize.css',
+    'resources/templates/admin/css/vendors/perfect-scrollbar.css',
+    'resources/templates/admin/css/vendors/select2.min.css',
+], 'public/css/admin/admin-vendors.css');
+
+mix.sass('resources/templates/admin/sass/main.scss', 'public/css/admin/main.css').options({
+    processCssUrls: false
+});
+
+
+/*
+ |--------------------------------------------------------------------------
+ | Production mode
+ |--------------------------------------------------------------------------
+ */
 
 if (mix.inProduction()) {
     mix.version();

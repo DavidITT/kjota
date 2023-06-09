@@ -1,6 +1,9 @@
 {
     "/js/app.js": "/js/app.js",
+    "/js/admin.js": "/js/admin.js",
+    "/css/admin/main.css": "/css/admin/main.css",
     "/css/client/main.css": "/css/client/main.css",
     "/css/client/client-plugins.css": "/css/client/client-plugins.css",
-    "/css/client/client-vendors.css": "/css/client/client-vendors.css"
+    "/css/client/client-vendors.css": "/css/client/client-vendors.css",
+    "/css/admin/admin-vendors.css": "/css/admin/admin-vendors.css"
 }
