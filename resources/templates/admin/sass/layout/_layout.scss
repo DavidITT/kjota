@@ -41,12 +41,13 @@ body.offcanvas-active{
         justify-content:space-between;
         border-bottom: 1px solid #eee;
         min-height: 72px;
+        background-color: $brand-dark;
         .brand-wrap{
             padding-left: math.div($spacer,2);
             padding-right: math.div($spacer,2);
             display:inline-block;
         }
-        .logo{ max-width:120px; margin-top: 5px; min-width: 120px;}
+        .logo{ max-width:113px; min-width: 110px;}
     }
 
 }

@@ -723,7 +723,7 @@ b {
 
 .btn-light {
   background-color: transparent;
-  border-color: #c0dbd9;
+  border-color: #0056B4;
   box-shadow: none;
   padding: 0.5rem 0.95rem;
 }
@@ -3674,6 +3674,7 @@ body.offcanvas-active {
   justify-content: space-between;
   border-bottom: 1px solid #eee;
   min-height: 72px;
+  background-color: #FFE82C;
 }
 .navbar-aside .aside-top .brand-wrap {
   padding-left: 0.5rem;
@@ -3681,9 +3682,8 @@ body.offcanvas-active {
   display: inline-block;
 }
 .navbar-aside .aside-top .logo {
-  max-width: 120px;
-  margin-top: 5px;
-  min-width: 120px;
+  max-width: 113px;
+  min-width: 110px;
 }
 
 .main-header {

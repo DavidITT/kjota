@@ -1,6 +1,6 @@
 <aside class="navbar-aside" id="offcanvas_aside">
     <div class="aside-top">
-        <a href="index.html" class="brand-wrap">
+        <a href="{{route('admin.dashboard')}}" class="brand-wrap">
             <img src="{{ asset('assets/client/imgs/theme/logo.png')}}" class="logo" alt="Kjota Logo">
         </a>
         <div>
@@ -10,19 +10,17 @@
     <nav>
         <ul class="menu-aside">
             <li class="menu-item active">
-                <a class="menu-link" href="index.html"> <i class="icon material-icons md-home"></i>
+                <a class="menu-link" href="{{route('admin.dashboard')}}"> <i class="icon material-icons md-home"></i>
                     <span class="text">Dashboard</span>
                 </a>
             </li>
             <li class="menu-item has-submenu">
-                <a class="menu-link" href="page-products-list.html"> <i class="icon material-icons md-shopping_bag"></i>
+                <a class="menu-link" href="#"> <i class="icon material-icons md-shopping_bag"></i>
                     <span class="text">Products</span>
                 </a>
                 <div class="submenu">
-                    <a href="page-products-list.html">Product List</a>
-                    <a href="page-products-grid.html">Product grid</a>
-                    <a href="page-products-grid-2.html">Product grid 2</a>
-                    <a href="page-categories.html">Categories</a>
+                    <a href="{{route('admin.products.index')}}">Lista de Productos</a>
+                    <a href="page-categories.html">Categorias</a>
                 </div>
             </li>
             <li class="menu-item has-submenu">

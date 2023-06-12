@@ -18,7 +18,11 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .vue();
+    .vue({
+        compilerOptions: {
+            isCustomElement: (tag) => ['md-linedivider'].includes(tag),
+        },
+    });
 
 mix.styles([
     'resources/templates/client/css/plugins/animate.css',
@@ -46,7 +50,11 @@ mix.sass('resources/templates/client/sass/main.scss', 'public/css/client/main.cs
  */
 
 mix.js('resources/js/admin.js', 'public/js/admin.js')
-    .vue();
+    .vue({
+        compilerOptions: {
+            isCustomElement: (tag) => ['md-linedivider'].includes(tag),
+        },
+    });
 
 mix.styles([
     'resources/templates/admin/css/vendors/bootstrap.css',

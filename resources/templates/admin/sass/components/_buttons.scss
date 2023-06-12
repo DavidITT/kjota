@@ -1,4 +1,4 @@
-.btn {	
+.btn {
 	&.btn-primary {
 		font-size: 14px;
 		font-weight: 500;
@@ -50,7 +50,7 @@
 		i {
 			font-size: 11px;
 		}
-	}	
+	}
 }
 .btn-facebook{background-color: #405D9D; color:#fff; &:hover{color:#fff} }
 .btn-instagram{background-color:#E52D27 ; color:#fff; &:hover{color:#fff}}
@@ -66,9 +66,9 @@
 	&:focus{ box-shadow:none;}
 }
 
-.btn-light{ 
-	background-color:transparent; 
-	border-color:#c0dbd9;
+.btn-light{
+	background-color:transparent;
+	border-color:$brand;
 	box-shadow: none;
 	padding: 0.5rem 0.95rem;
 	&:hover {
@@ -79,7 +79,7 @@
 		}
 	}
 	i{ color:$gray-500; }
-	
+
 }
 .rounded {
 	border-radius: 4px !important;
@@ -91,7 +91,7 @@
 
 .btn-sm{
 	padding: 5px 10px;
-	i{ 
+	i{
 		font-size: 13px;
     	line-height: 0.7;
     	vertical-align: bottom;
