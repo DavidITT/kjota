@@ -18,6 +18,12 @@ app.component('product-list', require('./admin/modules/products/ProductList.vue'
 |--------------------------------------------------------------------------
 */
 app.component('category-list', require('./admin/modules/categories/CategoryList.vue').default);
+/*
+|--------------------------------------------------------------------------
+| Orders
+|--------------------------------------------------------------------------
+*/
+app.component('category-list', require('./admin/modules/orders/OrderList.vue').default);
 
 // Mount
 app.mount('#admin-app')

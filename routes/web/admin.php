@@ -19,6 +19,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/categories', function () {
         return view('admin.categories.index');
     })->name('categories.index');
+
+    Route::get('/orders', function () {
+        return view('admin.orders.index');
+    })->name('orders.index');
 });
 
 
