@@ -23,7 +23,7 @@ app.component('category-list', require('./admin/modules/categories/CategoryList.
 | Orders
 |--------------------------------------------------------------------------
 */
-app.component('category-list', require('./admin/modules/orders/OrderList.vue').default);
+app.component('order-list', require('./admin/modules/orders/OrderList.vue').default);
 
 // Mount
 app.mount('#admin-app')

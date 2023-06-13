@@ -28,7 +28,7 @@
                     <span class="text">Ordenes</span>
                 </a>
                 <div class="submenu">
-                    <a href="{{route('admin.categories.index')}}">Lista de ordenes</a>
+                    <a href="{{route('admin.orders.index')}}">Lista de ordenes</a>
                     <a href="page-invoice.html">Factura</a>
                 </div>
             </li>

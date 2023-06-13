@@ -1,7 +1,7 @@
 <template>
     <div class="content-header">
         <div>
-            <h2 class="content-title card-title">Lista de Ordenes</h2>
+            <h2 class="content-title card-title">Ordenes</h2>
             <p>Listado de ordenes de compra.</p>
         </div>
         <div>
