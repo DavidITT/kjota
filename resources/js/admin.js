@@ -25,5 +25,12 @@ app.component('category-list', require('./admin/modules/categories/CategoryList.
 */
 app.component('order-list', require('./admin/modules/orders/OrderList.vue').default);
 
+/*
+|--------------------------------------------------------------------------
+| Sales
+|--------------------------------------------------------------------------
+*/
+app.component('sale-list', require('./admin/modules/sales/SalesList.vue').default);
+
 // Mount
 app.mount('#admin-app')

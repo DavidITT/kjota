@@ -32,15 +32,10 @@
                     <a href="page-invoice.html">Factura</a>
                 </div>
             </li>
-            <li class="menu-item has-submenu">
-                <a class="menu-link" href="page-sellers-cards.html"> <i class="icon material-icons md-store"></i>
-                    <span class="text">Sellers</span>
+            <li class="menu-item active">
+                <a class="menu-link" href="{{route('admin.sales.index')}}"> <i class="icon material-icons md-store"></i>
+                    <span class="text">Ventas</span>
                 </a>
-                <div class="submenu">
-                    <a href="page-sellers-cards.html">Sellers cards</a>
-                    <a href="page-sellers-list.html">Sellers list</a>
-                    <a href="page-seller-detail.html">Seller profile</a>
-                </div>
             </li>
             <li class="menu-item has-submenu">
                 <a class="menu-link" href="page-form-product-1.html"> <i class="icon material-icons md-add_box"></i>

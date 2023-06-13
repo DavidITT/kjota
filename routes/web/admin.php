@@ -23,6 +23,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/orders', function () {
         return view('admin.orders.index');
     })->name('orders.index');
+
+    Route::get('/sales', function () {
+        return view('admin.sales.index');
+    })->name('sales.index');
 });
 
 
