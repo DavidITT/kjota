@@ -20,7 +20,7 @@
                 </a>
                 <div class="submenu">
                     <a href="{{route('admin.products.index')}}">Lista de Productos</a>
-                    <a href="page-categories.html">Categorias</a>
+                    <a href="{{route('admin.categories.index')}}">Categorias</a>
                 </div>
             </li>
             <li class="menu-item has-submenu">

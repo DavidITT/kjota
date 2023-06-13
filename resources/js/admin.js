@@ -12,6 +12,12 @@ const app = createApp({}).use(store)
 |--------------------------------------------------------------------------
 */
 app.component('product-list', require('./admin/modules/products/ProductList.vue').default);
+/*
+|--------------------------------------------------------------------------
+| Categories
+|--------------------------------------------------------------------------
+*/
+app.component('category-list', require('./admin/modules/categories/CategoryList.vue').default);
 
 // Mount
 app.mount('#admin-app')
