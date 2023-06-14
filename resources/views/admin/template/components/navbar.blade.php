@@ -31,13 +31,9 @@
             <li class="dropdown nav-item">
                 <a class="dropdown-toggle" data-bs-toggle="dropdown" href="#" id="dropdownAccount" aria-expanded="false"> <img class="img-xs rounded-circle" src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200" alt="User"></a>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownAccount">
-                    <a class="dropdown-item" href="#"><i class="material-icons md-perm_identity"></i>Edit Profile</a>
-                    <a class="dropdown-item" href="#"><i class="material-icons md-settings"></i>Account Settings</a>
-                    <a class="dropdown-item" href="#"><i class="material-icons md-account_balance_wallet"></i>Wallet</a>
-                    <a class="dropdown-item" href="#"><i class="material-icons md-receipt"></i>Billing</a>
-                    <a class="dropdown-item" href="#"><i class="material-icons md-help_outline"></i>Help center</a>
+                    <a class="dropdown-item" href="#"><i class="material-icons md-settings"></i>Configuración</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-danger" href="#"><i class="material-icons md-exit_to_app"></i>Logout</a>
+                    <a class="dropdown-item text-danger" href="#"><i class="material-icons md-exit_to_app"></i>Cerrar Sesion</a>
                 </div>
             </li>
         </ul>

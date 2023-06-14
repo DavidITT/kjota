@@ -17,7 +17,7 @@
                                 </div>
                             </div>
                             <figure class="single-thumbnail">
-                                <img src="{{ asset('assets/client/imgs/page/img-1.jpg') }}" alt="">
+                                <img src="{{ asset('assets/client/imgs/blog/blog-10.jpg') }}" alt="">
                             </figure>
                             <div class="single-content">
                                 <h4>1. Account Registering</h4>
