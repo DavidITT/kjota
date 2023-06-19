@@ -1,8 +1,10 @@
 <div class="header-action-icon-2">
+    @auth
     <a href="shop-wishlist.html">
         <img class="svgInject" alt="Evara" src="{{asset('assets/client/imgs/theme/icons/icon-heart.svg')}}">
         <span class="pro-count blue">4</span>
     </a>
+    @endif
 </div>
 <div class="header-action-icon-2">
     <a class="mini-cart-icon" href="{{route('shopping-cart')}}">

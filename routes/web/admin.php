@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-
 Route::prefix('admin')->name('admin.')->group(function () {
+
     Route::get('/login', function () {
         return view('admin.auth.login');
     })->name('login');
@@ -27,6 +27,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/sales', function () {
         return view('admin.sales.index');
     })->name('sales.index');
+
+
 });
 
 

@@ -6,7 +6,9 @@
                     <ul>
                         <li>
                             <i class="fa-brands fa-whatsapp"></i>
-                            <a target="_blank" href="https://api.whatsapp.com/send?phone=5215574312004&amp;text=Hola,%20me%20gustar&iacute;a%20obtener%20m&aacute;s%20informaci&oacute;n">(+52) 1 55 7431 2004</a>
+                            <a target="_blank"
+                               href="https://api.whatsapp.com/send?phone=5215574312004&amp;text=Hola,%20me%20gustar&iacute;a%20obtener%20m&aacute;s%20informaci&oacute;n">(+52)
+                                1 55 7431 2004</a>
                         </li>
                     </ul>
                 </div>
@@ -23,10 +25,22 @@
             </div>
             <div class="col-xl-3 col-lg-4">
                 <div class="header-info header-info-right">
-                    <ul>
-                        <li><i class="fi-rs-user"></i><a href="{{route('login')}}">Iniciar Sesión</a></li>
-                        <li><a href="{{route('register')}}">Registrarse</a></li>
-                    </ul>
+                    @auth
+                        <ul>
+                            <li><i class="fi-rs-user"></i> {{ Auth::user()->name }}</li>
+                            <li>
+                                <form method="POST" action="{{route('logout')}}">
+                                    @csrf
+                                    <a href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit();">Cerrar Sesión</a>
+                                </form>
+                            </li>
+                        </ul>
+                    @else
+                        <ul>
+                            <li><i class="fi-rs-user"></i><a href="{{route('login')}}">Iniciar Sesión</a></li>
+                            <li><a href="{{route('register')}}">Registrarse</a></li>
+                        </ul>
+                    @endif
                 </div>
             </div>
         </div>

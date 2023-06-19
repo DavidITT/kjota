@@ -22,24 +22,6 @@ Route::get('/', function () {
 
 /*
 |--------------------------------------------------------------------------
-| Auth Routes
-|--------------------------------------------------------------------------
-*/
-
-Route::get('/login', function () {
-    return view('client.auth.login');
-})->name('login');
-
-Route::get('/registro', function () {
-    return view('client.auth.register');
-})->name('register');
-
-Route::get('/recuperar-contraseña', function () {
-    return view('client.auth.forgot-password');
-})->name('forgot-password');
-
-/*
-|--------------------------------------------------------------------------
 | Contact
 |--------------------------------------------------------------------------
 */
@@ -100,7 +82,7 @@ Route::get('/checkout/payment', function () {
 | Account
 |--------------------------------------------------------------------------
 */
-Route::get('/perfil', [AccountController::class, 'index'])->name('account');
+Route::get('/perfil', [AccountController::class, 'index'])->name('account')->middleware(['verified']);
 
 /*
 |--------------------------------------------------------------------------

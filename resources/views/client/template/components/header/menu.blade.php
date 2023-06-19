@@ -75,12 +75,14 @@
                             <li>
                                 <a href="{{route('contact')}}">Contacto</a>
                             </li>
+                            @auth
                             <li>
                                 <a href="{{route('account')}}">Mi Cuenta</a>
                             </li>
                             <li>
                                 <a href="{{ route('account', ['tab' => 'tracking']) }}">Seguimiento</a>
                             </li>
+                            @endif
                         </ul>
                     </nav>
                 </div>
