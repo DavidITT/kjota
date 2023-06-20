@@ -24,32 +24,77 @@
                     <div class="contact-from-area padding-20-row-col wow FadeInUp">
                         <h3 class="mb-10 text-center">Escribenos</h3>
                         <p class="text-muted mb-30 text-center font-sm">Tus necesidades son nuestra prioridad.</p>
-                        <form class="contact-form-style text-center" id="contact-form" action="#" method="post">
+                        @if(Session::has('success'))
+                            <div class="alert alert-success">
+                                {{Session::get('success')}}
+                            </div>
+                        @endif
+                        <form class="contact-form-style text-center" id="contact-form"
+                              action="{{ route('contact.store') }}" method="post">
+                            @csrf
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
-                                    <div class="input-style mb-20">
-                                        <input name="name" placeholder="Nombre" type="text">
+                                    <div class="input-style">
+                                        <input value="{{old('name')}}" name="name" placeholder="Nombre" type="text"
+                                               class="{{ $errors->has('name') ? 'form-control is-invalid' : '' }}">
+                                    </div>
+                                    <div class="bg-transparent mb-20 text-start">
+                                        @if ($errors->has('name'))
+                                            <span class="text-danger">{{ $errors->first('name') }}</span>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
-                                    <div class="input-style mb-20">
-                                        <input name="email" placeholder="Correo Electrónico" type="email">
+                                    <div class="input-style">
+                                        <input value="{{old('email')}}" name="email" placeholder="Correo Electrónico"
+                                               type="email"
+                                               class="{{ $errors->has('email') ? 'form-control is-invalid' : '' }}">
+                                    </div>
+                                    <div class="bg-transparent mb-20 text-start">
+                                        @if ($errors->has('email'))
+                                            <span class="text-danger">{{ $errors->first('email') }}</span>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
-                                    <div class="input-style mb-20">
-                                        <input name="telephone" placeholder="Telefono" type="tel">
+                                    <div class="input-style">
+                                        <input value="{{old('phone')}}" name="phone" placeholder="Telefono"
+                                               type="number"
+                                               class="{{ $errors->has('phone') ? 'form-control is-invalid' : '' }}">
+                                    </div>
+                                    <div class="bg-transparent mb-20 text-start">
+                                        @if ($errors->has('phone'))
+                                            <span class="text-danger">{{ $errors->first('phone') }}</span>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
-                                    <div class="input-style mb-20">
-                                        <input name="subject" placeholder="Asunto" type="text">
+                                    <div class="input-style">
+                                        <input value="{{old('subject')}}" name="subject" placeholder="Asunto"
+                                               type="text"
+                                               class="{{ $errors->has('subject') ? 'form-control is-invalid' : '' }}">
+                                    </div>
+                                    <div class="bg-transparent mb-20 text-start">
+                                        @if ($errors->has('subject'))
+                                            <span class="text-danger">{{ $errors->first('subject') }}</span>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12">
-                                    <div class="textarea-style mb-30">
-                                        <textarea name="message" placeholder="Mensjae..."></textarea>
+                                    <div class="textarea-style">
+                                        @if(old('message'))
+                                            <textarea style="resize:none; text-align: left" name="message" placeholder="Mensaje...">{{{ old('message') }}}</textarea>
+                                        @else
+                                            <textarea style="resize:none; text-align: left" name="message" placeholder="Mensaje..."></textarea>
+                                        @endif
                                     </div>
+                                    <div class="bg-transparent mb-20 text-start">
+                                        @if ($errors->has('message'))
+                                            <span class="text-danger">{{ $errors->first('message') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-12">
                                     <button class="submit submit-auto-width" type="submit">Enviar</button>
                                 </div>
                             </div>

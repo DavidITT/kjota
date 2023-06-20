@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{{ config('app.name') }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
+    <style type="text/css">
+        /* Base */
+
+        body,
+        body *:not(html):not(style):not(br):not(tr):not(code) {
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+            'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+            position: relative;
+        }
+
+        body {
+            -webkit-text-size-adjust: none;
+            background-color: #ffffff;
+            color: #718096;
+            height: 100%;
+            line-height: 1.4;
+            margin: 0;
+            padding: 0;
+            width: 100% !important;
+        }
+
+        p,
+        ul,
+        ol,
+        blockquote {
+            line-height: 1.4;
+            text-align: left;
+        }
+
+        a {
+            color: #3869d4;
+        }
+
+        a img {
+            border: none;
+        }
+
+        /* Typography */
+
+        h1 {
+            color: #3d4852;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 0;
+            text-align: left;
+        }
+
+        h2 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 0;
+            text-align: left;
+        }
+
+        h3 {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 0;
+            text-align: left;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5em;
+            margin-top: 0;
+            text-align: left;
+        }
+
+        p.sub {
+            font-size: 12px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        /* Layout */
+
+        .wrapper {
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+            -premailer-width: 100%;
+            background-color: #edf2f7;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        /* Header */
+
+        .header {
+            max-width: 570px;
+            text-align: center;
+            background-color: #FFE82C;
+        }
+
+        .header a {
+            color: #3d4852;
+            font-size: 19px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Body */
+
+        .body {
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+            -premailer-width: 100%;
+            background-color: #edf2f7;
+            border-bottom: 1px solid #edf2f7;
+            border-top: 1px solid #edf2f7;
+            margin: 0;
+            width: 100%;
+        }
+
+        .inner-body {
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+            -premailer-width: 570px;
+            background-color: #ffffff;
+            border-color: #e8e5ef;
+            border-radius: 2px;
+            border-width: 1px;
+            box-shadow: 0 2px 0 rgba(0, 0, 150, 0.025), 2px 4px 0 rgba(0, 0, 150, 0.015);
+            margin: 0 auto;
+            padding: 30px;
+            width: 570px;
+        }
+
+        .subcopy p {
+            font-size: 14px;
+        }
+
+        /* Footer */
+
+        .footer {
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+            -premailer-width: 570px;
+            margin: 0 auto;
+            padding: 0;
+            text-align: center;
+            width: 570px;
+            background-color: #0056B4;
+        }
+
+        .footer p {
+            color: white;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #b0adc5;
+            text-decoration: underline;
+        }
+
+        /* Tables */
+
+        .table table {
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+            -premailer-width: 100%;
+            margin: 30px auto;
+            width: 100%;
+        }
+
+        .table th {
+            border-bottom: 1px solid #edeff2;
+            margin: 0;
+            padding-bottom: 8px;
+        }
+
+        .table td {
+            color: #74787e;
+            font-size: 15px;
+            line-height: 18px;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        .content-cell {
+            max-width: 100vw;
+            padding: 32px;
+        }
+
+        .content-cell p {
+            margin-bottom: 0;
+        }
+
+        .panel-content p {
+            color: white;
+        }
+
+        .panel-item p:last-of-type {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        /* Utilities */
+
+        @media only screen and (max-width: 600px) {
+            .inner-body {
+                width: 100% !important;
+            }
+
+            .footer {
+                width: 100% !important;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .button {
+                width: 100% !important;
+            }
+        }
+    </style>
+</head>
+<body>
+<table class="wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+        <td>
+            <!-- Header -->
+            <table class="footer" width="570" cellpadding="0" cellspacing="0" role="presentation">
+                <tr>
+                    <td class="header" align="center">
+                        <a href="{{ route('home') }}" style="display: inline-block;">
+                            <img src="{{ asset('assets/general/logo.png') }}" alt="Kjota Logo">
+                        </a>
+                    </td>
+                </tr>
+
+                <!-- Email Body -->
+                <tr>
+                    <td class="body" align="left" width="100%" cellpadding="0" cellspacing="0"
+                        style="border: hidden !important;">
+                        <table class="inner-body" width="570" cellpadding="0" cellspacing="0" role="presentation">
+                            <!-- Body content -->
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <h2>Hola, Mi nombre es {{ $data->name }}</h2>
+                                        </tr>
+                                    </table>
+                                    <br>
+                                    <table align="center" width="100$">
+                                        <tr>
+                                            <td align="center">
+                                                <strong class="text-center">Contacto </strong>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <br>
+                                    <strong>Correo: </strong>{{ $data->email }} <br>
+                                    <strong>Telefono: </strong>{{ $data->phone }} <br><br>
+                                    <strong>Mensaje: </strong>
+                                    <br>{{ $data->message }} <br><br>
+
+                                    <span>¡Gracias!</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Email Footer -->
+                <tr>
+                    <td>
+                        <table class="footer" align="center" width="570" cellpadding="0" cellspacing="0"
+                               role="presentation">
+                            <tr>
+                                <td class="content-cell" align="center">
+                                    <p>© {{ date('Y') }} Kjota. Todos los derechos reservados.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+
+            </table>
+        </td>
+    </tr>
+</table>
+<!--<table class="wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+    <tr>
+        <td align="center">
+            <table class="content" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                <tr>
+                    <table class="footer" align="center" width="570" cellpadding="0" cellspacing="0"
+                           role="presentation">
+                        <tr>
+                            <td class="header" align="center">
+                                <a href="{{ route('home') }}" style="display: inline-block;">
+                                    <img src="{{ asset('assets/general/logo.png') }}" alt="Kjota Logo">
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </tr>
+
+                &lt;!&ndash; Email Body &ndash;&gt;
+                <tr class="content bg-white" style="background-color: #edf2f7;">
+                    <table align="center" width="570" cellpadding="0" cellspacing="0"
+                           role="presentation">
+                        <tr>
+                            <td>
+                                <h2>Hey, Soy {{ $data->name }}</h2>
+                                <br>
+                                <strong>User details: </strong><br>
+                                <strong>Nombre: </strong>{{ $data->name }} <br>
+                                <strong>Correo: </strong>{{ $data->email }} <br>
+                                <strong>Telefono: </strong>{{ $data->phone }} <br>
+                                <strong>Asunto: </strong>{{ $data->subject }} <br>
+                                <strong>Mensaje: </strong>{{ $data->message }} <br><br>
+
+                                Gracias
+                            </td>
+                        </tr>
+                    </table>
+                </tr>
+
+                <tr>
+                    <td>
+                        <table class="footer" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation">
+                            <tr>
+                                <td class="content-cell" align="center">
+                                    © {{ date('Y') }} Kjota. Todos los derechos reservados.
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>-->
+</body>
+</html>
+
+

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Client\AccountController;
 use App\Http\Controllers\Client\CategoryController;
+use App\Http\Controllers\Client\ContactController;
 use App\Http\Controllers\Client\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,9 +27,8 @@ Route::get('/', function () {
 |--------------------------------------------------------------------------
 */
 
-Route::get('/contacto', function () {
-    return view('client.contact.index');
-})->name('contact');
+Route::get('/contacto', [ContactController::class, 'index'])->name('contact');
+Route::post('/contacto', [ContactController::class, 'store'])->name('contact.store');
 
 /*
 |--------------------------------------------------------------------------

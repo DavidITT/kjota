@@ -200,7 +200,9 @@ textarea {
 			}
 		}
         .input-style{
-            background-color: white;
+            &:hover {
+                background-color: white !important;
+            }
         }
         .textarea-style{
             background-color: white;
@@ -208,7 +210,6 @@ textarea {
 	}
 }
 .form-group {
-	margin-bottom: white;
 	input {
 		background: #fff;
 		border: 1px solid #e2e9e1;

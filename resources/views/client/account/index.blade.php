@@ -18,7 +18,10 @@
                                     <a class="nav-link {{ $activeTab === 'tracking' ? 'active' : ''  }}" id="track-orders-tab" data-bs-toggle="tab" href="#track-orders" role="tab" aria-controls="track-orders" aria-selected="false"><i class="fi-rs-shopping-cart-check mr-10"></i>Rastrea tu pedido</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="page-login-register.html"><i class="fi-rs-sign-out mr-10"></i>Cerrar Sesión</a>
+                                    <form method="POST" action="{{route('logout')}}">
+                                        @csrf
+                                        <a class="nav-link" href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit();"><i class="fi-rs-sign-out mr-10"></i>Cerrar Sesión</a>
+                                    </form>
                                 </li>
                             </ul>
                         </div>

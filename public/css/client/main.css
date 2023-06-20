@@ -1053,16 +1053,13 @@ textarea:focus {
 .contact-from-area .contact-form-style button:hover {
   background-color: black !important;
 }
-.contact-from-area .contact-form-style .input-style {
-  background-color: white;
+.contact-from-area .contact-form-style .input-style:hover {
+  background-color: white !important;
 }
 .contact-from-area .contact-form-style .textarea-style {
   background-color: white;
 }
 
-.form-group {
-  margin-bottom: white;
-}
 .form-group input {
   background: #fff;
   border: 1px solid #e2e9e1;
