@@ -20,6 +20,9 @@ return new class extends Migration
             $table->string('phone');
             $table->string('subject');
             $table->text('message');
+            $table->boolean('favorite')->default(0);
+            $table->boolean('important')->default(0);
+            $table->boolean('read')->default(0);
             $table->timestamps();
         });
     }

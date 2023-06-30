@@ -244,32 +244,29 @@
                 <!-- Email Body -->
                 <tr>
                     <td class="body" align="left" width="100%" cellpadding="0" cellspacing="0"
-                        style="border: hidden !important;">
+                        style="border: hidden !important; background-color: white">
                         <table class="inner-body" width="570" cellpadding="0" cellspacing="0" role="presentation">
                             <!-- Body content -->
                             <tr>
-                                <td>
-                                    <table>
-                                        <tr>
-                                            <h2>Hola, Mi nombre es {{ $data->name }}</h2>
-                                        </tr>
-                                    </table>
-                                    <br>
-                                    <table align="center" width="100$">
-                                        <tr>
-                                            <td align="center">
-                                                <strong class="text-center">Contacto </strong>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <br>
-                                    <strong>Correo: </strong>{{ $data->email }} <br>
-                                    <strong>Telefono: </strong>{{ $data->phone }} <br><br>
-                                    <strong>Mensaje: </strong>
-                                    <br>{{ $data->message }} <br><br>
-
-                                    <span>¡Gracias!</span>
+                                <td style="padding-top: 30px; padding-bottom: 30px"><strong>Estimado(a) {{ isset($name) ? $name : '' }}</strong></td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom: 10px">
+                                    Agradecemos de antemano su contacto con nosotros.
                                 </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom: 30px">
+                                    De acuerdo a lo solicitado, nuestro equipo ha respondido lo siguiente:
+                                </td>
+                            </tr>
+                            <tr>
+                                <td  style="padding-bottom: 40px">
+                                   {{ $msg  }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Equipo de Kjota</strong></td>
                             </tr>
                         </table>
                     </td>
@@ -295,5 +292,3 @@
 </table>
 </body>
 </html>
-
-

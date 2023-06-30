@@ -15,7 +15,7 @@ body.dark{
     }
     .navbar-aside{
         background-color:$gray-800;
-        border-right:1px solid $gray-700; 
+        border-right:1px solid $gray-700;
         .aside-top {
             border-bottom: 1px solid $gray-700;
         }
@@ -27,7 +27,7 @@ body.dark{
     .menu-aside{
         .menu-item{
             .icon{
-                color:rgba($gray-500, .7); 
+                color:rgba($gray-500, .7);
             }
             &.active{
                 .icon{
@@ -42,26 +42,26 @@ body.dark{
         .menu-link:hover{ background-color:$gray-700; color:$light; }
         .submenu{
             background-color:$gray-800; border-color:$dark;
-            a{ color:$gray-400; 
-                &:hover{ color:$white;} 
+            a{ color:$gray-400;
+                &:hover{ color:$white;}
             }
-        }  
+        }
     }
 
     .main-header{
         background-color:$gray-800;
         border-bottom:1px solid $gray-800;
         .nav-item > a{ color: $white; }
-        
+
         .nav-link:hover, .nav-link.active{
             background-color:$gray-700;  color: $white
         }
     }
-    
+
 
     /// card-darken
     .card, .card-header{
-        background-color:#2a3042; 
+        background-color:#2a3042;
     }
     .card{ border:1px solid #303547 }
     .card-header{ border-color: $gray-700; }
@@ -82,13 +82,13 @@ body.dark{
 
 
     .form-control, .form-select{
-        background-color:$dark; 
+        background-color:$dark;
         border-color:$gray-700;
         color:$white;
     }
 
     .btn{ color:white; }
-    .btn-light{ background-color:$gray-700; border-color:$gray-700; 
+    .btn-light{ background-color:$gray-700; border-color:$gray-700;
         color:$white;
         i{ color:$gray-200; }
         &:hover{ background-color:$gray-800;  border-color:lighten($gray-700, 5%);  }
@@ -103,7 +103,7 @@ body.dark{
 
     // nav-pills
     .nav-pills{
-        .nav-link{ color:$white; 
+        .nav-link{ color:$white;
             &:hover{ color:$white;  }
         }
         .nav-link.active{ color:$white; background-color:$gray-700;  }
@@ -127,7 +127,7 @@ body.dark{
         thead {
             background: #32394e !important;
         }
-        
+
     }
     .table-light {
         --bs-table-bg: #32394e;
@@ -197,16 +197,16 @@ body.dark{
         }
         .dropdown-item {
             &:focus, &:hover{
-                color: #e9ecef;              
-                background-color: #32394e;  
+                color: #e9ecef;
+                background-color: #32394e;
             }
             &.text-danger {
                 color: #f6f6f6 !important;
             }
-        } 
-       
+        }
+
     }
-    
+
 
 }
 // body.dark end

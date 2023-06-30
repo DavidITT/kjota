@@ -12,9 +12,16 @@ class Contact extends Model
 {
     use HasFactory;
 
-    public $fillable = ['name', 'email', 'phone', 'subject', 'message'];
+    protected $table = 'contacts';
 
-    public static function boot() {
+    public $fillable = ['name', 'email', 'phone', 'subject', 'message', 'important', 'favorite', 'important', 'read'];
+
+    protected $casts = [
+        'created_at' => 'datetime:d-m-Y',
+    ];
+
+    public static function boot()
+    {
 
         parent::boot();
 

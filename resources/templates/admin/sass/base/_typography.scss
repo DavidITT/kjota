@@ -75,3 +75,15 @@ b {font-weight: 500;}
 .text-body {
   color: $color-body !important;
 }
+
+.text-gray {
+    color: $gray-500 !important;
+}
+
+.font-xxs{font-size:$font-xxs;}
+.font-xs{font-size:$font-xs;}
+.font-sm{font-size:$font-sm;}
+.font-md{font-size:$font-md;}
+.font-lg{font-size:$font-lg;}
+.font-xl{font-size:$font-xl;}
+.font-xxl{font-size:$font-xxl;}

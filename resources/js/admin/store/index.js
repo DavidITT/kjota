@@ -1,11 +1,10 @@
-import { createStore } from 'vuex'
+import {createStore} from 'vuex'
+import contact from '../modules/contact/store/contact'
 
-export default createStore({
-    state: {
-        loader:true
-    },
-    getters: {},
-    mutations: {},
-    actions: {},
-    modules: {}
+const store = createStore({
+    modules: {
+        contact
+    }
 })
+
+export default store

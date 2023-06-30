@@ -1,9 +1,14 @@
 require('./bootstrap');
-import { createApp } from 'vue'
+import {createApp} from 'vue'
 import store from './admin/store'
+const app = createApp({});
 
-const app = createApp({}).use(store)
-
+/*
+|--------------------------------------------------------------------------
+| Store
+|--------------------------------------------------------------------------
+*/
+app.use(store)
 
 
 /*
@@ -31,6 +36,17 @@ app.component('order-list', require('./admin/modules/orders/OrderList.vue').defa
 |--------------------------------------------------------------------------
 */
 app.component('sale-list', require('./admin/modules/sales/SalesList.vue').default);
+/*
+|--------------------------------------------------------------------------
+| Contact
+|--------------------------------------------------------------------------
+*/
+app.component('contact-main', require('./admin/modules/contact/Contact.vue').default);
 
-// Mount
+
+/*
+|--------------------------------------------------------------------------
+| Mount App
+|--------------------------------------------------------------------------
+*/
 app.mount('#admin-app')

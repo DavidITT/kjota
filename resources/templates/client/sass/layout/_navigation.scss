@@ -33,7 +33,7 @@
 					&.sub-menu {
 						position: absolute;
 						left: 0;
-						top: 100%;						
+						top: 100%;
 						background-color: #ffffff;
 						min-width: 250px;
 						padding: 25px 15px;
@@ -61,7 +61,7 @@
 								&.level-menu {
 									position: absolute;
 									left: 100%;
-									top: -110px;									
+									top: -110px;
 									background-color: #ffffff;
 									width: 240px;
 									padding: 33px 0 35px;
@@ -114,7 +114,7 @@
 					&.mega-menu {
 						position: absolute;
 						left: 0;
-						top: 100%;						
+						top: 100%;
 						background-color: #ffffff;
 						width: 100%;
 						padding: 35px 25px 35px 35px;
@@ -630,7 +630,7 @@
 	padding: 15px 0 10px 0;
 	background: #fff;
 	border: 1px solid #eef0ee;
-	border-radius: 0 0 4px 4px;	
+	border-radius: 0 0 4px 4px;
 	font-size: $font-md;
 	font-weight: 400;
 	min-width: 270px;
@@ -702,7 +702,7 @@
 
 			&.has-children {
 				position: relative;
-				> a::after {					
+				> a::after {
 						content: "\f111";
 						font-family: 'uicons-regular-straight' !important;
 						position: absolute;
@@ -797,11 +797,11 @@
 			position: absolute;
 			right: 38px;
 			top: 14px;
-		}		
+		}
 		&.show {
 			&::after {display: none;content: none;}
 		}
-	}	
+	}
 }
 
 
@@ -809,8 +809,8 @@
 .pagination-area {
 	.page-item {
 		margin: 0 5px;
-		&:first-child {	
-			margin-left: 0;		
+		&:first-child {
+			margin-left: 0;
 			.page-link {
 				border-top-left-radius: 4px;
 				border-bottom-left-radius: 4px;
@@ -828,7 +828,7 @@
 				background: $color-brand;
 			}
 		}
-		
+
 	}
 	.page-link {
 		border: 0;
@@ -850,3 +850,5 @@
 		}
 	}
 }
+
+

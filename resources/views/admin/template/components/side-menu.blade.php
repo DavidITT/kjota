@@ -82,6 +82,11 @@
                     <span class="text">Statistics</span>
                 </a>
             </li>
+            <li class="menu-item">
+                <a class="menu-link" href="{{route('admin.contact.index')}}"> <i class="icon material-icons md-contact_mail"></i>
+                    <span class="text">Contacto</span>
+                </a>
+            </li>
         </ul>
         <hr>
         <ul class="menu-aside">
