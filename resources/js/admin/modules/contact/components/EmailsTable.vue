@@ -38,11 +38,11 @@
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"
                         role="menu">
-                        <li class="dropdown-item">Marcar como leido</li>
-                        <li class="dropdown-item">Marcar como no leido</li>
-                        <li class="dropdown-item">Marcar como importante</li>
+                        <li class="dropdown-item" @click="markAllAsFavorite">Marcar como favorito</li>
+                        <li class="dropdown-item" @click="markAllAsImportant">Marcar como importante</li>
+                        <li class="dropdown-item" @click="markAllAsRead">Marcar como leido</li>
                         <li class="divider"></li>
-                        <li class="dropdown-item text-danger">Eliminar</li>
+                        <li class="dropdown-item text-danger" @click="deleteEmails">Eliminar</li>
                     </ul>
                 </div>
             </div>
@@ -51,13 +51,7 @@
             <form action="#" id="search-email" class="text-right">
                 <div class="input-group">
                     <input type="text" class="form-control form-control-sm"
-                           placeholder="Buscar por cliente" :disabled="emails.length === 0">
-                    <span class="input-group-btn">
-                        <button name="search" class="btn btn-primary h-100"
-                                :class="{'disabled': emails.length === 0}">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </span>
+                           placeholder="Buscar por nombre o fecha" v-model="search">
                 </div>
             </form>
         </div>
@@ -67,7 +61,7 @@
         <table class="table">
             <tbody>
             <tr v-if="emails.length === 0">No hay ningun correo</tr>
-            <Email v-else v-for="email in emails" :key="email.id" :email="email" :select-all="selectAll"
+            <Email v-else v-for="email in searchInTable" :key="email.id" :email="email" :select-all="selectAll"
                    @send-email="sendEmailToModal"/>
             </tbody>
         </table>
@@ -97,7 +91,7 @@ import useEmails from "../composables/useEmails";
 import useSelect from "../composables/useSelect";
 import {setUrlPagination} from "../store/contact/mutations";
 import {useStore} from "vuex";
-import {ref} from "vue";
+import {computed, ref} from "vue";
 import ReplyEmail from "../modals/ReplyEmail";
 import useModal from "../../../composables/useModal";
 
@@ -120,6 +114,8 @@ export default {
 
         const emailData = ref({})
 
+        const search = ref('')
+
         return {
             //useEmails
             emails,
@@ -141,7 +137,9 @@ export default {
             //reply email modal
             replyEmail,
             emailData,
-            sendEmailToModal: (email) => emailData.value = email
+            sendEmailToModal: (email) => emailData.value = email,
+            search,
+            searchInTable: computed(()  => store.getters['contact/filterEmails'](search.value)),
         }
 
     }

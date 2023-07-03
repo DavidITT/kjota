@@ -19273,7 +19273,6 @@ __webpack_require__.r(__webpack_exports__);
     var idTab = (0,vue__WEBPACK_IMPORTED_MODULE_3__.ref)('allEmails');
     var _useEmails = (0,_composables_useEmails__WEBPACK_IMPORTED_MODULE_4__["default"])(),
       getEmails = _useEmails.getEmails,
-      emails = _useEmails.emails,
       links = _useEmails.links,
       loader = _useEmails.loader,
       unreadEmails = _useEmails.unreadEmails;
@@ -19286,7 +19285,7 @@ __webpack_require__.r(__webpack_exports__);
       });
     };
     (0,vue__WEBPACK_IMPORTED_MODULE_3__.onMounted)(function () {
-      getEmails({});
+      var emails = getEmails({});
     });
     (0,vue__WEBPACK_IMPORTED_MODULE_3__.watch)(currentTab, function (newVal) {
       switch (newVal) {
@@ -19311,7 +19310,6 @@ __webpack_require__.r(__webpack_exports__);
       getEmailsByTerm: getEmailsByTerm,
       //Composable
       getEmails: getEmails,
-      emails: emails,
       links: links,
       unreadEmails: unreadEmails,
       loader: loader,
@@ -19452,6 +19450,7 @@ __webpack_require__.r(__webpack_exports__);
       markAllAsImportant = _useSelect.markAllAsImportant,
       deleteEmails = _useSelect.deleteEmails;
     var emailData = (0,vue__WEBPACK_IMPORTED_MODULE_4__.ref)({});
+    var search = (0,vue__WEBPACK_IMPORTED_MODULE_4__.ref)('');
     return {
       //useEmails
       emails: emails,
@@ -19475,7 +19474,11 @@ __webpack_require__.r(__webpack_exports__);
       emailData: emailData,
       sendEmailToModal: function sendEmailToModal(email) {
         return emailData.value = email;
-      }
+      },
+      search: search,
+      searchInTable: (0,vue__WEBPACK_IMPORTED_MODULE_4__.computed)(function () {
+        return store.getters['contact/filterEmails'](search.value);
+      })
     };
   }
 });
@@ -20052,59 +20055,44 @@ var _hoisted_5 = {
   key: 1,
   "class": "dropdown d-block d-md-none mb-10"
 };
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", {
+var _hoisted_6 = {
   "class": "dropdown-menu",
   "aria-labelledby": "dropdownMenuButton1",
   role: "menu"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
-  "class": "dropdown-item"
-}, "Marcar como leido"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
-  "class": "dropdown-item"
-}, "Marcar como no leido"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
-  "class": "dropdown-item"
-}, "Marcar como importante"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+};
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
   "class": "divider"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
-  "class": "dropdown-item text-danger"
-}, "Eliminar")], -1 /* HOISTED */);
-var _hoisted_7 = {
+}, null, -1 /* HOISTED */);
+var _hoisted_8 = {
   "class": "col-md-6 search-form mt-5"
 };
-var _hoisted_8 = {
+var _hoisted_9 = {
   action: "#",
   id: "search-email",
   "class": "text-right"
 };
-var _hoisted_9 = {
+var _hoisted_10 = {
   "class": "input-group"
 };
-var _hoisted_10 = ["disabled"];
 var _hoisted_11 = {
-  "class": "input-group-btn"
-};
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "fa fa-search"
-}, null, -1 /* HOISTED */);
-var _hoisted_13 = [_hoisted_12];
-var _hoisted_14 = {
   "class": "table-responsive"
 };
-var _hoisted_15 = {
+var _hoisted_12 = {
   "class": "table"
 };
-var _hoisted_16 = {
+var _hoisted_13 = {
   key: 0
 };
-var _hoisted_17 = {
+var _hoisted_14 = {
   "class": "pagination-area mt-15 mb-50"
 };
-var _hoisted_18 = {
+var _hoisted_15 = {
   "aria-label": "Page navigation example"
 };
-var _hoisted_19 = {
+var _hoisted_16 = {
   "class": "pagination justify-content-start d-flex flex-wrap"
 };
-var _hoisted_20 = ["onClick", "innerHTML"];
+var _hoisted_17 = ["onClick", "innerHTML"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Email = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Email");
   var _component_ReplyEmail = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("ReplyEmail");
@@ -20167,26 +20155,43 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     id: "dropdownMenuButton1",
     "data-bs-toggle": "dropdown",
     "aria-expanded": "false"
-  }, " Acciones ", 2 /* CLASS */), _hoisted_6])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, " Acciones ", 2 /* CLASS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+    "class": "dropdown-item",
+    onClick: _cache[6] || (_cache[6] = function () {
+      return $setup.markAllAsFavorite && $setup.markAllAsFavorite.apply($setup, arguments);
+    })
+  }, "Marcar como favorito"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+    "class": "dropdown-item",
+    onClick: _cache[7] || (_cache[7] = function () {
+      return $setup.markAllAsImportant && $setup.markAllAsImportant.apply($setup, arguments);
+    })
+  }, "Marcar como importante"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+    "class": "dropdown-item",
+    onClick: _cache[8] || (_cache[8] = function () {
+      return $setup.markAllAsRead && $setup.markAllAsRead.apply($setup, arguments);
+    })
+  }, "Marcar como leido"), _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+    "class": "dropdown-item text-danger",
+    onClick: _cache[9] || (_cache[9] = function () {
+      return $setup.deleteEmails && $setup.deleteEmails.apply($setup, arguments);
+    })
+  }, "Eliminar")])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     "class": "form-control form-control-sm",
-    placeholder: "Buscar por cliente",
-    disabled: $setup.emails.length === 0
-  }, null, 8 /* PROPS */, _hoisted_10), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    name: "search",
-    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["btn btn-primary h-100", {
-      'disabled': $setup.emails.length === 0
-    }])
-  }, _hoisted_13, 2 /* CLASS */)])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [$setup.emails.length === 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", _hoisted_16, "No hay ningun correo")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    placeholder: "Buscar por nombre o fecha",
+    "onUpdate:modelValue": _cache[10] || (_cache[10] = function ($event) {
+      return $setup.search = $event;
+    })
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.search]])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [$setup.emails.length === 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", _hoisted_13, "No hay ningun correo")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     key: 1
-  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.emails, function (email) {
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.searchInTable, function (email) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_Email, {
       key: email.id,
       email: email,
       "select-all": $setup.selectAll,
       onSendEmail: $setup.sendEmailToModal
     }, null, 8 /* PROPS */, ["email", "select-all", "onSendEmail"]);
-  }), 128 /* KEYED_FRAGMENT */))])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_19, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.links, function (link) {
+  }), 128 /* KEYED_FRAGMENT */))])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_16, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.links, function (link) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", {
       key: link.label,
       "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["page-item mb-2", {
@@ -20199,7 +20204,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         return $setup.pagination(link.url);
       },
       innerHTML: link.label
-    }, null, 8 /* PROPS */, _hoisted_20)], 2 /* CLASS */);
+    }, null, 8 /* PROPS */, _hoisted_17)], 2 /* CLASS */);
   }), 128 /* KEYED_FRAGMENT */))])])]), $setup.replyEmail ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_ReplyEmail, {
     key: 0,
     modal: $setup.replyEmail,
@@ -21759,6 +21764,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   createModal: () => (/* binding */ createModal),
 /* harmony export */   emails: () => (/* binding */ emails),
+/* harmony export */   filterEmails: () => (/* binding */ filterEmails),
 /* harmony export */   getUrl: () => (/* binding */ getUrl),
 /* harmony export */   links: () => (/* binding */ links),
 /* harmony export */   loader: () => (/* binding */ loader),
@@ -21769,6 +21775,14 @@ __webpack_require__.r(__webpack_exports__);
 //Get emails
 var emails = function emails(state) {
   return state.emails;
+};
+var filterEmails = function filterEmails(state) {
+  return function (query) {
+    if (query.length === 0) return state.emails;
+    return state.emails.filter(function (email) {
+      return email.name.toLowerCase().includes(query.toLocaleLowerCase()) || email.created_at.toLowerCase().includes(query.toLocaleLowerCase());
+    });
+  };
 };
 
 //Get the links of pagination

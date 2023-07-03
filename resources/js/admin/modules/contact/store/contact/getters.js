@@ -4,6 +4,14 @@ export const emails = (state)  => {
     return state.emails
 }
 
+export const filterEmails = (state) => (query)  => {
+    if(query.length === 0) return state.emails
+    return (state.emails.filter(email =>
+            email.name.toLowerCase().includes(query.toLocaleLowerCase()) ||
+            email.created_at.toLowerCase().includes(query.toLocaleLowerCase())
+        ))
+}
+
 //Get the links of pagination
 export const links = (state) => {
     return state.links

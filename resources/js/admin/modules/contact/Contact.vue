@@ -96,7 +96,7 @@ export default {
         const currentTab = ref('allEmails')
         const idTab = ref('allEmails')
 
-        const {getEmails, emails, links, loader, unreadEmails} = useEmails()
+        const {getEmails, links, loader, unreadEmails} = useEmails()
 
         const getEmailsByTerm = (current, type) => {
             currentTab.value = current
@@ -105,8 +105,8 @@ export default {
             getEmails({type: type})
         }
 
-        onMounted(() => {
-            getEmails({})
+        onMounted( () => {
+            const emails = getEmails({})
         })
 
         watch(currentTab, (newVal) => {
@@ -136,7 +136,6 @@ export default {
             getEmailsByTerm,
             //Composable
             getEmails,
-            emails,
             links,
             unreadEmails,
             loader,
