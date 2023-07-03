@@ -9,30 +9,30 @@
     </div>
     <nav>
         <ul class="menu-aside">
-            <li class="menu-item active">
+            <li class="{{ Route::is('admin.dashboard') ? 'menu-item active' : 'menu-item ' }}">
                 <a class="menu-link" href="{{route('admin.dashboard')}}"> <i class="icon material-icons md-home"></i>
                     <span class="text">Dashboard</span>
                 </a>
             </li>
-            <li class="menu-item has-submenu">
+            <li class="{{ Route::is('admin.products.index') || Route::is('admin.categories.index') ? 'menu-item has-submenu active' : 'menu-item has-submenu' }}">
                 <a class="menu-link" href="#"> <i class="icon material-icons md-shopping_bag"></i>
                     <span class="text">Products</span>
                 </a>
                 <div class="submenu">
-                    <a href="{{route('admin.products.index')}}">Lista de Productos</a>
-                    <a href="{{route('admin.categories.index')}}">Categorias</a>
+                    <a href="{{route('admin.products.index')}}" class="{{Route::is('admin.products.index') ? 'active active-sub' : '' }}">Lista de Productos</a>
+                    <a href="{{route('admin.categories.index')}}" class="{{Route::is('admin.categories.index') ? 'active active-sub' : '' }}">Categorias</a>
                 </div>
             </li>
-            <li class="menu-item has-submenu">
-                <a class="menu-link" href="{{route('admin.categories.index')}}"> <i class="icon material-icons md-shopping_cart"></i>
+            <li class="{{ Route::is('admin.orders.index') ? 'menu-item has-submenu active' : 'menu-item has-submenu' }}">
+                <a class="menu-link" href="#"><i class="icon material-icons md-shopping_cart"></i>
                     <span class="text">Ordenes</span>
                 </a>
                 <div class="submenu">
-                    <a href="{{route('admin.orders.index')}}">Lista de ordenes</a>
+                    <a href="{{route('admin.orders.index')}}" class="{{Route::is('admin.orders.index') ? 'active active-sub' : '' }}">Lista de ordenes</a>
                     <a href="page-invoice.html">Factura</a>
                 </div>
             </li>
-            <li class="menu-item active">
+            <li class="{{ Route::is('admin.sales.index') ? 'menu-item active' : 'menu-item' }}" >
                 <a class="menu-link" href="{{route('admin.sales.index')}}"> <i class="icon material-icons md-store"></i>
                     <span class="text">Ventas</span>
                 </a>
@@ -82,7 +82,7 @@
                     <span class="text">Statistics</span>
                 </a>
             </li>
-            <li class="menu-item">
+            <li class="{{ Route::is('admin.contact.index') ? 'menu-item active' : 'menu-item' }}">
                 <a class="menu-link" href="{{route('admin.contact.index')}}"> <i class="icon material-icons md-contact_mail"></i>
                     <span class="text">Contacto</span>
                 </a>
