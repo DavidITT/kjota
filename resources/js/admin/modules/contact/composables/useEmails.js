@@ -1,9 +1,11 @@
 import {useStore} from "vuex";
-import {computed} from "vue";
+import {computed, ref} from "vue";
 
 const useEmails = () => {
 
     const store = useStore()
+
+    const search = ref('')
 
     return {
         //Actions
@@ -16,7 +18,10 @@ const useEmails = () => {
         unreadEmails: computed(() => store.getters['contact/unreadEmails']),
         loader: computed(() => store.getters['contact/loader']),
         //Mutations
-        url: store.commit('contact/clearSelectedEmails')
+        url: store.commit('contact/clearSelectedEmails'),
+        //Search input
+        searchInTable: computed(()  => store.getters['contact/filterEmails'](search.value)),
+        search
     }
 }
 

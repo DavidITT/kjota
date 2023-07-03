@@ -19438,7 +19438,9 @@ __webpack_require__.r(__webpack_exports__);
     var _useEmails = (0,_composables_useEmails__WEBPACK_IMPORTED_MODULE_1__["default"])(),
       getEmails = _useEmails.getEmails,
       emails = _useEmails.emails,
-      links = _useEmails.links;
+      links = _useEmails.links,
+      searchInTable = _useEmails.searchInTable,
+      search = _useEmails.search;
     var _useModal = (0,_composables_useModal__WEBPACK_IMPORTED_MODULE_6__["default"])(),
       replyEmail = _useModal.replyEmail;
     var _useSelect = (0,_composables_useSelect__WEBPACK_IMPORTED_MODULE_2__["default"])(),
@@ -19450,7 +19452,6 @@ __webpack_require__.r(__webpack_exports__);
       markAllAsImportant = _useSelect.markAllAsImportant,
       deleteEmails = _useSelect.deleteEmails;
     var emailData = (0,vue__WEBPACK_IMPORTED_MODULE_4__.ref)({});
-    var search = (0,vue__WEBPACK_IMPORTED_MODULE_4__.ref)('');
     return {
       //useEmails
       emails: emails,
@@ -19476,9 +19477,7 @@ __webpack_require__.r(__webpack_exports__);
         return emailData.value = email;
       },
       search: search,
-      searchInTable: (0,vue__WEBPACK_IMPORTED_MODULE_4__.computed)(function () {
-        return store.getters['contact/filterEmails'](search.value);
-      })
+      searchInTable: searchInTable
     };
   }
 });
@@ -20084,6 +20083,7 @@ var _hoisted_13 = {
   key: 0
 };
 var _hoisted_14 = {
+  key: 0,
   "class": "pagination-area mt-15 mb-50"
 };
 var _hoisted_15 = {
@@ -20182,7 +20182,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "onUpdate:modelValue": _cache[10] || (_cache[10] = function ($event) {
       return $setup.search = $event;
     })
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.search]])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [$setup.emails.length === 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", _hoisted_13, "No hay ningun correo")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.search]])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [$setup.searchInTable.length === 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", _hoisted_13, "No hay ningun correo")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     key: 1
   }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.searchInTable, function (email) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_Email, {
@@ -20191,7 +20191,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       "select-all": $setup.selectAll,
       onSendEmail: $setup.sendEmailToModal
     }, null, 8 /* PROPS */, ["email", "select-all", "onSendEmail"]);
-  }), 128 /* KEYED_FRAGMENT */))])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_16, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.links, function (link) {
+  }), 128 /* KEYED_FRAGMENT */))])])]), $setup.searchInTable.length !== 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_16, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.links, function (link) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", {
       key: link.label,
       "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["page-item mb-2", {
@@ -20205,8 +20205,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       },
       innerHTML: link.label
     }, null, 8 /* PROPS */, _hoisted_17)], 2 /* CLASS */);
-  }), 128 /* KEYED_FRAGMENT */))])])]), $setup.replyEmail ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_ReplyEmail, {
-    key: 0,
+  }), 128 /* KEYED_FRAGMENT */))])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $setup.replyEmail ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_ReplyEmail, {
+    key: 1,
     modal: $setup.replyEmail,
     email: $setup.emailData
   }, null, 8 /* PROPS */, ["modal", "email"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)], 64 /* STABLE_FRAGMENT */);
@@ -21100,6 +21100,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var useEmails = function useEmails() {
   var store = (0,vuex__WEBPACK_IMPORTED_MODULE_1__.useStore)();
+  var search = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('');
   return {
     //Actions
     getEmails: function getEmails(_ref) {
@@ -21130,7 +21131,12 @@ var useEmails = function useEmails() {
       return store.getters['contact/loader'];
     }),
     //Mutations
-    url: store.commit('contact/clearSelectedEmails')
+    url: store.commit('contact/clearSelectedEmails'),
+    //Search input
+    searchInTable: (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(function () {
+      return store.getters['contact/filterEmails'](search.value);
+    }),
+    search: search
   };
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useEmails);

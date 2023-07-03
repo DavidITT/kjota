@@ -60,14 +60,14 @@
     <div class="table-responsive">
         <table class="table">
             <tbody>
-            <tr v-if="emails.length === 0">No hay ningun correo</tr>
+            <tr v-if="searchInTable.length=== 0">No hay ningun correo</tr>
             <Email v-else v-for="email in searchInTable" :key="email.id" :email="email" :select-all="selectAll"
                    @send-email="sendEmailToModal"/>
             </tbody>
         </table>
     </div>
 
-    <div class="pagination-area mt-15 mb-50">
+    <div v-if="searchInTable.length !== 0" class="pagination-area mt-15 mb-50">
         <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-start d-flex flex-wrap">
                 <li v-for="link in links" :key="link.label"
@@ -100,7 +100,7 @@ export default {
     components: {Email, ReplyEmail},
     setup() {
         const store = useStore()
-        const {getEmails, emails, links} = useEmails()
+        const {getEmails, emails, links, searchInTable, search} = useEmails()
         const {replyEmail} = useModal()
         const {
             selectAllEmails,
@@ -113,8 +113,6 @@ export default {
         } = useSelect()
 
         const emailData = ref({})
-
-        const search = ref('')
 
         return {
             //useEmails
@@ -139,7 +137,7 @@ export default {
             emailData,
             sendEmailToModal: (email) => emailData.value = email,
             search,
-            searchInTable: computed(()  => store.getters['contact/filterEmails'](search.value)),
+            searchInTable
         }
 
     }
