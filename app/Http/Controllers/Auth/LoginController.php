@@ -43,16 +43,16 @@ class LoginController extends Controller
     protected function login(Request $request)
     {
 
-        $credentials = $request->only('email', 'password');
-
         $credentials = $request->validate([
             'email' => ['required','email'],
             'password' => ['required'],
         ]);
 
+        $remember_me = $request->filled('remember');
+
         $request->flashOnly(['email','remember']);
 
-        if (Auth::attempt($credentials)) {
+        if (Auth::attempt($credentials, $remember_me)) {
             if(auth()->user()->hasRole('Admin')){
                 return redirect()->route('admin.dashboard');
             }else if(auth()->user()->hasRole('Client')){

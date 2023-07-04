@@ -53,7 +53,8 @@
                                                     <input class="form-check-input" type="checkbox"
                                                            name="remember"
                                                            id="remember"
-                                                           value="{{ old('remember') ? 'checked' : '' }}">
+                                                           value="1"
+                                                           {{ old('remember') ? 'checked' : '' }}>
                                                     <label class="form-check-label"
                                                            for="remember"><span>Recordarme</span></label>
                                                 </div>
