@@ -1,6 +1,7 @@
 require('./bootstrap');
 import {createApp} from 'vue'
 import store from './admin/store'
+import LaravelPermissionToVueJS from 'laravel-permission-to-vuejs'
 const app = createApp({});
 
 /*
@@ -9,6 +10,14 @@ const app = createApp({});
 |--------------------------------------------------------------------------
 */
 app.use(store)
+
+/*
+|--------------------------------------------------------------------------
+| Spatie in vue
+|--------------------------------------------------------------------------
+*/
+
+app.use(LaravelPermissionToVueJS)
 
 
 /*

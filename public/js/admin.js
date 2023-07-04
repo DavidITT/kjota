@@ -22224,6 +22224,78 @@ module.exports = function (cssWithMappingToString) {
 
 /***/ }),
 
+/***/ "./node_modules/laravel-permission-to-vuejs/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/laravel-permission-to-vuejs/index.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  install: (app, options) => {
+    app.config.globalProperties.can = function(value){
+    	if(window.Laravel.jsPermissions == 0){
+    		return false
+    	}
+		let permissions = window.Laravel.jsPermissions.permissions
+		let _return = false
+		if(!Array.isArray(permissions)){
+			return false
+		}
+		if(value.includes('|')){
+			value.split('|').forEach(function (item) {
+				if(permissions.includes(item.trim())){
+					_return = true
+				}
+			})
+		}else if(value.includes('&')){
+			_return = true
+			value.split('&').forEach(function (item) {
+				if(!permissions.includes(item.trim())){
+					_return = false
+				}
+			})
+		}else{
+			_return = permissions.includes(value.trim())
+		}
+		return _return
+	}
+    app.config.globalProperties.is = function(value){
+    	if(window.Laravel.jsPermissions == 0){
+    		return false
+    	}
+		let roles = window.Laravel.jsPermissions.roles
+		let _return = false
+		if(!Array.isArray(roles)){
+			return false
+		}
+		if(value.includes('|')){
+			value.split('|').forEach(function (item) {
+				if(roles.includes(item.trim())){
+					_return = true
+				}
+			})
+		}else if(value.includes('&')){
+			_return = true
+			value.split('&').forEach(function (item) {
+				if(!roles.includes(item.trim())){
+					_return = false
+				}
+			})
+		}else{
+			_return = roles.includes(value.trim())
+		}
+		return _return
+	}
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/lodash/lodash.js":
 /*!***************************************!*\
   !*** ./node_modules/lodash/lodash.js ***!
@@ -48381,7 +48453,9 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 /* harmony import */ var _admin_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./admin/store */ "./resources/js/admin/store/index.js");
+/* harmony import */ var laravel_permission_to_vuejs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! laravel-permission-to-vuejs */ "./node_modules/laravel-permission-to-vuejs/index.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
 
 
 var app = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)({});
@@ -48392,6 +48466,14 @@ var app = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)({});
 |--------------------------------------------------------------------------
 */
 app.use(_admin_store__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+/*
+|--------------------------------------------------------------------------
+| Spatie in vue
+|--------------------------------------------------------------------------
+*/
+
+app.use(laravel_permission_to_vuejs__WEBPACK_IMPORTED_MODULE_2__["default"]);
 
 /*
 |--------------------------------------------------------------------------

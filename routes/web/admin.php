@@ -3,7 +3,7 @@
 use App\Http\Controllers\Admin\ContactController;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('admin')->name('admin.')->group(function () {
+Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () {
 
     Route::get('/login', function () {
         return view('admin.auth.login');
@@ -11,31 +11,41 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     Route::get('/dashboard', function () {
         return view('admin.dashboard.index');
-    })->name('dashboard');
+    })->middleware('can:admin.dashboard.index')
+        ->name('dashboard');
 
     Route::get('/products', function () {
         return view('admin.products.index');
-    })->name('products.index');
+    })->middleware('can:admin.products.index')
+        ->name('products.index');
 
     Route::get('/categories', function () {
         return view('admin.categories.index');
-    })->name('categories.index');
+    })->middleware('can:admin.categories.index')
+        ->name('categories.index');
 
     Route::get('/orders', function () {
         return view('admin.orders.index');
-    })->name('orders.index');
+    })->middleware('can:admin.orders.index')
+        ->name('orders.index');
 
     Route::get('/sales', function () {
         return view('admin.sales.index');
-    })->name('sales.index');
+    })->middleware('can:admin.sales.index')
+        ->name('sales.index');
 
     /*
     |--------------------------------------------------------------------------
     | Contact
     |--------------------------------------------------------------------------
     */
-    Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
-    Route::get('/contact_emails/{type}', [ContactController::class, 'getContactEmails']);
+
+    Route::get('/contact', [ContactController::class, 'index'])
+        ->middleware('can:admin.contact.index')
+        ->name('contact.index');
+
+    Route::get('/contact_emails/{type}', [ContactController::class, 'getContactEmails'])
+        ->middleware('can:admin.contact.get');
 
     Route::prefix('contact')->group(function () {
         Route::post('/mark_as_favorite/{type}', [ContactController::class, 'markAsFavorite']);

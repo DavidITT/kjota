@@ -9,11 +9,13 @@
     </div>
     <nav>
         <ul class="menu-aside">
+            @can('admin.dashboard.index')
             <li class="{{ Route::is('admin.dashboard') ? 'menu-item active' : 'menu-item ' }}">
                 <a class="menu-link" href="{{route('admin.dashboard')}}"> <i class="icon material-icons md-home"></i>
                     <span class="text">Dashboard</span>
                 </a>
             </li>
+            @endcan
             <li class="{{ Route::is('admin.products.index') || Route::is('admin.categories.index') ? 'menu-item has-submenu active' : 'menu-item has-submenu' }}">
                 <a class="menu-link" href="#"> <i class="icon material-icons md-shopping_bag"></i>
                     <span class="text">Products</span>

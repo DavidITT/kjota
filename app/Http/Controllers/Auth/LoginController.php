@@ -53,22 +53,15 @@ class LoginController extends Controller
         $request->flashOnly(['email','remember']);
 
         if (Auth::attempt($credentials)) {
-
-            return redirect()->route('home');
-
-
-            /* $user_role = Auth::user()->role;
-
-             switch ($user_role) {
-                 case 1:
-                     return redirect()->route('home');
-                 case 2:
-                     return redirect()->route('admin.dashboard');
-
-                 default:
-                     Auth::logout();
-                     return redirect()->route('login')->with('error','Oops algo salio mal, intentalo mas tarde');
-             }*/
+            if(auth()->user()->hasRole('Admin')){
+                return redirect()->route('admin.dashboard');
+            }else if(auth()->user()->hasRole('Client')){
+                return redirect()->route('home');
+            }else if(auth()->user()->hasRole('Saler')){
+                return redirect()->route('admin.sales.index');
+            }else{
+                return redirect()->route('home');
+            }
         } else {
             return redirect()->route('login')->with('error', 'Estas credenciales son incorrectas');
         }
@@ -82,4 +75,5 @@ class LoginController extends Controller
         }
         return redirect()->intended($this->redirectPath());
     }
+
 }

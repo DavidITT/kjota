@@ -41,6 +41,13 @@
 </div>
 <script src="{{ asset('js/admin.js') }}"></script>
 
+<script type="text/javascript">
+    window.Laravel = {
+        csrfToken: "{{ csrf_token() }}",
+        jsPermissions: {!! auth()->user()?->jsPermissions() !!}
+    }
+</script>
+
 <!-- Vendor JS-->
 
 <script src="{{ asset('assets/admin/js/vendors/chart.js') }}"></script>
