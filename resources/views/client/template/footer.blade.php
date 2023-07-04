@@ -6,7 +6,8 @@
                 <div class="col-lg-7 mb-md-3 mb-lg-0">
                     <div class="row align-items-center">
                         <div class="col flex-horizontal-center">
-                            <img class="icon-email" src="{{asset('assets/client/imgs/theme/icons/icon-email.svg')}}" alt="">
+                            <img class="icon-email" src="{{asset('assets/client/imgs/theme/icons/icon-email.svg')}}"
+                                 alt="">
                             <h4 class="font-size-20 mb-0 ml-3 text-white">Registrate</h4>
                         </div>
                     </div>
@@ -14,7 +15,8 @@
                 <div class="col-lg-5">
                     <!-- Subscribe Form -->
                     <form class="form-subcriber d-flex wow fadeIn animated">
-                        <input type="email" class="form-control bg-white font-small" placeholder="Ingresa tu correo electrónico">
+                        <input type="email" class="form-control bg-white font-small"
+                               placeholder="Ingresa tu correo electrónico">
                         <button class="btn btn-suscribe text-white">Suscribirse</button>
                     </form>
                 </div>
@@ -30,14 +32,18 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="widget-about font-md mb-md-5 mb-lg-0">
                         <div class="logo logo-width-1 wow fadeIn animated">
-                            <a href="{{route('home')}}" class="text-center text-md-start"><img src="{{asset('assets/client/imgs/theme/logo.png')}}" alt="logo"></a>
+                            <a href="{{route('home')}}" class="text-center text-md-start"><img
+                                    src="{{asset('assets/client/imgs/theme/logo.png')}}" alt="logo"></a>
                         </div>
                         <h5 class="mt-20 mb-10 fw-600 text-grey-4 wow fadeIn animated">Contacto</h5>
                         <p class="wow fadeIn animated">
-                            <strong>Direccion: </strong>  Calz. de la Viga 1183, Militar Marte, Iztacalco, 08840 Ciudad de México, CDMX
+                            <strong>Direccion: </strong> Calz. de la Viga 1183, Militar Marte, Iztacalco, 08840 Ciudad
+                            de México, CDMX
                         </p>
                         <p class="wow fadeIn animated">
-                            <strong>Telefono: </strong><a target="_blank" href="https://api.whatsapp.com/send?phone=5215574312004&amp;text=Hola,%20me%20gustar&iacute;a%20obtener%20m&aacute;s%20informaci&oacute;n">(+52) 1 55 7431 2004</a>
+                            <strong>Telefono: </strong><a target="_blank"
+                                                          href="https://api.whatsapp.com/send?phone=5215574312004&amp;text=Hola,%20me%20gustar&iacute;a%20obtener%20m&aacute;s%20informaci&oacute;n">(+52)
+                                1 55 7431 2004</a>
                         </p>
                         <div class="wow fadeIn animated d-flex flex-column">
                             <strong>Horario: </strong>
@@ -48,8 +54,12 @@
                         </div>
                         <h5 class="mb-10 mt-30 fw-600 text-grey-4 wow fadeIn animated">Siguenos</h5>
                         <div class="mobile-social-icon wow fadeIn animated mb-sm-5 mb-md-0">
-                            <a href="https://www.facebook.com/bullet.envios/" target="_blank"><img src="{{asset('assets/client/imgs/theme/icons/icon-facebook.svg')}}" alt="facebook-icon"></a>
-                            <a href="https://www.instagram.com/kjota.mx/" target="_blank"><img src="{{asset('assets/client/imgs/theme/icons/icon-instagram.svg')}}" alt="instagram-icon"></a>
+                            <a href="https://www.facebook.com/bullet.envios/" target="_blank"><img
+                                    src="{{asset('assets/client/imgs/theme/icons/icon-facebook.svg')}}"
+                                    alt="facebook-icon"></a>
+                            <a href="https://www.instagram.com/kjota.mx/" target="_blank"><img
+                                    src="{{asset('assets/client/imgs/theme/icons/icon-instagram.svg')}}"
+                                    alt="instagram-icon"></a>
                         </div>
                     </div>
                 </div>
@@ -66,13 +76,18 @@
                 <div class="col-lg-2  col-md-3">
                     <h5 class="widget-title wow fadeIn animated">Mi Cuenta</h5>
                     <ul class="footer-list wow fadeIn animated">
-                        <li><a href="{{route('login')}}">Iniciar Sesión</a></li>
-                        <li><a href="{{route('register')}}">Registrarse</a></li>
-                        <li><a href="{{route('account')}}">Mi cuenta</a></li>
+                        @if (!auth()->check())
+                            <li><a href="{{route('login')}}">Iniciar Sesión</a></li>
+                            <li><a href="{{route('register')}}">Registrarse</a></li>
+                        @endauth
+                        @auth
+                            <li><a href="{{route('account')}}">Mi cuenta</a></li>
+                            <li><a href="{{ route('account', ['tab' => 'orders']) }}" class="mb-0 mb-5 mb-md-0">Mis
+                                    Ordenes</a></li>
+                            <li><a href="{{ route('account', ['tab' => 'tracking']) }}">Seguimiento</a></li>
+                            <li><a href="#">Lista de deseos</a></li>
+                        @endauth
                         <li><a href="{{route('shopping-cart')}}">Ver Carrito</a></li>
-                        <li><a href="{{ route('account', ['tab' => 'orders']) }}" class="mb-0 mb-5 mb-md-0">Mis Ordenes</a></li>
-                        <li><a href="{{ route('account', ['tab' => 'tracking']) }}">Seguimiento</a></li>
-                        <li><a href="#">Lista de deseos</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4">
@@ -80,7 +95,8 @@
                     <div class="row">
                         <div class="col-md-4 col-lg-12 mt-md-3 mt-lg-0">
                             <p class="mb-20 wow fadeIn animated">Pagos seguros</p>
-                            <img class="wow fadeIn animated" src="{{asset('assets/client/imgs/theme/payment-method.png')}}" alt="payment_methods">
+                            <img class="wow fadeIn animated"
+                                 src="{{asset('assets/client/imgs/theme/payment-method.png')}}" alt="payment_methods">
                         </div>
                     </div>
                 </div>
@@ -96,7 +112,8 @@
                 <div class="footer-bottom"></div>
             </div>
             <div class="col text-center">
-                <p class="float-md-left font-sm text-muted mb-0">&copy; {{ now()->year }}, <strong class="text-brand">Kjota</strong> - Cajas de Cartón </p>
+                <p class="float-md-left font-sm text-muted mb-0">&copy; {{ now()->year }}, <strong class="text-brand">Kjota</strong>
+                    - Cajas de Cartón </p>
             </div>
         </div>
     </div>

@@ -21,6 +21,7 @@ Route::get('/', function () {
     return view('client.home.index');
 })->name('home');
 
+
 /*
 |--------------------------------------------------------------------------
 | Contact
@@ -83,6 +84,8 @@ Route::get('/checkout/payment', function () {
 |--------------------------------------------------------------------------
 */
 Route::get('/perfil', [AccountController::class, 'index'])->name('account')->middleware(['verified']);
+Route::get('/profile/get_info', [AccountController::class, 'getInformation']);
+Route::post('/profile/save/info', [AccountController::class, 'saveInformation']);
 
 /*
 |--------------------------------------------------------------------------

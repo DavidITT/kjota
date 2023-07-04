@@ -4,6 +4,23 @@ import store from './client/store'
 
 const app = createApp({}).use(store)
 
-//Client Components
+
+/*
+|--------------------------------------------------------------------------
+| Profile
+|--------------------------------------------------------------------------
+*/
+app.component('general', require('./client/modules/account/components/General.vue').default);
+/*
+|--------------------------------------------------------------------------
+| Branch Map
+|--------------------------------------------------------------------------
+*/
 app.component('branch-map', require('./client/modules/contact/MapSection.vue').default);
+
+/*
+|--------------------------------------------------------------------------
+| Mount App
+|--------------------------------------------------------------------------
+*/
 app.mount('#app')
