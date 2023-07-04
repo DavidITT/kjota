@@ -14,6 +14,7 @@ class ReplyContactMail extends Mailable
     use Queueable, SerializesModels;
     public string $msg;
     public string $name;
+    public $subject;
 
     /**
      * Create a new message instance.
@@ -21,14 +22,15 @@ class ReplyContactMail extends Mailable
      * @return void
      */
 
-    public function __construct($msg,$name)
+    public function __construct($msg,$name,$subject)
     {
         $this->msg = $msg;
         $this->name = $name;
+        $this->subject = $subject;
     }
 
     public function build()
     {
-        return $this->view('admin.contact.emails.contact-email');
+        return $this->subject($this->subject)->view('admin.contact.emails.contact-email');
     }
 }

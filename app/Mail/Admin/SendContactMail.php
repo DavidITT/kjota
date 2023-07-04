@@ -13,19 +13,21 @@ class SendContactMail extends Mailable
 {
     use Queueable, SerializesModels;
     public string $msg;
+    public $subject;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($msg)
+    public function __construct($msg, $subject)
     {
         $this->msg = $msg;
+        $this->subject = $subject;
     }
 
     public function build()
     {
-        return $this->view('admin.contact.emails.contact-email');
+        return $this->subject($this->subject)->view('admin.contact.emails.contact-email');
     }
 }

@@ -24,9 +24,9 @@ class ContactController extends Controller
     {
         try {
             $emails = match ($type) {
-                'favorites' => Contact::where('favorite', 1)->paginate(15),
-                'important' => Contact::where('important', 1)->paginate(15),
-                default => Contact::paginate(15),
+                'favorites' => Contact::where('favorite', 1)->orderBy('created_at', 'desc')->paginate(15),
+                'important' => Contact::where('important', 1)->orderBy('created_at', 'desc')->paginate(15),
+                default => Contact::orderBy('created_at', 'desc')->paginate(15),
             };
             $unreadEmails = Contact::where('read', 0)->count();
             return response()->json(['emails' => $emails, 'unreadEmails' => $unreadEmails]);
@@ -230,13 +230,13 @@ class ContactController extends Controller
 
     public function sendEmail(Request $request)
     {
-        Mail::to($request['to'])->send(new SendContactMail($request['message']));
+        Mail::to($request['to'])->send(new SendContactMail($request['message'], $request['subject']));
         return response()->json(['message' => 'Correo enviado exitosamente'], 200);
     }
 
     public function replyEmail(Request $request)
     {
-       Mail::to($request['to'])->send(new ReplyContactMail($request['message'],$request['client']));
+       Mail::to($request['to'])->send(new ReplyContactMail($request['message'],$request['client'],$request['subject']));
         return response()->json(['message' => 'Correo enviado exitosamente'], 200);
     }
 
