@@ -84,8 +84,9 @@ Route::get('/checkout/payment', function () {
 |--------------------------------------------------------------------------
 */
 Route::get('/perfil', [AccountController::class, 'index'])->name('account')->middleware(['verified']);
-Route::get('/profile/get_info', [AccountController::class, 'getInformation']);
+Route::get('/profile/get-info', [AccountController::class, 'getInformation']);
 Route::post('/profile/save/info', [AccountController::class, 'saveInformation']);
+Route::post('/profile/change-password', [AccountController::class, 'changePassword']);
 
 /*
 |--------------------------------------------------------------------------

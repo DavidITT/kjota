@@ -86,9 +86,9 @@
         <div class="row" style="max-width:920px">
             <div class="col-md-12 col-lg-6">
                 <article class="box mb-3 bg-light p-2">
-                    <button class="btn float-end btn-light rounded btn-sm font-md" href="#">Cambiar</button>
+                    <a class="btn float-end btn-light rounded btn-sm font-md" :href="routeToChangePassword">Cambiar</a>
                     <h6>Contraseña</h6>
-                    <small class="text-muted d-block" style="width:70%">Puede restablecer o cambiar su contraseña
+                    <small class="text-muted d-block" style="width:70%">Puedes cambiar tu contraseña
                         haciendo clic aquí</small>
                 </article>
             </div>
@@ -113,7 +113,10 @@ import useVuelidate from "@vuelidate/core/dist/index.mjs";
 
 export default {
     name: "General",
-    setup() {
+    props:{
+        routeToChangePassword: String
+    },
+    setup(props) {
         const {errorMessage, successMessage} = useAlerts()
         const userData = reactive({
             name: '',
@@ -152,7 +155,7 @@ export default {
 
         const getGeneralInfo = async () => {
             loader.value = true
-            await axios.get('/profile/get_info')
+            await axios.get('/profile/get-info')
                 .then(({data, status}) => {
                     if (status === 200) {
                         userData.name = data.name
@@ -214,7 +217,8 @@ export default {
             saveInfo,
             v$,
             errors,
-            isFormUnchanged
+            isFormUnchanged,
+            routeToChangePassword: props.routeToChangePassword
         }
     }
 }

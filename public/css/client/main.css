@@ -319,6 +319,10 @@ input[type=number]:focus,
   background-color: #90908e !important;
 }
 
+.bg-grey-light {
+  background-color: #F7F8F9 !important;
+}
+
 .bg-1 {
   background-color: #fddde4 !important;
 }
