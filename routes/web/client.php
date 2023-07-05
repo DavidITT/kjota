@@ -87,6 +87,7 @@ Route::get('/perfil', [AccountController::class, 'index'])->name('account')->mid
 Route::get('/profile/get-info', [AccountController::class, 'getInformation']);
 Route::post('/profile/save/info', [AccountController::class, 'saveInformation']);
 Route::post('/profile/change-password', [AccountController::class, 'changePassword']);
+Route::post('/profile/deactivate/account', [AccountController::class, 'deactivateAccount']);
 
 /*
 |--------------------------------------------------------------------------

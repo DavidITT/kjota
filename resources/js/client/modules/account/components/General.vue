@@ -78,7 +78,9 @@
                 </div>
                 <br>
                 <div class="w-100  text-center text-lg-start">
-                    <button class="btn btn-primary btn-small" :disabled="isFormUnchanged" type="submit">Guardar cambios</button>
+                    <button class="btn btn-primary btn-small" :disabled="isFormUnchanged" type="submit">Guardar
+                        cambios
+                    </button>
                 </div>
             </form>
         </div>
@@ -94,10 +96,9 @@
             </div>
             <div class="col-md-12 col-lg-6">
                 <article class="box mb-3 bg-light p-2">
-                    <a class="btn float-end btn-light rounded btn-sm font-md" href="#">Desactivar</a>
-                    <h6>Eliminar Cuenta</h6>
-                    <small class="text-muted d-block" style="width:70%">Una vez que eliminas tu cuenta <br> no hay
-                        vuelta atrás..</small>
+                    <button class="btn float-end btn-light rounded btn-sm font-md" @click="deactivateAccount">Desactivar</button>
+                    <h6>Desactivar Cuenta</h6>
+                    <small class="text-muted d-block" style="width:70%">Una vez que desactives tu cuenta <br> ya no podras entrar a ella.</small>
                 </article>
             </div>
         </div>
@@ -110,10 +111,11 @@ import {onMounted, reactive, ref, computed} from "vue";
 import useAlerts from "../../../composables/useAlerts";
 import {email, helpers, required, minLength, maxLength} from "@vuelidate/validators";
 import useVuelidate from "@vuelidate/core/dist/index.mjs";
+import Swal from "sweetalert2";
 
 export default {
     name: "General",
-    props:{
+    props: {
         routeToChangePassword: String
     },
     setup(props) {
@@ -197,6 +199,24 @@ export default {
                 })
         }
 
+        const deactivateAccount = async () => {
+            Swal.fire({
+                title: '¿Esta seguro de desactivar su cuenta?',
+                text: "Esta acción no puede revertirse y una vez confirma, no podra ingresar a la misma.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#095CAA',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si, estoy consiente'
+            }).then(async (result) => {
+                if (result.isConfirmed) {
+                    await axios.post('profile/deactivate/account')
+                        .then(({data, status}) => {
+
+                        })
+                }
+            })
+        }
         const isFormUnchanged = computed(() => {
             return (
                 initialData.name === userData.name &&
@@ -218,6 +238,7 @@ export default {
             v$,
             errors,
             isFormUnchanged,
+            deactivateAccount,
             routeToChangePassword: props.routeToChangePassword
         }
     }

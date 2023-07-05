@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 
 class AccountController extends Controller
 {
@@ -45,10 +46,10 @@ class AccountController extends Controller
             $user = User::find($userId);
 
             $user->update([
-               'name' => $request['name'] ,
-               'lastname' => $request['lastname'] ,
-               'phone' => $request['phone'] ,
-               'email' => $request['email'] ,
+                'name' => $request['name'],
+                'lastname' => $request['lastname'],
+                'phone' => $request['phone'],
+                'email' => $request['email'],
             ]);
 
             DB::commit();
@@ -63,10 +64,10 @@ class AccountController extends Controller
     public function changePassword(Request $request)
     {
 
-        try{
+        try {
             #Match The Old Password
-            if(!Hash::check($request['old-password'], auth()->user()->password)){
-                return response()->json(['message' => 'Su antigua contraseña no coincide'],400);
+            if (!Hash::check($request['old-password'], auth()->user()->password)) {
+                return response()->json(['message' => 'Su antigua contraseña no coincide'], 400);
             }
 
             #Update the new Password
@@ -74,10 +75,25 @@ class AccountController extends Controller
                 'password' => Hash::make($request['new-password'])
             ]);
 
-            return response()->json(['message' => 'Contraseña actualizada'],200);
+            return response()->json(['message' => 'Contraseña actualizada'], 200);
 
-        }catch(\Exception $e){
-            return response()->json(['message' => 'Ocurrio un error intentelo mas tarde'],400);
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'Ocurrio un error intentelo mas tarde'], 400);
+        }
+    }
+
+    public function deactivateAccount(Request $request)
+    {
+        try {
+            DB::beginTransaction();
+            User::whereId(auth()->user()->id)->update([
+                'status' => 0
+            ]);
+            DB::commit();
+            return response()->json(['message' => 'Usuario desactivado']);
+        } catch (\Exception $e) {
+            Log::error('An error occurred: ' . $e->getMessage());
+            return response()->json(['message' => 'Usuario no pudo ser desactivado']);
         }
     }
 }
