@@ -39,7 +39,7 @@
                                        :class="{'is-invalid': v$.email.$dirty && v$.email.$error}"
                                        placeholder="Correo electrónico" v-model="userData.email">
                                 <div class="text-sm mt-2">
-                                    <p class="text-danger" v-if="errors !== ''">
+                                    <p class="text-danger" v-if="errors.length !== 0">
                                         <span>{{ errors }}</span>
                                     </p>
                                 </div>
@@ -64,11 +64,19 @@
                     </div>
                     <aside class="col-lg-4 upload-image">
                         <figure class="text-lg-center text-center">
-                            <img class="img-lg img-avatar rounded-circle"
-                                 src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"
+                            <img v-if="imagePreview !== null" class="img-lg img-avatar rounded-circle"
+                                 width="200"
+                                 height="200"
+                                 :src="imagePreview !== null ? imagePreview : ''"
+                                 alt="User Photo">
+                            <img v-else class="img-lg img-avatar rounded-circle"
+                                 width="200"
+                                 height="200"
+                                 :src="userData.img.url ? `storage/${userData.img.url}` : 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200'"
                                  alt="User Photo">
                             <figcaption>
-                                <input type="file" id="file-input">
+                                <input type="file" id="file-input" accept="image/x-png,image/jpg,image/jpeg"
+                                       @change="onImageChange">
                                 <label for="file-input">
                                     <i class="fi-rs-camera bg-primary rounded-circle p-2" role="button"></i>
                                 </label>
@@ -77,8 +85,8 @@
                     </aside>
                 </div>
                 <br>
-                <div class="w-100  text-center text-lg-start">
-                    <button class="btn btn-primary btn-small" :disabled="isFormUnchanged" type="submit">Guardar
+                <div class="w-100 text-center text-lg-start">
+                    <button class="btn btn-primary btn-small mx-auto" :disabled="isFormUnchanged" type="submit">Guardar
                         cambios
                     </button>
                 </div>
@@ -96,9 +104,12 @@
             </div>
             <div class="col-md-12 col-lg-6">
                 <article class="box mb-3 bg-light p-2">
-                    <button class="btn float-end btn-light rounded btn-sm font-md" @click="deactivateAccount">Desactivar</button>
+                    <button class="btn float-end btn-light rounded btn-sm font-md" @click="deactivateAccount">
+                        Desactivar
+                    </button>
                     <h6>Desactivar Cuenta</h6>
-                    <small class="text-muted d-block" style="width:70%">Una vez que desactives tu cuenta <br> ya no podras entrar a ella.</small>
+                    <small class="text-muted d-block" style="width:70%">Una vez que desactives tu cuenta <br> ya no
+                        podras entrar a ella.</small>
                 </article>
             </div>
         </div>
@@ -124,17 +135,19 @@ export default {
             name: '',
             lastname: '',
             phone: '',
-            email: ''
+            email: '',
+            img: '',
         })
+        const imagePreview = ref(null)
         const initialData = reactive({
             name: '',
             lastname: '',
             phone: '',
-            email: ''
+            email: '',
+            img: '',
         })
-        const errors = ref('')
+        const errors = ref([])
         const loader = ref(false)
-
         const rules = {
             name: {
                 required: helpers.withMessage('El nombre es requerido.', required),
@@ -150,9 +163,8 @@ export default {
             email: {
                 required: helpers.withMessage('El correo electronico es requerido.', required),
                 email: helpers.withMessage('El correo electronico es invalido.', email)
-            }
+            },
         }
-
         const v$ = useVuelidate(rules, userData)
 
         const getGeneralInfo = async () => {
@@ -164,11 +176,13 @@ export default {
                         userData.lastname = data.lastname
                         userData.email = data.email
                         userData.phone = data.phone
+                        userData.img = data.image
 
                         initialData.name = data.name
                         initialData.lastname = data.lastname
                         initialData.email = data.email
                         initialData.phone = data.phone
+                        initialData.img = data.image
                         loader.value = false
                     }
                 })
@@ -182,17 +196,37 @@ export default {
             const result = await v$.value.$validate();
             if (!result) return
             loader.value = true
-            await axios.post('profile/save/info', userData)
+
+            let data = new FormData();
+
+            data.append('name', userData.name)
+            data.append('lastname', userData.lastname)
+            data.append('phone', userData.phone)
+            data.append('email', userData.email)
+            data.append('img', userData.img)
+
+            await axios.post('profile/save/info', data, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            })
                 .then(({data, status}) => {
                     if (status === 200) {
                         successMessage(data.message)
+                        imagePreview.value = null
                         loader.value = false
+                        errors.value = []
+                        getGeneralInfo()
                     }
                 })
                 .catch((error) => {
                     loader.value = false
                     if (error.response.data.message !== undefined) {
                         errors.value = error.response.data.message
+                    } else if (error.response.data.img !== undefined) {
+                        errors.value = error.response.data.img[0]
+                        imagePreview.value = null
+                        userData.img = initialData.img
                     } else {
                         errorMessage('Ocurrio un error al actualizar la información, intentelo mas tarde')
                     }
@@ -212,20 +246,35 @@ export default {
                 if (result.isConfirmed) {
                     await axios.post('profile/deactivate/account')
                         .then(({data, status}) => {
-
+                            successMessage(data.message)
+                            window.location = '/';
                         })
                 }
             })
         }
+
+        const onImageChange = (event) => {
+            const file = event.target.files[0];
+            if (!file.type.startsWith('image/')) return errors.value = 'Este tipo de archivo no es permitido'
+
+            const reader = new FileReader()
+            reader.onload = (e) => {
+                imagePreview.value = e.target.result
+            }
+            reader.readAsDataURL(file)
+
+            userData.img = event.target.files[0];
+        }
+
         const isFormUnchanged = computed(() => {
             return (
                 initialData.name === userData.name &&
                 initialData.lastname === userData.lastname &&
                 initialData.email === userData.email &&
-                initialData.phone === userData.phone
+                initialData.phone === userData.phone &&
+                initialData.img === userData.img
             )
         })
-
 
         onMounted(() => {
             getGeneralInfo()
@@ -239,6 +288,8 @@ export default {
             errors,
             isFormUnchanged,
             deactivateAccount,
+            imagePreview,
+            onImageChange,
             routeToChangePassword: props.routeToChangePassword
         }
     }

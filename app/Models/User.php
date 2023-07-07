@@ -46,4 +46,10 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /** Polymorphic relationship (One to One) */
+
+    public function image(){
+        return $this->morphOne('App\Models\Image', 'imageable');
+    }
 }

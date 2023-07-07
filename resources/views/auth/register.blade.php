@@ -65,11 +65,16 @@
                                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation"  placeholder="Confirma contraseña" autocomplete="new-password">
                                         </div>
                                         <div class="login_footer form-group">
-                                            <div class="chek-form" required>
+                                            <div class="chek-form">
                                                 <div class="custome-checkbox">
-                                                    <input class="form-check-input" type="checkbox" name="terms" id="terms" value="{{old('terms')}}">
+                                                    <input class="form-check-input" type="checkbox" name="terms" id="terms" value="1">
                                                     <label class="form-check-label" for="terms"><span>Acepto los términos y condiciones.</span></label>
                                                 </div>
+                                                @error('terms')
+                                                <span>
+                                                <strong class="text-danger">Es necesario que acepte los terminos y condiciones.</strong>
+                                                </span>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="form-group">

@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 
+
 class AccountController extends Controller
 {
     public function index(Request $request)
@@ -32,25 +33,31 @@ class AccountController extends Controller
 
     public function getInformation()
     {
-        $user = auth()->user();
+        $user = User::with('image')->find(auth()->user()->id);
         return response()->json($user);
     }
 
     public function saveInformation(UpdateAccountInfoRequest $request)
     {
+
         try {
             DB::beginTransaction();
-
+            //Get the id of user in session
             $userId = Auth::user()->id;
-
+            //Find the user
             $user = User::find($userId);
-
+            //Update the info user
             $user->update([
                 'name' => $request['name'],
                 'lastname' => $request['lastname'],
                 'phone' => $request['phone'],
                 'email' => $request['email'],
             ]);
+
+            //Find if the request comes with file  type img
+           if($request->hasFile('img')){
+              uploadUserImage($request->all(), $user); //Helper
+           }
 
             DB::commit();
             return response()->json(['message' => 'Informacion actualizada'], 200);
@@ -82,7 +89,7 @@ class AccountController extends Controller
         }
     }
 
-    public function deactivateAccount(Request $request)
+    public function deactivateAccount()
     {
         try {
             DB::beginTransaction();

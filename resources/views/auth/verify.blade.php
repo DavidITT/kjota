@@ -14,7 +14,7 @@
                                             <h3 class="mb-30">Verifica tu correo electrónico</h3>
                                         </div>
                                         <p class="mb-50 font-xl">
-                                            Para brindarte una mejor atención, necesitamos que verifiques tu correo electrónico y asi puedas iniciar sesión.
+                                            Para brindarte una mejor atención, necesitamos que verifiques tu correo electrónico y asi puedas acceder a todo el contenido.
                                         </p>
                                         <span class="text-grey-5 font-xl"> {{ __('Si no recibiste uno, haz') }},</span>
                                         <form class="d-inline font-xl mb-30" method="POST" action="{{ route('verification.resend') }}">
