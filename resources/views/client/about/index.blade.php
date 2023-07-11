@@ -35,51 +35,17 @@
                 </div>
             </div>
             <div class="row">
+                @foreach ($branchs as $branch)
                 <div class="col-md-4 text-center mb-4">
                     <img class="btn-shadow-brand hover-up border-radius-10 bg-brand-muted wow fadeIn animated"
-                         src="{{asset('assets/client/imgs/branchs/tollocan.png')}}" alt="">
-                    <h4 class="mt-30 mb-10 wow fadeIn animated">Tollocan</h4>
-                    <a href="https://maps.google.com/?q=19.28587541728125,-99.55892338807507"
+                         src="{{asset($branch->image->url)}}" style="width: 100%; height: 256px" alt="image_branch">
+                    <h4 class="mt-30 mb-10 wow fadeIn animated">Sucursal {{ $branch->name }}</h4>
+                    <a href="{{'https://maps.google.com/?q='.$branch->address}}"
                        target="_blank" class="btn-sm btn-brand-outline font-weight-bold text-brand bg-white text-hover-white mt-20 border-radius-5 btn-shadow-brand hover-up">
                         <i class="fi-rs-marker mr-10"></i>Ver mapa
                     </a>
                 </div>
-                <div class="col-md-4 text-center mb-4">
-                    <img class="btn-shadow-brand hover-up border-radius-10 bg-brand-muted wow fadeIn animated"
-                         src="{{asset('assets/client/imgs/branchs/naucalpan.png')}}" alt="">
-                    <h4 class="mt-30 mb-15 wow fadeIn animated">Naucalpan</h4>
-                    <a href="https://maps.google.com/?q=19.45672326500629,-99.21680972883567"
-                       target="_blank" class="btn-sm btn-brand-outline font-weight-bold text-brand bg-white text-hover-white mt-20 border-radius-5 btn-shadow-brand hover-up">
-                        <i class="fi-rs-marker mr-10"></i>Ver mapa
-                    </a>
-                </div>
-                <div class="col-md-4 text-center mb-4">
-                    <img class="btn-shadow-brand hover-up border-radius-10 bg-brand-muted wow fadeIn animated"
-                         src="{{asset('assets/client/imgs/branchs/la-viga.jpg')}}" alt="">
-                    <h4 class="mt-30 mb-15 wow fadeIn animated">La Viga</h4>
-                    <a href="https://maps.google.com/?q=19.37961771236311,-99.12301087458063"
-                       target="_blank" class="btn-sm btn-brand-outline font-weight-bold text-brand bg-white text-hover-white mt-20 border-radius-5 btn-shadow-brand hover-up">
-                        <i class="fi-rs-marker mr-10"></i>Ver mapa
-                    </a>
-                </div>
-                <div class="col-md-4 text-center mb-4">
-                    <img class="btn-shadow-brand hover-up border-radius-10 bg-brand-muted wow fadeIn animated"
-                         src="{{asset('assets/client/imgs/branchs/el-olivo.jpg')}}" alt="">
-                    <h4 class="mt-30 mb-15 wow fadeIn animated">El Olivo</h4>
-                    <a href="https://maps.google.com/?q=19.38994654039866,-99.27706915974935"
-                       target="_blank" class="btn-sm btn-brand-outline font-weight-bold text-brand bg-white text-hover-white mt-20 border-radius-5 btn-shadow-brand hover-up">
-                        <i class="fi-rs-marker mr-10"></i>Ver mapa
-                    </a>
-                </div>
-                <div class="col-md-4 text-center mb-4">
-                    <img class="btn-shadow-brand hover-up border-radius-10 bg-brand-muted wow fadeIn animated"
-                         src="{{asset('assets/client/imgs/branchs/villa.png')}}" alt="">
-                    <h4 class="mt-30 mb-15 wow fadeIn animated">Villa Guerrero</h4>
-                    <a href="https://maps.google.com/?q=18.950687862700228,-99.64618690674652"
-                       target="_blank" class="btn-sm btn-brand-outline font-weight-bold text-brand bg-white text-hover-white mt-20 border-radius-5 btn-shadow-brand hover-up">
-                        <i class="fi-rs-marker mr-10"></i>Ver mapa
-                    </a>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\Client\AboutUsController;
 use App\Http\Controllers\Client\AccountController;
 use App\Http\Controllers\Client\CategoryController;
 use App\Http\Controllers\Client\ContactController;
+use App\Http\Controllers\Client\ContentController;
 use App\Http\Controllers\Client\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -51,13 +53,11 @@ Route::get('/ayuda', function () {
 
 /*
 |--------------------------------------------------------------------------
-| About Us
+| About Us,
 |--------------------------------------------------------------------------
 */
 
-Route::get('/nosotros', function () {
-    return view('client.about.index');
-})->name('about');
+Route::get('/nosotros', [AboutUsController::class, 'index'])->name('about');
 
 /*
 |--------------------------------------------------------------------------

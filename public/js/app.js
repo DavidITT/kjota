@@ -19643,30 +19643,21 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     Map: _components_Map__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  setup: function setup() {
+  props: {
+    branchs: {
+      type: Array
+    }
+  },
+  setup: function setup(props) {
     var branch = (0,vue__WEBPACK_IMPORTED_MODULE_1__.ref)('Naucalpan');
     var srcMap = (0,vue__WEBPACK_IMPORTED_MODULE_1__.ref)('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2236.886328304762!2d-99.21830818280395!3d19.45645540744735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d202413ac1e673%3A0x666397235f1e69b2!2sKjota!5e0!3m2!1ses-419!2smx!4v1685650319965!5m2!1ses-419!2smx');
-    (0,vue__WEBPACK_IMPORTED_MODULE_1__.watch)(branch, function (newBranch, oldBranch) {
-      switch (branch.value) {
-        case 'Naucalpan':
-          srcMap.value = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2236.886328304762!2d-99.21830818280395!3d19.45645540744735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d202413ac1e673%3A0x666397235f1e69b2!2sKjota!5e0!3m2!1ses-419!2smx!4v1685650319965!5m2!1ses-419!2smx';
-          break;
-        case 'Tollocan':
-          srcMap.value = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d941.4810681157093!2d-99.55941750944595!3d19.285659112610013!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8ac5bb0cf197%3A0xd6b7eaaaa35691e7!2sKJ%20Suc%20Tollocan!5e0!3m2!1ses-419!2smx!4v1685996824301!5m2!1ses-419!2smx';
-          break;
-        case 'La Viga':
-          srcMap.value = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.9404548505975!2d-99.1235828058053!3d19.379463194765535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fe675dbd3ee5%3A0xd88398ac865bbe9d!2sCalz.%20de%20la%20Viga%201183%2C%20Militar%20Marte%2C%20Iztacalco%2C%2008840%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1685659930258!5m2!1ses-419!2smx';
-          break;
-        case 'El Olivo':
-          srcMap.value = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1582.3664904748505!2d-99.27788615965858!3d19.38979702272373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2011a91fee347%3A0x1ed1381f6fa463a!2sKJ%20Cajas%20de%20cart%C3%B3n!5e0!3m2!1ses-419!2smx!4v1685996918915!5m2!1ses-419!2smx';
-          break;
-        case 'Villa':
-          srcMap.value = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d943.3916464347712!2d-99.646324!3d18.950569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd97d67e9e8e63%3A0x1a12670b1ad72ae9!2sEmpaques%20De%20Cart%C3%B3n%20K%20J!5e0!3m2!1ses-419!2smx!4v1685727781138!5m2!1ses-419!2smx';
-          break;
-      }
+    var branchs = props.branchs;
+    (0,vue__WEBPACK_IMPORTED_MODULE_1__.watch)(branch, function () {
+      srcMap.value = "https://maps.google.com/maps?&q=\"+".concat(branch.value, "\"&output=embed");
     });
     return {
       branch: branch,
+      branchs: branchs,
       srcMap: srcMap,
       onViewMap: function onViewMap(val) {
         return branch.value = val;
@@ -20114,82 +20105,14 @@ var _hoisted_3 = {
   "class": "d-flex flex-wrap flex-column flex-md-row"
 };
 var _hoisted_4 = {
-  "class": "col-md-4 mb-4"
-};
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", {
   "class": "mb-15 text-brand"
-}, "Sucursal Tollocan", -1 /* HOISTED */);
+};
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("abbr", {
+  title: "Phone"
+}, "Telefono:", -1 /* HOISTED */);
 var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1 /* HOISTED */);
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1 /* HOISTED */);
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("abbr", {
-  title: "Phone"
-}, "Telefono:", -1 /* HOISTED */);
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1 /* HOISTED */);
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("abbr", {
-  title: "Phone"
-}, "Telefono:", -1 /* HOISTED */);
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1 /* HOISTED */);
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "fi-rs-marker mr-10"
-}, null, -1 /* HOISTED */);
-var _hoisted_13 = {
-  "class": "col-md-4 mb-4"
-};
-var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", {
-  "class": "mb-15 text-brand"
-}, "Sucursal Naucalpan", -1 /* HOISTED */);
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1 /* HOISTED */);
-var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1 /* HOISTED */);
-var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("abbr", {
-  title: "Phone"
-}, "Telefono:", -1 /* HOISTED */);
-var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1 /* HOISTED */);
-var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "fi-rs-marker mr-10"
-}, null, -1 /* HOISTED */);
-var _hoisted_20 = {
-  "class": "col-md-4 mb-4"
-};
-var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", {
-  "class": "mb-15 text-brand"
-}, "Sucural Villa Guerrero", -1 /* HOISTED */);
-var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1 /* HOISTED */);
-var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1 /* HOISTED */);
-var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("abbr", {
-  title: "Phone"
-}, "Telefono:", -1 /* HOISTED */);
-var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1 /* HOISTED */);
-var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "fi-rs-marker mr-10"
-}, null, -1 /* HOISTED */);
-var _hoisted_27 = {
-  "class": "col-md-4 mb-4"
-};
-var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", {
-  "class": "mb-15 text-brand"
-}, "Sucursal La Viga", -1 /* HOISTED */);
-var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1 /* HOISTED */);
-var _hoisted_30 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1 /* HOISTED */);
-var _hoisted_31 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("abbr", {
-  title: "Phone"
-}, "Telefono:", -1 /* HOISTED */);
-var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1 /* HOISTED */);
-var _hoisted_33 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "fi-rs-marker mr-10"
-}, null, -1 /* HOISTED */);
-var _hoisted_34 = {
-  "class": "col-md-4 mb-4"
-};
-var _hoisted_35 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", {
-  "class": "mb-15 text-brand"
-}, "Sucursal El Olivo", -1 /* HOISTED */);
-var _hoisted_36 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1 /* HOISTED */);
-var _hoisted_37 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1 /* HOISTED */);
-var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("abbr", {
-  title: "Telefono"
-}, "Phone:", -1 /* HOISTED */);
-var _hoisted_39 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1 /* HOISTED */);
-var _hoisted_40 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+var _hoisted_7 = ["onClick"];
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "fi-rs-marker mr-10"
 }, null, -1 /* HOISTED */);
 
@@ -20199,33 +20122,18 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     branch: $setup.branch,
     srcMap: $setup.srcMap,
     id: "branch-map"
-  }, null, 8 /* PROPS */, ["branch", "srcMap"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Av. Paseo Tollocan 321, Alvaro Obregon "), _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" 52105, San Mateo Atenco, Méx. "), _hoisted_7, _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" 01 728 690 1794"), _hoisted_9, _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" 01 728 690 9499"), _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    onClick: _cache[0] || (_cache[0] = function ($event) {
-      return $setup.onViewMap('Tollocan');
-    }),
-    type: "button",
-    "class": "btn-sm btn-brand-outline font-weight-bold text-brand bg-white text-hover-white mt-20 border-radius-5 btn-shadow-brand hover-up"
-  }, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Ver mapa ")])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Calz. Transmisiones Militares 23 Col, Lomas de Sotelo"), _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" 53390 Naucalpan de Juárez, Méx."), _hoisted_16, _hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" 5576 5423"), _hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    onClick: _cache[1] || (_cache[1] = function ($event) {
-      return $setup.onViewMap('Naucalpan');
-    }),
-    "class": "btn-sm btn-brand-outline font-weight-bold text-brand bg-white text-hover-white mt-20 border-radius-5 btn-shadow-brand hover-up"
-  }, [_hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Ver mapa ")])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [_hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Carretera Federal Toluca-Ixtapan de la Sal"), _hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" San Francisco, Villa Guerrero, EDOMEX"), _hoisted_23, _hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" 714 146 1904"), _hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    onClick: _cache[2] || (_cache[2] = function ($event) {
-      return $setup.onViewMap('Villa');
-    }),
-    "class": "btn-sm btn-brand-outline font-weight-bold text-brand bg-white text-hover-white mt-20 border-radius-5 btn-shadow-brand hover-up"
-  }, [_hoisted_26, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Ver mapa ")])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [_hoisted_28, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Calz. de la Viga 1183, Militar Marte"), _hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Iztacalco, 08840 Ciudad de México, CDMX"), _hoisted_30, _hoisted_31, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" 5634 1830"), _hoisted_32, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    onClick: _cache[3] || (_cache[3] = function ($event) {
-      return $setup.onViewMap('La Viga');
-    }),
-    "class": "btn-sm btn-brand-outline font-weight-bold text-brand bg-white text-hover-white mt-20 border-radius-5 btn-shadow-brand hover-up"
-  }, [_hoisted_33, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Ver mapa ")])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [_hoisted_35, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Lomas de San Fernando 206, El Olivo"), _hoisted_36, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" 52789 Naucalpan de Juárez, Méx"), _hoisted_37, _hoisted_38, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("55 9137 8674"), _hoisted_39, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    onClick: _cache[4] || (_cache[4] = function ($event) {
-      return $setup.onViewMap('El Olivo');
-    }),
-    "class": "btn-sm btn-brand-outline font-weight-bold text-brand bg-white text-hover-white mt-20 border-radius-5 btn-shadow-brand hover-up"
-  }, [_hoisted_40, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Ver mapa ")])])])])]);
+  }, null, 8 /* PROPS */, ["branch", "srcMap"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.branchs, function (branch) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+      "class": "col-md-4 mb-4 p-20",
+      key: branch.id
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", _hoisted_4, "Sucursal " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(branch.name), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(branch.address), 1 /* TEXT */), _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(branch.phone), 1 /* TEXT */), _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+      onClick: function onClick($event) {
+        return $setup.onViewMap(branch.address);
+      },
+      type: "button",
+      "class": "btn-sm btn-brand-outline font-weight-bold text-brand bg-white text-hover-white mt-20 border-radius-5 btn-shadow-brand hover-up"
+    }, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Ver mapa ")], 8 /* PROPS */, _hoisted_7)]);
+  }), 128 /* KEYED_FRAGMENT */))])])]);
 }
 
 /***/ }),

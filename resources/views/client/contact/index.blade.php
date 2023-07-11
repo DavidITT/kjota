@@ -16,7 +16,7 @@
             </div>
         </div>
     </section>
-    <branch-map></branch-map>
+    <branch-map :branchs="{{ $branchs }}"></branch-map>
     <section class="section-border pt-50 pb-50 bg-grey-9">
         <div class="container">
             <div class="row">
