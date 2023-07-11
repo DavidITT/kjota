@@ -9,7 +9,7 @@
         <table class="table table-hover">
             <thead>
             <tr>
-                <th class="text-center"></th>
+                <!-- <th class="text-center"></th> -->
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Direccion</th>
@@ -46,7 +46,7 @@
 
 <script>
 
-import {onMounted, reactive} from "vue";
+import {onMounted,ref} from "vue";
 import {useStore} from "vuex";
 import useBranch from "../composables/useBranch";
 import BranchItem from "./BranchItem";

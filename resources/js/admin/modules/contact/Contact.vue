@@ -78,7 +78,7 @@ import EmailsTable from "./components/EmailsTable";
 import {onMounted, reactive, ref, watch} from "vue";
 import useEmails from "./composables/useEmails";
 import {useStore} from "vuex";
-import useModal from "../../composables/useModal";
+import useModal from "./composables/useModal";
 
 
 export default {

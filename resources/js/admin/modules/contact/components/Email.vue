@@ -24,7 +24,7 @@
 import {computed} from "vue";
 import useEmails from "../composables/useEmails";
 import useSelect from "../composables/useSelect";
-import useModal from "../../../composables/useModal";
+import useModal from "../composables/useModal";
 
 export default {
     name: "Email",

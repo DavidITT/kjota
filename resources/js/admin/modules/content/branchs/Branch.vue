@@ -20,15 +20,22 @@
             </div>
         </div>
     </div>
+
+    <!--Modals-->
+    <ShowBranch/>
+    <EditBranch/>
+
 </template>
 
 <script>
 import BranchForm from "./components/BranchForm";
 import BranchTable from "./components/BranchTable";
+import ShowBranch from "./modals/ShowBranch";
+import EditBranch from "./modals/EditBranch";
 
 export default {
     name: "Branch",
-    components: {BranchForm, BranchTable},
+    components: {EditBranch, ShowBranch, BranchForm, BranchTable},
 }
 </script>
 

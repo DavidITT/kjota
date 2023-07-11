@@ -78,7 +78,7 @@
 </template>
 
 <script>
-import useModal from "../../../composables/useModal";
+import useModal from "../composables/useModal";
 import {reactive, ref} from "vue";
 import useVuelidate from '@vuelidate/core'
 import {required, email, helpers} from '@vuelidate/validators'

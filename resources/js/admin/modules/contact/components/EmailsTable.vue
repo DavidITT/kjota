@@ -93,7 +93,7 @@ import {setUrlPagination} from "../store/contact/mutations";
 import {useStore} from "vuex";
 import {ref} from "vue";
 import ReplyEmail from "../modals/ReplyEmail";
-import useModal from "../../../composables/useModal";
+import useModal from "../composables/useModal";
 
 export default {
     name: "EmailsTable",

@@ -14,4 +14,13 @@ export const links = (state) => {
     return state.links
 }
 
+//Edit branch
+export const editBranch = (state) => {
+    return state.editBranch
+}
+
+export const showBranch = (state) => {
+    return state.showBranch
+}
+
 
