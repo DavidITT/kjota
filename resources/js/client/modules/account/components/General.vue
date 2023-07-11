@@ -67,12 +67,12 @@
                             <img v-if="imagePreview !== null" class="img-lg img-avatar rounded-circle"
                                  width="200"
                                  height="200"
-                                 :src="imagePreview !== null ? imagePreview : ''"
+                                 :src="imagePreview"
                                  alt="User Photo">
                             <img v-else class="img-lg img-avatar rounded-circle"
                                  width="200"
                                  height="200"
-                                 :src="userData.img.url ? `storage/${userData.img.url}` : 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200'"
+                                 :src="userData.img !== null ?  userData.img.url : 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200'"
                                  alt="User Photo">
                             <figcaption>
                                 <input type="file" id="file-input" accept="image/x-png,image/jpg,image/jpeg"

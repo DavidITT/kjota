@@ -22,13 +22,13 @@ function uploadUserImage($request, $user){
         $file_name = time().'_'.uniqid().'.'.$request['img']->extension();
         $file_path = $request['img']->storeAs('uploads/profiles', $file_name, 'public');
         $user->image()->update([
-            'url' => $file_path
+            'url' => 'storage/'.$file_path
         ]);
     }else{
         $file_name = time().'_'.uniqid().'.'.$request['img']->extension();
         $file_path = $request['img']->storeAs('uploads/profiles', $file_name, 'public');
         $user->image()->create([
-            'url' => $file_path
+            'url' => 'storage/'.$file_path
         ]);
     }
 

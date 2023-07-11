@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BranchController;
 use App\Http\Controllers\Admin\ContactController;
 use Illuminate\Support\Facades\Route;
 
@@ -60,6 +61,20 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () 
         Route::post('/send/email', [ContactController::class, 'sendEmail']);
         Route::post('/reply/email', [ContactController::class, 'replyEmail']);
     });
+
+    /*
+   |--------------------------------------------------------------------------
+   | Content
+   |--------------------------------------------------------------------------
+   */
+
+    Route::prefix('content')->group(function () {
+        Route::get('/get_branches', [BranchController::class, 'getBranchs']);
+        Route::get('/branchs', [BranchController::class, 'index'])->name('branchs.index');
+        Route::post('branch/delete/{id}', [BranchController::class, 'deleteBranch']);
+        Route::post('branch/create', [BranchController::class, 'createBranch']);
+    });
+
 
 
 

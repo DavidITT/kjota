@@ -84,6 +84,15 @@
                     <span class="text">Statistics</span>
                 </a>
             </li>
+                <li class="menu-item has-submenu">
+                    <a class="menu-link" href="#"> <i class="icon material-icons md-branding_watermark"></i>
+                        <span class="text">Contenido</span>
+                    </a>
+                    <div class="submenu">
+                        <a href="{{route('admin.branchs.index')}}">Sucursales</a>
+                        <a href="page-account-register.html">Banners</a>
+                    </div>
+                </li>
             <li class="{{ Route::is('admin.contact.index') ? 'menu-item active' : 'menu-item' }}">
                 <a class="menu-link" href="{{route('admin.contact.index')}}"> <i class="icon material-icons md-contact_mail"></i>
                     <span class="text">Contacto</span>

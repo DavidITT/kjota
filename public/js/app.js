@@ -20058,14 +20058,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "img-lg img-avatar rounded-circle",
     width: "200",
     height: "200",
-    src: $setup.imagePreview !== null ? $setup.imagePreview : '',
+    src: $setup.imagePreview,
     alt: "User Photo"
   }, null, 8 /* PROPS */, _hoisted_27)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {
     key: 1,
     "class": "img-lg img-avatar rounded-circle",
     width: "200",
     height: "200",
-    src: $setup.userData.img.url ? "storage/".concat($setup.userData.img.url) : 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200',
+    src: $setup.userData.img !== null ? $setup.userData.img.url : 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200',
     alt: "User Photo"
   }, null, 8 /* PROPS */, _hoisted_28)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("figcaption", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "file",

@@ -47,6 +47,15 @@ app.component('order-list', require('./admin/modules/orders/OrderList.vue').defa
 app.component('sale-list', require('./admin/modules/sales/SalesList.vue').default);
 /*
 |--------------------------------------------------------------------------
+| Content
+|--------------------------------------------------------------------------
+*/
+
+//               Branchs
+app.component('branch-list', require('./admin/modules/content/branchs/Branch.vue').default);
+
+/*
+|--------------------------------------------------------------------------
 | Contact
 |--------------------------------------------------------------------------
 */
