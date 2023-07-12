@@ -34,7 +34,7 @@
                 </tbody>
             </table>
 
-            <div v-if="searchBranch.length !== 0" class="pagination-area mt-15 mb-50">
+            <div class="pagination-area mt-15 mb-50">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-start d-flex flex-wrap">
                         <li v-for="link in links" :key="link.label"
