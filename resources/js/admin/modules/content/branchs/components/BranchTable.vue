@@ -12,8 +12,7 @@
                 <!-- <th class="text-center"></th> -->
                 <th>ID</th>
                 <th>Nombre</th>
-                <th>Direccion</th>
-                <th>Telefono</th>
+                <th>Estado</th>
                 <th class="text-center">Acciones</th>
             </tr>
             </thead>

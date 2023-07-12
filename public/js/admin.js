@@ -20185,16 +20185,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _composables_useModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../composables/useModal */ "./resources/js/admin/modules/content/branchs/composables/useModal.js");
+/* harmony import */ var _composables_useBranch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../composables/useBranch */ "./resources/js/admin/modules/content/branchs/composables/useBranch.js");
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "ShowBranch",
   setup: function setup() {
+    var _useBranch = (0,_composables_useBranch__WEBPACK_IMPORTED_MODULE_1__["default"])(),
+      store = _useBranch.store,
+      getBranches = _useBranch.getBranches;
     var _UseModal = (0,_composables_useModal__WEBPACK_IMPORTED_MODULE_0__["default"])(),
       showBranch = _UseModal.showBranch,
       handleModal = _UseModal.handleModal;
+    var branch = store.getters['branches/branch'];
     return {
       showBranch: showBranch,
-      handleModal: handleModal
+      handleModal: handleModal,
+      branch: branch
     };
   }
 });
@@ -21088,10 +21095,10 @@ var _hoisted_4 = {
   "class": "row"
 };
 var _hoisted_5 = {
-  "class": "col-12 col-md-4 col-lg-3"
+  "class": "col-12 col-md-5 col-lg-4 p-30"
 };
 var _hoisted_6 = {
-  "class": "col-12 col-md-8 col-lg-9"
+  "class": "col-12 col-md-7 col-lg-8"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_BranchForm = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("BranchForm");
@@ -21305,7 +21312,9 @@ var _hoisted_4 = {
   "class": "dropdown-menu"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        <td class=\"text-center\">\n            <div class=\"form-check\"><input class=\"form-check-input\" type=\"checkbox\" value=\"\"></div>\n        </td>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.branch.id), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("b", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.branch.name), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.branch.address), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.branch.phone), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        <td class=\"text-center\">\n            <div class=\"form-check\"><input class=\"form-check-input\" type=\"checkbox\" value=\"\"></div>\n        </td>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.branch.id), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("b", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.branch.name), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["badge rounded-pill", $setup.branch.status === 1 ? 'alert-success' : 'alert-warning'])
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.branch.status === 1 ? 'Habilitado' : 'Deshabilitado'), 3 /* TEXT, CLASS */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "dropdown-item",
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return $setup.handleModal({
@@ -21370,7 +21379,7 @@ var _hoisted_6 = {
 var _hoisted_7 = {
   "class": "table table-hover"
 };
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <th class=\"text-center\"></th> "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "ID"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "Nombre"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "Direccion"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "Telefono"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <th class=\"text-center\"></th> "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "ID"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "Nombre"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "Estado"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "text-center"
 }, "Acciones")])], -1 /* HOISTED */);
 var _hoisted_9 = {
@@ -21682,24 +21691,67 @@ var _withScopeId = function _withScopeId(n) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-32fc4a7e"), n = n(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)(), n;
 };
 var _hoisted_1 = {
-  "class": "modal-wrapper"
+  "class": "modal-dialog modal-lg modal-dialog-scrollable"
 };
 var _hoisted_2 = {
-  "class": "modal-dialog modal-lg"
-};
-var _hoisted_3 = {
   "class": "modal-content"
 };
-var _hoisted_4 = {
+var _hoisted_3 = {
   "class": "modal-header"
 };
-var _hoisted_5 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_4 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", {
     "class": "modal-title",
-    id: "createMailModalLabel"
+    id: "exampleModalLabel"
   }, "Detalles de sucursal", -1 /* HOISTED */);
 });
-
+var _hoisted_5 = {
+  "class": "modal-body"
+};
+var _hoisted_6 = {
+  "class": "row mtb-30"
+};
+var _hoisted_7 = {
+  "class": "col-12 col-lg-6 align-self-center"
+};
+var _hoisted_8 = {
+  "class": "detail-gallery"
+};
+var _hoisted_9 = {
+  "class": "product-image-slider"
+};
+var _hoisted_10 = {
+  "class": "border-radius-10"
+};
+var _hoisted_11 = ["src"];
+var _hoisted_12 = {
+  "class": "col-12 col-lg-6"
+};
+var _hoisted_13 = {
+  "class": "detail-info"
+};
+var _hoisted_14 = {
+  "class": "title-detail mb-30"
+};
+var _hoisted_15 = {
+  "class": "product-detail-rating mb-20"
+};
+var _hoisted_16 = {
+  "class": "pro-details-brand"
+};
+var _hoisted_17 = {
+  "class": "product-detail-rating mb-20"
+};
+var _hoisted_18 = {
+  "class": "pro-details-brand"
+};
+var _hoisted_19 = {
+  "class": "font-xs color-grey mb-20"
+};
+var _hoisted_20 = {
+  "class": "mb-5"
+};
+var _hoisted_21 = ["href"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Modal "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["modal fade", {
@@ -21707,16 +21759,26 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }]),
     tabindex: "-1",
     role: "dialog"
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-    "class": "icon material-icons md-close",
-    role: "button",
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    type: "button",
+    "class": "btn-close",
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return $setup.handleModal({
         modal: 'show',
         status: false
       });
-    })
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <form @submit.prevent=\"submitForm\" method=\"post\">\n                                            <div class=\"modal-body\">\n                                                <div class=\"mb-3\">\n                                                    <p><strong>Instrucciones: </strong>Envia un correo electrónico rapido al cliente desde\n                                                        aqui</p>\n                                                </div>\n                                                <div class=\"form-group mb-2\">\n                                                    <input name=\"to\" type=\"text\" class=\"form-control\"\n                                                           :class=\"{'is-invalid': v$.to.$dirty && v$.to.$error}\"\n                                                           placeholder=\"Para: example@gmail.com\"\n                                                           v-model=\"emailData.to\">\n                                                    <div class=\"text-danger mt-2\">\n                                                        <p v-for=\"error in v$.to.$errors\" :key=\"error.$uid\">\n                                                            <span>{{ error.$message }}</span>\n                                                        </p>\n                                                    </div>\n                                                </div>\n                                                <div class=\"form-group mb-2\">\n                                                    <input name=\"subject\" type=\"text\" class=\"form-control\"\n                                                           :class=\"{'is-invalid': v$.subject.$dirty && v$.subject.$error}\"\n                                                           placeholder=\"Asunto\"\n                                                           v-model=\"emailData.subject\">\n                                                    <div class=\"text-danger mt-2\">\n                                                        <p v-for=\"error in v$.subject.$errors\" :key=\"error.$uid\">\n                                                            <span>{{ error.$message }}</span>\n                                                        </p>\n                                                    </div>\n                                                </div>\n                                                <div class=\"form-group\">\n                                                    <textarea name=\"message\" id=\"email_message\" class=\"form-control\"\n                                                              :class=\"{'is-invalid': v$.message.$dirty && v$.message.$error}\"\n                                                              placeholder=\"Mensaje\"\n                                                              v-model=\"emailData.message\"\n                                                              style=\"height: 120px;\"></textarea>\n                                                    <div class=\"text-danger mt-2\">\n                                                        <p v-for=\"error in v$.message.$errors\" :key=\"error.$uid\">\n                                                            <span>{{ error.$message }}</span>\n                                                        </p>\n                                                    </div>\n                                                </div>\n                                            </div>\n\n\n                                            <div class=\"modal-footer\">\n                                                <div v-if=\"loader\" class=\"spinner-border text-brand\" role=\"status\">\n                                                    <span class=\"visually-hidden\">Loading...</span>\n                                                </div>\n                                                <button v-else type=\"button\" class=\"btn btn-default\"\n                                                        @click=\"handleModal({modal:'create',statusModal:false})\"><i\n                                                    class=\"fa fa-times\"></i> Descartar\n                                                </button>\n                                                <button :disabled=\"loader\" type=\"submit\" class=\"btn btn-primary pull-right\"><i\n                                                    class=\"fa fa-envelope\"></i> Enviar Mensaje\n                                                </button>\n                                            </div>\n                                        </form>")])])])], 2 /* CLASS */)], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */);
+    }),
+    "aria-label": "Close"
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("figure", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: "/".concat($setup.branch.image.url),
+    alt: "product image"
+  }, null, 8 /* PROPS */, _hoisted_11)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_14, "Sucursal " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.branch.name), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, " Dirección: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.branch.address), 1 /* TEXT */)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, " Telefono: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.branch.phone), 1 /* TEXT */)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Estado: "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["badge rounded-pill", $setup.branch.status === 1 ? 'alert-success' : 'alert-warning'])
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.branch.status === 1 ? 'Habilitado' : 'Deshabilitado'), 3 /* TEXT, CLASS */)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    href: "https://maps.google.com/?q=".concat($setup.branch.address),
+    target: "_blank",
+    "class": "btn-sm btn-outline-primary mb-20"
+  }, " Ver mapa ", 8 /* PROPS */, _hoisted_21)])])])])])])], 2 /* CLASS */)], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */);
 }
 
 /***/ }),

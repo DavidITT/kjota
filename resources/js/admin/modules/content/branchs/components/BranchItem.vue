@@ -5,8 +5,9 @@
         </td>-->
         <td>{{ branch.id }}</td>
         <td><b>{{ branch.name }}</b></td>
-        <td>{{ branch.address }}</td>
-        <td>{{ branch.phone }}</td>
+        <td>
+            <span class="badge rounded-pill" :class="branch.status === 1 ? 'alert-success' : 'alert-warning'">{{ branch.status === 1 ? 'Habilitado' : 'Deshabilitado' }}</span>
+        </td>
         <td class="text-center">
             <div class="dropdown">
                 <a href="#" data-bs-toggle="dropdown" class="btn btn-light rounded btn-sm font-sm">

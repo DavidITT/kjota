@@ -26,20 +26,6 @@ class BranchController extends Controller
         }
     }
 
-    public function deleteBranch($id)
-    {
-        try {
-            DB::beginTransaction();
-            $status = Branch::findOrFail($id);
-            $status->delete();
-            DB::commit();
-            return response()->json(['message' => 'Sucursal eliminada'], 200);
-        } catch (\Exception $e) {
-            DB::rollBack();
-            return response()->json('Error to delete branch');
-        }
-    }
-
     public function createBranch(Request $request)
     {
         try {
@@ -83,6 +69,20 @@ class BranchController extends Controller
         } catch (\Exception $e) {
             DB::rollBack();
             return response()->json('Error to update branch');
+        }
+    }
+
+    public function deleteBranch($id)
+    {
+        try {
+            DB::beginTransaction();
+            $status = Branch::findOrFail($id);
+            $status->delete();
+            DB::commit();
+            return response()->json(['message' => 'Sucursal eliminada'], 200);
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return response()->json('Error to delete branch');
         }
     }
 

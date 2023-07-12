@@ -1,90 +1,72 @@
 <template>
     <!-- Modal -->
+
     <div class="modal fade" :class="{show:showBranch}" tabindex="-1" role="dialog">
-        <div class="modal-wrapper">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="createMailModalLabel">Detalles de sucursal</h5>
-                        <i class="icon material-icons md-close" role="button" @click="handleModal({modal:'show', status:false})"></i>
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Detalles de sucursal</h5>
+                    <button type="button" class="btn-close" @click="handleModal({modal:'show', status:false})"
+                            aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mtb-30">
+                        <div class="col-12 col-lg-6 align-self-center">
+                            <div class="detail-gallery">
+                                <div class="product-image-slider">
+                                    <figure class="border-radius-10">
+                                        <img :src="`/${branch.image.url}`" alt="product image">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="detail-info">
+                                <h3 class="title-detail mb-30">Sucursal {{ branch.name }}</h3>
+                                <div class="product-detail-rating mb-20">
+                                    <div class="pro-details-brand">
+                                        <span> Dirección: {{ branch.address }}</span>
+                                    </div>
+                                </div>
+                                <div class="product-detail-rating mb-20">
+                                    <div class="pro-details-brand">
+                                        <span> Telefono: {{ branch.phone }}</span>
+                                    </div>
+                                </div>
+                                <ul class="font-xs color-grey mb-20">
+                                    <li class="mb-5">Estado:
+                                        <span class="badge rounded-pill" :class="branch.status === 1 ? 'alert-success' : 'alert-warning'">{{ branch.status === 1 ? 'Habilitado' : 'Deshabilitado' }}</span>
+                                    </li>
+                                </ul>
+
+                                <a :href="`https://maps.google.com/?q=${branch.address}`"
+                                   target="_blank" class="btn-sm btn-outline-primary mb-20">
+                                    Ver mapa
+                                </a>
+                            </div>
+                        </div>
                     </div>
-
-                    <!--                    <form @submit.prevent="submitForm" method="post">
-                                            <div class="modal-body">
-                                                <div class="mb-3">
-                                                    <p><strong>Instrucciones: </strong>Envia un correo electrónico rapido al cliente desde
-                                                        aqui</p>
-                                                </div>
-                                                <div class="form-group mb-2">
-                                                    <input name="to" type="text" class="form-control"
-                                                           :class="{'is-invalid': v$.to.$dirty && v$.to.$error}"
-                                                           placeholder="Para: example@gmail.com"
-                                                           v-model="emailData.to">
-                                                    <div class="text-danger mt-2">
-                                                        <p v-for="error in v$.to.$errors" :key="error.$uid">
-                                                            <span>{{ error.$message }}</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group mb-2">
-                                                    <input name="subject" type="text" class="form-control"
-                                                           :class="{'is-invalid': v$.subject.$dirty && v$.subject.$error}"
-                                                           placeholder="Asunto"
-                                                           v-model="emailData.subject">
-                                                    <div class="text-danger mt-2">
-                                                        <p v-for="error in v$.subject.$errors" :key="error.$uid">
-                                                            <span>{{ error.$message }}</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <textarea name="message" id="email_message" class="form-control"
-                                                              :class="{'is-invalid': v$.message.$dirty && v$.message.$error}"
-                                                              placeholder="Mensaje"
-                                                              v-model="emailData.message"
-                                                              style="height: 120px;"></textarea>
-                                                    <div class="text-danger mt-2">
-                                                        <p v-for="error in v$.message.$errors" :key="error.$uid">
-                                                            <span>{{ error.$message }}</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="modal-footer">
-                                                <div v-if="loader" class="spinner-border text-brand" role="status">
-                                                    <span class="visually-hidden">Loading...</span>
-                                                </div>
-                                                <button v-else type="button" class="btn btn-default"
-                                                        @click="handleModal({modal:'create',statusModal:false})"><i
-                                                    class="fa fa-times"></i> Descartar
-                                                </button>
-                                                <button :disabled="loader" type="submit" class="btn btn-primary pull-right"><i
-                                                    class="fa fa-envelope"></i> Enviar Mensaje
-                                                </button>
-                                            </div>
-                                        </form>-->
                 </div>
             </div>
         </div>
-
     </div>
 </template>
 
 <script>
 
 import UseModal from "../composables/useModal";
+import useBranch from "../composables/useBranch";
 
 export default {
     name: "ShowBranch",
     setup() {
-
+        const {store, getBranches} = useBranch()
         const {showBranch, handleModal} = UseModal()
-
+        const branch = store.getters['branches/branch']
         return {
             showBranch,
-            handleModal
+            handleModal,
+            branch
         }
     }
 }

@@ -11,10 +11,10 @@
     <div class="card">
         <div class="card-body">
             <div class="row">
-                <div class="col-12 col-md-4 col-lg-3">
+                <div class="col-12 col-md-5 col-lg-4 p-30">
                     <BranchForm/>
                 </div>
-                <div class="col-12 col-md-8 col-lg-9">
+                <div class="col-12 col-md-7 col-lg-8">
                     <BranchTable/>
                 </div>
             </div>
