@@ -4,9 +4,6 @@
             <h2 class="content-title card-title">Sucursales </h2>
             <p>Agrega, edita o elimina las sucursales que se le mostraran al cliente en la pagina.</p>
         </div>
-        <div>
-            <input type="text" placeholder="Buscar Sucursal" class="form-control bg-white">
-        </div>
     </div>
     <div class="card">
         <div class="card-body">
@@ -34,14 +31,15 @@ import ShowBranch from "./modals/ShowBranch";
 import EditBranch from "./modals/EditBranch";
 import useModal from "./composables/useModal";
 
+
 export default {
     name: "Branch",
-    components: {EditBranch, ShowBranch, BranchForm, BranchTable},
+    components: { EditBranch, ShowBranch, BranchForm, BranchTable},
     setup(){
         const {showBranch, editBranch} = useModal()
         return{
             showBranch,
-            editBranch
+            editBranch,
         }
     }
 }

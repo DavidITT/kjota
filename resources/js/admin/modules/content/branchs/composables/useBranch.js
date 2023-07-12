@@ -5,6 +5,8 @@ const useBranch = () => {
 
     const store = useStore()
 
+    const search = ref('')
+
     return {
         //Actions
         getBranches: () => store.dispatch('branches/getBranches'),
@@ -13,6 +15,8 @@ const useBranch = () => {
         branches: computed(()  => store.getters['branches/branches']),
         links: computed(() => store.getters['branches/links']),
         loader: computed(() => store.getters['branches/loader']),
+        searchBranch: computed(()  => store.getters['branches/searchBranch'](search.value)),
+        search,
         store
     }
 }

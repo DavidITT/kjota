@@ -19970,9 +19970,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm-bundler.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm-bundler.js");
 /* harmony import */ var _composables_useBranch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../composables/useBranch */ "./resources/js/admin/modules/content/branchs/composables/useBranch.js");
 /* harmony import */ var _BranchItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BranchItem */ "./resources/js/admin/modules/content/branchs/components/BranchItem.vue");
+/* harmony import */ var _composables_useSearch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../composables/useSearch */ "./resources/js/admin/modules/content/branchs/composables/useSearch.js");
+
 
 
 
@@ -19983,21 +19985,24 @@ __webpack_require__.r(__webpack_exports__);
     BranchItem: _BranchItem__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   setup: function setup() {
-    var store = (0,vuex__WEBPACK_IMPORTED_MODULE_3__.useStore)();
+    var store = (0,vuex__WEBPACK_IMPORTED_MODULE_4__.useStore)();
     var _useBranch = (0,_composables_useBranch__WEBPACK_IMPORTED_MODULE_1__["default"])(),
       getBranches = _useBranch.getBranches,
-      branches = _useBranch.branches,
       links = _useBranch.links,
       loader = _useBranch.loader;
+    var _useSearch = (0,_composables_useSearch__WEBPACK_IMPORTED_MODULE_3__["default"])(),
+      search = _useSearch.search,
+      searchBranch = _useSearch.searchBranch;
     (0,vue__WEBPACK_IMPORTED_MODULE_0__.onMounted)(function () {
       getBranches();
     });
     return {
+      searchBranch: searchBranch,
+      search: search,
       paginate: function paginate(url) {
         store.commit('branches/setUrl', url);
         getBranches();
       },
-      branches: branches,
       links: links,
       loader: loader
     };
@@ -21080,11 +21085,7 @@ var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "mb-5 mb-md-0"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
   "class": "content-title card-title"
-}, "Sucursales "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Agrega, edita o elimina las sucursales que se le mostraran al cliente en la pagina.")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-  type: "text",
-  placeholder: "Buscar Sucursal",
-  "class": "form-control bg-white"
-})])], -1 /* HOISTED */);
+}, "Sucursales "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Agrega, edita o elimina las sucursales que se le mostraran al cliente en la pagina.")])], -1 /* HOISTED */);
 var _hoisted_2 = {
   "class": "card"
 };
@@ -21373,44 +21374,59 @@ var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 }, null, -1 /* HOISTED */);
 var _hoisted_5 = [_hoisted_2, _hoisted_3, _hoisted_4];
 var _hoisted_6 = {
-  key: 1,
-  "class": "table-responsive"
+  key: 1
 };
 var _hoisted_7 = {
+  "class": "row mb-30 justify-content-end"
+};
+var _hoisted_8 = {
+  "class": "col-4"
+};
+var _hoisted_9 = {
+  "class": "table-responsive"
+};
+var _hoisted_10 = {
   "class": "table table-hover"
 };
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <th class=\"text-center\"></th> "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "ID"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "Nombre"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "Estado"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <th class=\"text-center\"></th> "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "ID"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "Nombre"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "Estado"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "text-center"
 }, "Acciones")])], -1 /* HOISTED */);
-var _hoisted_9 = {
+var _hoisted_12 = {
   key: 0,
   "class": "text-center"
 };
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
   colspan: "6"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "No hay ninguna sucursal registrada aun")], -1 /* HOISTED */);
-var _hoisted_11 = [_hoisted_10];
-var _hoisted_12 = {
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "No hay ninguna sucursal")], -1 /* HOISTED */);
+var _hoisted_14 = [_hoisted_13];
+var _hoisted_15 = {
   key: 0,
   "class": "pagination-area mt-15 mb-50"
 };
-var _hoisted_13 = {
+var _hoisted_16 = {
   "aria-label": "Page navigation example"
 };
-var _hoisted_14 = {
+var _hoisted_17 = {
   "class": "pagination justify-content-start d-flex flex-wrap"
 };
-var _hoisted_15 = ["onClick", "innerHTML"];
+var _hoisted_18 = ["onClick", "innerHTML"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_BranchItem = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("BranchItem");
-  return $setup.loader ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, _hoisted_5)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [$setup.branches.length === 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", _hoisted_9, _hoisted_11)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+  return $setup.loader ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, _hoisted_5)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "text",
+    "class": "form-control-sm form-control bg-white",
+    placeholder: "Buscar sucursal",
+    "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
+      return $setup.search = $event;
+    })
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.search]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_10, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [$setup.searchBranch.length === 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", _hoisted_12, _hoisted_14)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     key: 1
-  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.branches, function (branch) {
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.searchBranch, function (branch) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_BranchItem, {
       key: branch.id,
       branch: branch
     }, null, 8 /* PROPS */, ["branch"]);
-  }), 128 /* KEYED_FRAGMENT */))])]), $setup.branches.length !== 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_14, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.links, function (link) {
+  }), 128 /* KEYED_FRAGMENT */))])]), $setup.searchBranch.length !== 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_17, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.links, function (link) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", {
       key: link.label,
       "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["page-item mb-2", {
@@ -21423,8 +21439,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         return $setup.paginate(link.url);
       },
       innerHTML: link.label
-    }, null, 8 /* PROPS */, _hoisted_15)], 2 /* CLASS */);
-  }), 128 /* KEYED_FRAGMENT */))])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]));
+    }, null, 8 /* PROPS */, _hoisted_18)], 2 /* CLASS */);
+  }), 128 /* KEYED_FRAGMENT */))])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]));
 }
 
 /***/ }),
@@ -23303,6 +23319,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var useBranch = function useBranch() {
   var store = (0,vuex__WEBPACK_IMPORTED_MODULE_1__.useStore)();
+  var search = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('');
   return {
     //Actions
     getBranches: function getBranches() {
@@ -23321,6 +23338,10 @@ var useBranch = function useBranch() {
     loader: (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(function () {
       return store.getters['branches/loader'];
     }),
+    searchBranch: (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(function () {
+      return store.getters['branches/searchBranch'](search.value);
+    }),
+    search: search,
     store: store
   };
 };
@@ -23362,6 +23383,35 @@ var useModal = function useModal() {
         branch: branch
       });
     }
+  };
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useModal);
+
+/***/ }),
+
+/***/ "./resources/js/admin/modules/content/branchs/composables/useSearch.js":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/admin/modules/content/branchs/composables/useSearch.js ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm-bundler.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+
+var useModal = function useModal() {
+  var store = (0,vuex__WEBPACK_IMPORTED_MODULE_1__.useStore)();
+  var search = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('');
+  return {
+    searchBranch: (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(function () {
+      return store.getters['branches/searchBranch'](search.value);
+    }),
+    search: search
   };
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useModal);
@@ -23513,20 +23563,25 @@ var deleteBranch = /*#__PURE__*/function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   branch: () => (/* binding */ branch),
-/* harmony export */   branches: () => (/* binding */ branches),
 /* harmony export */   editBranch: () => (/* binding */ editBranch),
 /* harmony export */   links: () => (/* binding */ links),
 /* harmony export */   loader: () => (/* binding */ loader),
+/* harmony export */   searchBranch: () => (/* binding */ searchBranch),
 /* harmony export */   showBranch: () => (/* binding */ showBranch)
 /* harmony export */ });
+//Search Branch
+var searchBranch = function searchBranch(state) {
+  return function (query) {
+    if (query.length === 0) return state.branches;
+    return state.branches.filter(function (branch) {
+      return branch.name.toLowerCase().includes(query.toLocaleLowerCase());
+    });
+  };
+};
+
 //Get the loader status
 var loader = function loader(state) {
   return state.loader;
-};
-
-//Get emails
-var branches = function branches(state) {
-  return state.branches;
 };
 
 //Get the links of pagination
@@ -23538,9 +23593,13 @@ var links = function links(state) {
 var editBranch = function editBranch(state) {
   return state.editBranch;
 };
+
+//Modal to show details of branch
 var showBranch = function showBranch(state) {
   return state.showBranch;
 };
+
+//Get the info of branch in specific
 var branch = function branch(state) {
   return state.branch;
 };
