@@ -84,12 +84,12 @@
                     <span class="text">Statistics</span>
                 </a>
             </li>
-                <li class="menu-item has-submenu">
+                <li class="{{ Route::is('admin.branchs.index')  ? 'menu-item has-submenu active' : 'menu-item has-submenu' }}">
                     <a class="menu-link" href="#"> <i class="icon material-icons md-branding_watermark"></i>
                         <span class="text">Contenido</span>
                     </a>
                     <div class="submenu">
-                        <a href="{{route('admin.branchs.index')}}">Sucursales</a>
+                        <a href="{{route('admin.branchs.index')}}" class="{{Route::is('admin.branchs.index') ? 'active active-sub' : '' }}">Sucursales</a>
                         <a href="page-account-register.html">Banners</a>
                     </div>
                 </li>
@@ -111,8 +111,8 @@
                 </div>
             </li>
             <li class="menu-item">
-                <a class="menu-link" href="page-blank.html"> <i class="icon material-icons md-local_offer"></i>
-                    <span class="text"> Starter page </span>
+                <a class="menu-link" href="{{ route('home') }}"> <i class="icon material-icons md-local_offer"></i>
+                    <span class="text"> Pagina principal </span>
                 </a>
             </li>
         </ul>
