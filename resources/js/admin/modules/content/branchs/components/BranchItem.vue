@@ -13,13 +13,14 @@
                     <i class="material-icons md-more_horiz"></i>
                 </a>
                 <div class="dropdown-menu">
-                    <button class="dropdown-item" @click="handleModal({modal:'show', status: true})">Ver detalles</button>
-                    <button class="dropdown-item" @click="handleModal({modal:'edit', status: true})">Editar</button>
+                    <button class="dropdown-item" @click="handleModal({modal:'show', status: true, branch: branch})">Ver detalles</button>
+                    <button class="dropdown-item" @click="handleModal({modal:'edit', status: true, branch: branch})">Editar</button>
                     <button class="dropdown-item text-danger" @click="deleteBranch(branch.id)">Eliminar</button>
                 </div>
             </div>
         </td>
     </tr>
+
 </template>
 
 <script>

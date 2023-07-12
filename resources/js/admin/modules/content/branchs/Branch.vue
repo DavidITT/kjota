@@ -22,8 +22,8 @@
     </div>
 
     <!--Modals-->
-    <ShowBranch/>
-    <EditBranch/>
+    <ShowBranch v-if="showBranch"/>
+    <EditBranch v-if="editBranch"/>
 
 </template>
 
@@ -32,10 +32,18 @@ import BranchForm from "./components/BranchForm";
 import BranchTable from "./components/BranchTable";
 import ShowBranch from "./modals/ShowBranch";
 import EditBranch from "./modals/EditBranch";
+import useModal from "./composables/useModal";
 
 export default {
     name: "Branch",
     components: {EditBranch, ShowBranch, BranchForm, BranchTable},
+    setup(){
+        const {showBranch, editBranch} = useModal()
+        return{
+            showBranch,
+            editBranch
+        }
+    }
 }
 </script>
 

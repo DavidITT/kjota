@@ -8,7 +8,7 @@ const useModal = () => {
     return {
         showBranch: computed(() => store.getters['branches/showBranch']),
         editBranch: computed(() => store.getters['branches/editBranch']),
-        handleModal: ({modal, status }) => store.commit('branches/handleModal', {modal:modal,status:status}),
+        handleModal: ({modal, status, branch }) => store.commit('branches/handleModal', {modal:modal,status:status, branch:branch}),
     }
 }
 

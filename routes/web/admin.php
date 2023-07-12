@@ -69,10 +69,12 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () 
    */
 
     Route::prefix('content')->group(function () {
+        //Branchs
         Route::get('/get_branches', [BranchController::class, 'getBranchs']);
         Route::get('/branchs', [BranchController::class, 'index'])->name('branchs.index');
         Route::post('branch/delete/{id}', [BranchController::class, 'deleteBranch']);
         Route::post('branch/create', [BranchController::class, 'createBranch']);
+        Route::post('branch/update/{id}', [BranchController::class, 'updateBranch']);
     });
 
 

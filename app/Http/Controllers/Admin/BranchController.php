@@ -19,7 +19,7 @@ class BranchController extends Controller
     public function getBranchs()
     {
         try {
-            $branchs = Branch::orderBy('id', 'desc')->paginate(7);
+            $branchs = Branch::orderBy('id', 'desc')->with('image:url,imageable_id')->paginate(7);
             return response()->json($branchs);
         } catch (\Exception $e) {
             return response()->json('Error to get branches');
@@ -62,12 +62,37 @@ class BranchController extends Controller
         }
     }
 
+    public function updateBranch(Request $request, $id)
+    {
+        try {
+            DB::beginTransaction();
+
+            $branch = Branch::find($id);
+            $branch->update([
+                'name' => $request['name'],
+                'address' => $request['address'],
+                'phone' => $request['phone'],
+                'status' => $request['status'] == 'true' ? 1 : 0,
+            ]);
+            if ($request->hasFile('img')) {
+                $this->uploadBranchImage($request->all(), $branch);
+            }
+            DB::commit();
+
+            return response()->json(['message' => 'Sucursal creada'], 200);
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return response()->json('Error to update branch');
+        }
+    }
+
     private function uploadBranchImage($request, $branch)
     {
+
         // Check if the branch has an image already saved, if so, delete it and save the new one, if not, save normal
-        if ($branch->image !== null) {
-            $oldPath = $branch->image->url;
-            Storage::disk('public')->delete($oldPath);
+        if ($branch->image) {
+            $oldPath = str_replace("storage/", "", $branch->image->url);
+            $storage = Storage::disk('public')->delete($oldPath);
             $file_name = time() . '_' . uniqid() . '.' . $request['img']->extension();
             $file_path = $request['img']->storeAs('uploads/branches', $file_name, 'public');
             $branch->image()->update([

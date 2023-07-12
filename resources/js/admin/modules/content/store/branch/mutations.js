@@ -18,13 +18,15 @@ export const setUrl = (state, url) => {
 }
 
 //Mutation to handle status of modals in branches module
-export const handleModal = (state, {modal, status}) => {
+export const handleModal = (state, {modal, status, branch}) => {
     switch (modal) {
         case 'show':
             state.showBranch = status
+            state.branch = {...branch}
             break
         case 'edit':
             state.editBranch = status
+            state.branch = {...branch}
             break
     }
 }

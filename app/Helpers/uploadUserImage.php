@@ -17,7 +17,7 @@ function uploadUserImage($request, $user){
 
     // Check if the user has an image already saved, if so, delete it and save the new one, if not, save normal
     if($user->image){
-        $oldPath = $user->image->url;
+        $oldPath = str_replace("storage/", "", $user->image->url);
         Storage::disk('public')->delete($oldPath);
         $file_name = time().'_'.uniqid().'.'.$request['img']->extension();
         $file_path = $request['img']->storeAs('uploads/profiles', $file_name, 'public');
