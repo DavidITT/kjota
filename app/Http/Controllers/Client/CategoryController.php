@@ -46,9 +46,7 @@ class CategoryController extends Controller
      */
     public function show($category)
     {
-
         return view('client.categories.index', compact('category'));
-
     }
 
     /**

@@ -31,46 +31,21 @@
                         <li class="menu-item-has-children"><span class="menu-expand"></span><a
                                 href="{{  route('category.show', ['category' => 'cajas-de-linea']) }}">Categorias</a>
                             <ul class="dropdown">
-                                <li><a href="{{  route('category.show', ['category' => 'Cajas de Linea']) }}">Cajas de
-                                        linea</a></li>
-                                <li><a href="{{  route('category.show', ['category' => 'Cajas Delivery']) }}">Cajas
-                                        delivery</a></li>
-                                <li><a href="{{  route('category.show', ['category' => 'Cajas de Plastico']) }}">Cajas
-                                        de plastico</a></li>
-                                <li><a href="{{  route('category.show', ['category' => 'Carton Corrugado']) }}">Cartón
-                                        corrugado</a></li>
-                                <li><a href="{{  route('category.show', ['category' => 'Esquineros']) }}">Esquineros</a>
-                                </li>
-                                <li><a href="{{  route('category.show', ['category' => 'Peliculas Estirables']) }}">Peliculas
-                                        estirables</a></li>
-                                <li><a href="{{  route('category.show', ['category' => 'Cintas Adhesivas']) }}">Cintas
-                                        adhesivas</a></li>
-                                <li><a href="{{  route('category.show', ['category' => 'Papel Kraft']) }}">Papel
-                                        Kraft</a></li>
-                                <li><a href="{{  route('category.show', ['category' => 'Cacahuate']) }}">Cacahuate</a>
-                                </li>
-                                <li><a href="{{  route('category.show', ['category' => 'Aire Sellado']) }}">Aire
-                                        Sellado</a></li>
-                                <li><a href="{{  route('category.show', ['category' => 'Archiveros']) }}">Archiveros</a>
-                                </li>
-                                <li><a href="{{  route('category.show', ['category' => 'Hogar']) }}">Hogar</a></li>
-                                <li><a href="{{  route('category.show', ['category' => 'Oficina']) }}">Oficina</a></li>
-                                <li><a href="{{  route('category.show', ['category' => 'Despachador de Cinta']) }}">Despachador
-                                        de cinta</a></li>
-                                <li><a href="{{  route('category.show', ['category' => 'Sobre Acojinado']) }}">Sobre
-                                        acojinado</a></li>
-                                <li><a href="{{  route('category.show', ['category' => 'Papel Engomado']) }}">Pepel
-                                        Engomado</a></li>
-                                <li><a href="{{  route('category.show', ['category' => 'Espuma de Polietileno']) }}">Espuma
-                                        de polietileno</a></li>
-                                <li><a href="{{  route('category.show', ['category' => 'Etiquetas Adheribles']) }}">Etiquetas
-                                        adheribles</a></li>
-                                <li><a href="{{  route('category.show', ['category' => 'Fleje']) }}">Fleje</a></li>
-                                <li><a href="{{  route('category.show', ['category' => 'Hojas de cartón']) }}">Hojas de
-                                        cartón</a></li>
-                                <li><a href="{{  route('category.show', ['category' => 'Papeleria']) }}">Papeleria</a>
-                                </li>
-                                <li><a href="{{  route('category.show', ['category' => 'Rafla']) }}">Rafla</a></li>
+                                @foreach($categories as $category)
+                                    <li class="menu-item-has-children">
+                                        <span class="menu-expand"></span>
+                                        <a href="{{  route('category.show', ['category' => $category->slug]) }}">{{ $category->name  }}</a>
+                                        @if(!$category->subCategories->isEmpty())
+                                            <ul class="dropdown">
+                                                @foreach($category->subCategories as $subcategory)
+                                                    <li>
+                                                        <a href="{{ route('category.show', ['category' => $subcategory->slug]) }}">{{ $subcategory->name }}</a>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        @endif
+                                    </li>
+                                @endforeach
                             </ul>
                         </li>
                         <li>
@@ -95,7 +70,8 @@
                     @auth
                         <form method="POST" action="{{route('logout')}}">
                             @csrf
-                            <a href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit();">Cerrar Sesión</a>
+                            <a href="{{route('logout')}}"
+                               onclick="event.preventDefault(); this.closest('form').submit();">Cerrar Sesión</a>
                         </form>
                     @else
                         <a class="mr-5" href="{{route('login')}}">Iniciar Sesión </a> /

@@ -5631,6 +5631,7 @@ span.fi-rs-apps {
   top: 100%;
   background-color: #ffffff;
   min-width: 250px;
+  height: auto;
   padding: 25px 15px;
   transition: all 0.25s ease 0s;
   opacity: 0;

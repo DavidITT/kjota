@@ -5,6 +5,7 @@ use App\Http\Controllers\Client\AccountController;
 use App\Http\Controllers\Client\CategoryController;
 use App\Http\Controllers\Client\ContactController;
 use App\Http\Controllers\Client\ContentController;
+use App\Http\Controllers\Client\HomeController;
 use App\Http\Controllers\Client\ProductController;
 use Illuminate\Support\Facades\Route;
 
