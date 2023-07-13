@@ -1,0 +1,39 @@
+/* Style the tabs */
+.tabs {
+    overflow: hidden;
+    margin-bottom: -2px;
+}
+
+.tabs ul {
+    list-style-type: none;
+}
+
+.tabs a{
+    float: left;
+    cursor: pointer;
+    padding: 7px 19px;
+    transition: background-color 0.2s;
+    border: none;
+    background-color: white;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+    margin-right: 5px;
+}
+
+/* Change background color of tabs on hover */
+.tabs a:hover {
+    background-color: $primary;
+    color: #fff;
+}
+
+/* Styling for active tab */
+.tabs a.active {
+    background-color: $primary;
+    color: white;
+    cursor: default;
+}
+
+/* Style the tab content */
+.tabcontent {
+    padding: 30px 0px;
+}

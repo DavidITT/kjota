@@ -31,7 +31,7 @@ app.component('product-list', require('./admin/modules/products/ProductList.vue'
 | Categories
 |--------------------------------------------------------------------------
 */
-app.component('category-list', require('./admin/modules/categories/CategoryList.vue').default);
+app.component('category-list', require('./admin/modules/categories/Category.vue').default);
 /*
 |--------------------------------------------------------------------------
 | Orders

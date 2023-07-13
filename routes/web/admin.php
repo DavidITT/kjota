@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\BranchController;
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContactController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,11 +20,6 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () 
         return view('admin.products.index');
     })->middleware('can:admin.products.index')
         ->name('products.index');
-
-    Route::get('/categories', function () {
-        return view('admin.categories.index');
-    })->middleware('can:admin.categories.index')
-        ->name('categories.index');
 
     Route::get('/orders', function () {
         return view('admin.orders.index');
@@ -76,6 +72,21 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () 
         Route::post('branch/create', [BranchController::class, 'createBranch']);
         Route::post('branch/update/{id}', [BranchController::class, 'updateBranch']);
     });
+
+    /*
+    |--------------------------------------------------------------------------
+    | Content
+    |--------------------------------------------------------------------------
+    */
+    Route::get('/categories', [CategoryController::class, 'index'])
+        ->middleware('can:admin.categories.index')
+        ->name('categories.index');
+
+    Route::prefix('category')->group(function () {
+        Route::get('/get_categories/{type}', [CategoryController::class, 'getCategories']);
+
+    });
+
 
 
 
