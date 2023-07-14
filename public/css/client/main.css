@@ -1715,7 +1715,7 @@ label {
   position: relative;
   background: #fff;
   text-align: center;
-  border: 1px solid #cce7d0;
+  border: 1px solid rgb(130, 163, 218);
   border-radius: 20px;
 }
 .card-1 figure {
@@ -2887,6 +2887,7 @@ table .product-thumbnail img {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
+  border: 1px solid rgb(130, 163, 218);
 }
 .product-cart-wrap .product-img-action-wrap .product-img a {
   overflow: hidden;

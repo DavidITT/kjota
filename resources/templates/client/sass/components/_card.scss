@@ -3,7 +3,7 @@
     position: relative;
     background: #fff;
     text-align: center;
-    border: 1px solid #cce7d0;
+    border: 1px solid rgb(130, 163, 218);
     border-radius: 20px;
     figure {
         overflow: hidden;
@@ -18,7 +18,7 @@
     h5 {
         margin:20px 0;
         a {
-            color: $color-text            
+            color: $color-text
         }
     }
     &:hover {
