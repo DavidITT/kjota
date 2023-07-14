@@ -26,7 +26,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //Share categories in all views
-        $categories = Category::with('subCategories')->where('status','=',1)->get();
+        $categories = Category::with('subcategories')
+            ->where('status','=',1)
+            ->where('parent_id', '=', null)
+            ->get();
         View::share('categories', $categories);
     }
 }

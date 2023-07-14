@@ -18,8 +18,16 @@ class Category extends Model
         return $this->morphOne(Image::class, 'imageable');
     }
 
-    //One to Many
-    public function subCategories(){
-        return $this->hasMany('App\Models\SubCategory');
+    //One to One
+    public function parentCategory()
+    {
+        return $this->belongsTo('App\Models\Category', 'parent_id');
     }
+
+    // One to Many
+    public function subcategories()
+    {
+        return $this->hasMany('App\Models\Category', 'parent_id');
+    }
+
 }

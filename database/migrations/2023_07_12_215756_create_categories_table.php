@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('slug');
             $table->tinyInteger('priority')->nullable();
             $table->boolean('popular_category')->nullable();
+            $table->unsignedBigInteger('parent_id')->nullable();
             $table->boolean('status')->default(1);
             $table->timestamps();
         });

@@ -26,6 +26,7 @@ class CategoryFactory extends Factory
             'slug' => $slug,
             'priority' => $this->faker->randomElement([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
             'popular_category' => $this->faker->randomElement([1, 0]),
+            'parent_id' => $this->faker->randomElement([null,1,2,3,4,5,6]),
             'status' => $this->faker->randomElement([1, 0]),
             'created_at' => $this->faker->dateTime(),
             'updated_at' => $this->faker->dateTime()

@@ -20,8 +20,7 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Contact::factory(1000)->create();
         \App\Models\Branch::factory(10)->create();
-         \App\Models\Category::factory(10)->create();
-         \App\Models\SubCategory::factory(20)->create();
+        \App\Models\Category::factory(20)->create();
 
 
     }
