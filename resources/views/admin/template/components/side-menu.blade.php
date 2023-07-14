@@ -18,7 +18,7 @@
             @endcan
             <li class="{{ Route::is('admin.products.index') || Route::is('admin.categories.index') ? 'menu-item has-submenu active' : 'menu-item has-submenu' }}">
                 <a class="menu-link" href="#"> <i class="icon material-icons md-shopping_bag"></i>
-                    <span class="text">Products</span>
+                    <span class="text">Productos</span>
                 </a>
                 <div class="submenu">
                     <a href="{{route('admin.products.index')}}" class="{{Route::is('admin.products.index') ? 'active active-sub' : '' }}">Lista de Productos</a>

@@ -20,10 +20,13 @@ class CategoryController extends Controller
                 case 'categories':
                     $categories = Category::orderBy('priority', 'desc')
                         ->with('image:url,imageable_id')
+                        ->where('parent_id','=', null)
                         ->paginate(6);
                     return response()->json($categories);
                 case 'subcategories':
-                    $categories = SubCategory::with(['image:url,imageable_id','category:id,name'])
+                    $categories = Category::orderBy('parent_id', 'desc')
+                        ->with(['image:url,imageable_id','parentCategory:id,name'])
+                        ->where('parent_id','!=', null)
                         ->paginate(6);
                     return response()->json($categories);
             }

@@ -18,18 +18,23 @@
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Descripción</th>
-                <th>Slug</th>
-                <th  v-if="tab === 1">Orden</th>
+                <th v-if="tab === 1">Prioridad</th>
                 <th v-if="tab === 2">Categoria Padre</th>
+                <th>Estado</th>
                 <th class="text-end">Acciones</th>
             </tr>
             </thead>
             <tbody>
+            <tr class="text-center" v-if="searchCategory.length === 0">
+                <td colspan="6">
+                    <p>No hay ninguna categoria</p>
+                </td>
+            </tr>
             <CategoryItem v-for="category in searchCategory" :key="category.id" :category="category" />
             </tbody>
         </table>
 
-        <div class="pagination-area mt-15 mb-50">
+        <div class="pagination-area mt-15 mb-50" v-if="searchCategory.length !== 0">
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-start d-flex flex-wrap">
                     <li v-for="link in links" :key="link.label"

@@ -2,10 +2,12 @@
     <tr>
         <td>{{ category.id }}</td>
         <td><b>{{ category.name }}</b></td>
-        <td>{{ category.description }}</td>
-        <td>/{{ category.slug }}</td>
-        <td v-if="!category.category">{{ category.priority }}</td>
-        <td v-if="category.category">{{ category.category.name }}</td>
+        <td>{{ shortDescription(category.description) }}</td>
+        <td v-if="!category.parent_category">{{ category.priority }}</td>
+        <td v-if="category.parent_category">{{ category.parent_category.name }}</td>
+        <td>
+            <span class="badge rounded-pill" :class="category.status === 1 ? 'alert-success' : 'alert-warning'">{{ category.status === 1 ? 'Habilitado' : 'Deshabilitado' }}</span>
+        </td>
         <td class="text-end">
             <div class="dropdown">
                 <a href="#" data-bs-toggle="dropdown" class="btn btn-light rounded btn-sm font-sm"> <i
@@ -31,7 +33,9 @@ export default {
     },
     setup(props) {
         return {
-            category: props.category
+            category: props.category,
+            //Short message
+            shortDescription: (text) => (text.length > 20) ? text.substring(0, 20) + '...' : text,
         }
     }
 }
