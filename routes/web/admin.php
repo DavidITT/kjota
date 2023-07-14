@@ -75,7 +75,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () 
 
     /*
     |--------------------------------------------------------------------------
-    | Content
+    | Categories
     |--------------------------------------------------------------------------
     */
     Route::get('/categories', [CategoryController::class, 'index'])
@@ -84,7 +84,8 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () 
 
     Route::prefix('category')->group(function () {
         Route::get('/get_categories/{type}', [CategoryController::class, 'getCategories']);
-
+        Route::post('/create', [CategoryController::class, 'createCategory']);
+        Route::get('/get_parent_categories', [CategoryController::class, 'getParentCategories']);
     });
 
 
